@@ -2,29 +2,80 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرشیو ویدیوهای درمان | کلینیک حکیم</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>ویدیوهای درمان | کلینیک حکیم</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        body { font-family: 'Vazirmatn', sans-serif; background-color: #f4f7f6; color: #2d3436; }
+        .hero-section { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .video-card { background: white; border-radius: 20px; border: none; transition: all 0.3s ease; height: 100%; box-shadow: 0 6px 12px rgba(0,0,0,0.05); overflow: hidden; }
+        .video-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .btn-aparat { background-color: #df0000; color: white; border-radius: 10px; padding: 10px; font-weight: bold; transition: 0.3s; width: 100%; display: block; text-align: center; text-decoration: none; }
+        .btn-aparat:hover { background-color: #b30000; color: white; transform: scale(1.02); }
+        .card-body { padding: 20px; text-align: center; }
+        .card-title { font-size: 1.1rem; font-weight: 700; color: #1b4332; margin-bottom: 15px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
+        .back-link { color: #1b4332; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; margin-top: 40px; transition: 0.3s; }
+        .back-link:hover { color: #2d6a4f; }
+    </style>
 </head>
-<body class="bg-light">
-    <div class="container py-5">
-        <h2 class="text-center mb-5">تجربیات درمان‌شدگان</h2>
-        <div class="row g-4">
-            <!-- کارت ویدیو ۱ -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://via.placeholder.com/400x250?text=Clinic+Hakim+Video" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5>درمان دیسک کمر با طب سوزنی</h5>
-                        <p class="small text-muted">مشاهده بهبودی بیمار پس از ۱۰ جلسه</p>
-                        <a href="اینجا-لینک-آپارات-را-بگذارید" target="_blank" class="btn btn-danger w-100">
-                            <i class="fas fa-play me-2"></i> پخش در آپارات
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5"><a href="index.html" class="btn btn-outline-dark">← بازگشت به صفحه اصلی</a></div>
+<body>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <i class="fas fa-play-circle fa-3x mb-3 text-warning"></i>
+        <h1 class="display-6 fw-bold">تجربیات واقعی درمان‌شدگان</h1>
+        <p class="lead opacity-75">گلچینی از نتایج درمان در کلینیک طب سوزنی حکیم</p>
     </div>
+</header>
+
+<div class="container pb-5">
+    <div class="row g-4">
+        <!-- ویدیوها بر اساس لیست شما -->
+        <script>
+            const videos = [
+                { title: "پوست مقاوم به درمان", link: "https://www.aparat.com/v/woj08x4" },
+                { title: "کیست تخمدان", link: "https://www.aparat.com/v/xllor6a" },
+                { title: "درمان دیسک پاره", link: "https://www.aparat.com/v/kppgrdg" },
+                { title: "جراحی یاخچیدی؟! (تجربه جراحی)", link: "https://www.aparat.com/v/oadaoq9" },
+                { title: "درمان تهوع و مشکلات گوارشی", link: "https://www.aparat.com/v/jrr68kw" },
+                { title: "درمان سنگ کیسه صفرا", link: "https://www.aparat.com/v/upm1l96" },
+                { title: "درمان آسم کودکان", link: "https://www.aparat.com/v/koejup7" },
+                { title: "تنگی کانال نخاعی", link: "https://www.aparat.com/v/ripg5o3" },
+                { title: "آرتروز شدید زانو", link: "https://www.aparat.com/v/kcz6803" },
+                { title: "کمردرد مقاوم به درمان", link: "https://www.aparat.com/v/vhd726n" },
+                { title: "درمان قطعی خارپاشنه", link: "https://www.aparat.com/v/lazyerp" },
+                { title: "بعد از عمل هم کنارتیم (بازتوانی)", link: "https://www.aparat.com/v/fbw917i" },
+                { title: "درمان عدم تعادل", link: "https://www.aparat.com/v/yarxs0k" },
+                { title: "بعد از ۱۲ سال ایستاد", link: "https://www.aparat.com/v/yarxs0k" }
+            ];
+
+            const container = document.currentScript.parentElement;
+            videos.forEach(vid => {
+                container.innerHTML += `
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="video-card card">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h5 class="card-title">${vid.title}</h5>
+                                <a href="${vid.link}" target="_blank" class="btn-aparat">
+                                    <i class="fas fa-play ms-2"></i> مشاهده ویدیو
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        </script>
+    </div>
+
+    <div class="text-center">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-right"></i> بازگشت به صفحه اصلی کلینیک
+        </a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
