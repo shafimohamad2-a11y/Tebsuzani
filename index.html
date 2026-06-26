@@ -1,405 +1,444 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کلینیک تخصصی طب سنتی-سوزنی حکیم</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کلینیک تخصصی طب سنتی-سوزنی حکیم</title>
 
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        .top-bar {
-            background: #1a4d2e;
-            color: white;
-            padding: 12px 0;
-            font-size: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1050;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
 
-        .top-bar a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-            border-bottom: 1px dashed #ffcc00;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .navbar-custom {
-            background: white;
-            padding: 20px 15px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .navbar-custom h1 {
-            color: #1a4d2e;
-            font-weight: 800;
-            font-size: 2rem;
-            margin: 0;
-        }
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
 
-        .sub-links {
-            margin-top: 15px;
-        }
+    .top-bar {
+      background: #1a4d2e;
+      color: #fff;
+      padding: 12px 0;
+      font-size: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+    }
 
-        .sub-links a {
-            display: inline-block;
-            margin: 8px 10px;
-            color: #1a4d2e;
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-        }
+    .top-bar a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 10px;
+      border-bottom: 1px dashed #ffcc00;
+    }
 
-        .sub-links a:hover {
-            color: #c79a00;
-        }
+    .top-bar a:hover {
+      color: #fff3b0;
+    }
 
-        .section-box {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+    .navbar-custom {
+      background: #ffffff;
+      padding: 20px 15px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
 
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.58);
-        }
+    .navbar-custom h1 {
+      color: #1a4d2e;
+      font-weight: 800;
+      font-size: 2rem;
+      margin: 0;
+    }
 
-        .content-wrap {
-            position: relative;
-            z-index: 2;
-            max-width: 950px;
-        }
+    .sub-links {
+      margin-top: 15px;
+    }
 
-        .content-wrap h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            font-weight: 800;
-            color: #ffcc00;
-        }
+    .sub-links a {
+      display: inline-block;
+      margin: 8px 10px;
+      color: #1a4d2e;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
 
-        .content-wrap p {
-            font-size: 1.2rem;
-            line-height: 2;
-            margin-bottom: 30px;
-        }
+    .sub-links a:hover {
+      color: #c79a00;
+    }
 
-        .btn-custom {
-            padding: 12px 35px;
-            border-radius: 50px;
-            background: #ffcc00;
-            color: #1a4d2e;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.3s;
-            display: inline-block;
-            border: none;
-        }
+    .section-box {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding: 60px 20px;
+    }
 
-        .btn-custom:hover {
-            background: #fff;
-            transform: translateY(-3px);
-            color: #1a4d2e;
-        }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.58);
+    }
 
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80');
-        }
+    .content-wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 950px;
+    }
 
-        .guide-bg {
-            background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80');
-        }
+    .content-wrap h2 {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+      color: #ffcc00;
+    }
 
-        .results-bg {
-            background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
-        }
+    .content-wrap p {
+      font-size: 1.2rem;
+      line-height: 2;
+      margin-bottom: 30px;
+    }
 
-        .doctors-bg {
-            background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80');
-        }
+    .btn-custom {
+      padding: 12px 35px;
+      border-radius: 50px;
+      background: #ffcc00;
+      color: #1a4d2e;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      border: none;
+    }
 
-        .acupuncture-bg {
-            background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=1920&q=80');
-        }
+    .btn-custom:hover {
+      background: #ffffff;
+      color: #1a4d2e;
+      transform: translateY(-3px);
+    }
 
-        .homeopathy-bg {
-            background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80');
-        }
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .exercise-bg {
-            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
-        }
+    .about-bg {
+      background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .about-bg {
-            background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80');
-        }
+    .guide-bg {
+      background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .research-bg {
-            background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80');
-        }
+    .results-bg {
+      background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .education-bg {
-            background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80');
-        }
+    .doctors-bg {
+      background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        #contact {
-            background: #f4f7f6;
-            padding: 80px 0;
-        }
+    .acupuncture-bg {
+      background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .contact-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+    .homeopathy-bg {
+      background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .alert-info-custom {
-            background: #e1f5fe;
-            border-right: 5px solid #0288d1;
-            padding: 15px;
-            margin-bottom: 20px;
-            color: #01579b;
-            text-align: right;
-        }
+    .exercise-bg {
+      background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .address-box {
-            background: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
-        }
+    .research-bg {
+      background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .address-box h3 {
-            color: #1a4d2e;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
+    .education-bg {
+      background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80');
+    }
 
-        .address-box p {
-            color: #333;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
+    .address-box {
+      background: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        footer {
-            background: #1a4d2e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    .address-box h3 {
+      color: #1a4d2e;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
 
-        @media (max-width: 768px) {
-            .content-wrap h2 {
-                font-size: 1.9rem;
-            }
+    .address-box p {
+      color: #333;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 2;
+    }
 
-            .content-wrap p {
-                font-size: 1rem;
-            }
+    #contact {
+      background: #f4f7f6;
+      padding: 80px 0;
+    }
 
-            .section-box {
-                background-attachment: scroll;
-            }
+    .contact-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 
-            .navbar-custom h1 {
-                font-size: 1.4rem;
-            }
+    .alert-info-custom {
+      background: #e1f5fe;
+      border-right: 5px solid #0288d1;
+      padding: 15px;
+      margin-bottom: 20px;
+      color: #01579b;
+      text-align: right;
+      border-radius: 8px;
+    }
 
-            .sub-links a {
-                display: block;
-                margin: 8px 0;
-            }
-        }
-    </style>
+    .form-control {
+      padding: 12px 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #1a4d2e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrap h2 {
+        font-size: 2rem;
+      }
+
+      .content-wrap p {
+        font-size: 1rem;
+      }
+
+      .navbar-custom h1 {
+        font-size: 1.4rem;
+      }
+
+      .sub-links a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .section-box {
+        background-attachment: scroll;
+        min-height: 80vh;
+      }
+
+      .contact-card {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <div class="container d-flex justify-content-center flex-wrap">
-            <span><i class="fa fa-phone-alt"></i> شماره‌های تماس مطب اصفهان: </span>
-            <a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
-            <a href="tel:03133677182">۰۳۱۳۳۶۷۷۱۸۲</a>
-        </div>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-center flex-wrap">
+      <span><i class="fa fa-phone-alt"></i> شماره‌های تماس مطب اصفهان: </span>
+      <a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
+      <a href="tel:03133677182">۰۳۱۳۳۶۷۷۱۸۲</a>
     </div>
+  </div>
 
-    <!-- Header -->
-    <div class="navbar-custom">
-        <div class="container">
-            <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
-            <div class="sub-links">
-                <a href="#about">درباره ما</a>
-                <a href="#guide">راهنمای مراجعین</a>
-                <a href="#results">گلچین نتایج درمان</a>
-                <a href="#doctors">معرفی پزشکان</a>
-                <a href="#research">مطالعات و تحقیقات</a>
-                <a href="#education">آموزش طب سنتی-سوزنی</a>
-                <a href="#contact">تماس با ما</a>
-            </div>
-        </div>
+  <!-- Header -->
+  <div class="navbar-custom">
+    <div class="container">
+      <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
+      <div class="sub-links">
+        <a href="#about">درباره ما</a>
+        <a href="#guide">راهنمای مراجعین</a>
+        <a href="#results">گلچین نتایج درمان</a>
+        <a href="#doctors">معرفی پزشکان</a>
+        <a href="#acupuncture">معرفی طب سوزنی</a>
+        <a href="#homeopathy">معرفی همیوپاتی</a>
+        <a href="#exercise">معرفی حرکات اصلاحی</a>
+        <a href="#research">مطالعات و تحقیقات</a>
+        <a href="#education">آموزش طب سنتی-سوزنی</a>
+        <a href="#contact">تماس با ما</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Hero -->
-    <section class="section-box hero-bg" id="home">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>سلامتی با تکیه بر طبیعت</h2>
-            <p>درمان‌های تخصصی طب سنتی و سوزنی در محیطی آرام، علمی و حرفه‌ای برای بازگشت به تعادل جسم و ذهن.</p>
-            <a href="#guide" class="btn-custom">مشاهده بخش‌ها</a>
-        </div>
-    </section>
+  <!-- Hero -->
+  <section class="section-box hero-bg" id="home">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>سلامتی با تکیه بر طبیعت</h2>
+      <p>درمان‌های تخصصی طب سنتی و سوزنی در محیطی آرام، علمی و حرفه‌ای برای بازگشت به تعادل جسم و ذهن.</p>
+      <a href="#guide" class="btn-custom">مشاهده بخش‌ها</a>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section class="section-box about-bg" id="about">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>درباره ما</h2>
-            <p>کلینیک تخصصی طب سنتی-سوزنی حکیم با بهره‌گیری از دانش طب سنتی، طب سوزنی، همیوپاتی و حرکات اصلاحی، تلاش می‌کند درمانی ریشه‌ای، علمی و هدفمند برای مراجعین فراهم کند.</p>
-            <a href="#contact" class="btn-custom">ارتباط با ما</a>
-        </div>
-    </section>
+  <!-- About -->
+  <section class="section-box about-bg" id="about">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>درباره ما</h2>
+      <p>کلینیک تخصصی طب سنتی-سوزنی حکیم با بهره‌گیری از دانش طب سنتی، طب سوزنی، همیوپاتی و حرکات اصلاحی، تلاش می‌کند درمانی ریشه‌ای، علمی و هدفمند برای مراجعین فراهم کند.</p>
+      <a href="#contact" class="btn-custom">ارتباط با ما</a>
+    </div>
+  </section>
 
-    <!-- Guide -->
-    <section class="section-box guide-bg" id="guide">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>راهنمای مراجعین</h2>
-            <p>در این بخش شما توصیه های غذایی ، نکات قبل و بعد از دریافت درمانها ، سوالات متدوال مربوطه را میخوانید .</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Guide -->
+  <section class="section-box guide-bg" id="guide">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>راهنمای مراجعین</h2>
+      <p>در این بخش شما توصیه های غذایی، نکات قبل و بعد از دریافت درمان‌ها، و سوالات متداول مربوطه را می‌خوانید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Results -->
-    <section class="section-box results-bg" id="results">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>گلچین نتایج درمان</h2>
-            <p>در این بخش تنوع بیماری هایی که در کلینیک ما تحت درمان بوده اند را می بینید و اطلاعات بیشتری برای درمان پیدا میکنید .</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Results -->
+  <section class="section-box results-bg" id="results">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>گلچین نتایج درمان</h2>
+      <p>در این بخش تنوع بیماری‌هایی که در کلینیک ما تحت درمان بوده‌اند را می‌بینید و اطلاعات بیشتری برای درمان پیدا می‌کنید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Doctors -->
-    <section class="section-box doctors-bg" id="doctors">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>معرفی پزشکان</h2>
-            <p>رزومه پزشکان و همکاران در این بخش نمایش داده می شود .</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Doctors -->
+  <section class="section-box doctors-bg" id="doctors">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>معرفی پزشکان</h2>
+      <p>رزومه پزشکان و همکاران در این بخش نمایش داده می‌شود.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Acupuncture -->
-    <section class="section-box acupuncture-bg" id="acupuncture">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>معرفی طب سوزنی</h2>
-            <p>با روش های طب سوزنی مورد استفاده در کلینیک ما آشنا شوید .</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Acupuncture -->
+  <section class="section-box acupuncture-bg" id="acupuncture">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>معرفی طب سوزنی</h2>
+      <p>با روش‌های طب سوزنی مورد استفاده در کلینیک ما آشنا شوید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Homeopathy -->
-    <section class="section-box homeopathy-bg" id="homeopathy">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>معرفی همیوپاتی</h2>
-            <p>با این روش معجزه آسا آشنا شوید.</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Homeopathy -->
+  <section class="section-box homeopathy-bg" id="homeopathy">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>معرفی همیوپاتی</h2>
+      <p>با این روش معجزه‌آسا آشنا شوید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Corrective Exercises -->
-    <section class="section-box exercise-bg" id="exercise">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>معرفی حرکات اصلاحی</h2>
-            <p>با تخصصی که مجموعه ما در حیطه حرکات اصلاحی دارد و تجمیع تخصص های دیگر آشنا شوید.</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Corrective Exercises -->
+  <section class="section-box exercise-bg" id="exercise">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>معرفی حرکات اصلاحی</h2>
+      <p>با تخصصی که مجموعه ما در حیطه حرکات اصلاحی دارد و تجمیع تخصص‌های دیگر آشنا شوید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Research -->
-    <section class="section-box research-bg" id="research">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>مطالعات و تحقیقات</h2>
-            <p>در این بخش می‌توانید با مطالعات، پژوهش‌ها و رویکردهای علمی مورد استفاده در مجموعه ما بیشتر آشنا شوید.</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Research -->
+  <section class="section-box research-bg" id="research">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>مطالعات و تحقیقات</h2>
+      <p>در این بخش می‌توانید با مطالعات، پژوهش‌ها و رویکردهای علمی مورد استفاده در مجموعه ما بیشتر آشنا شوید.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Education -->
-    <section class="section-box education-bg" id="education">
-        <div class="overlay"></div>
-        <div class="content-wrap">
-            <h2>آموزش طب سنتی-سوزنی</h2>
-            <p>در این بخش مطالب آموزشی و محتوای علمی مربوط به طب سنتی و طب سوزنی برای علاقه‌مندان و مراجعین ارائه می‌شود.</p>
-            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
-        </div>
-    </section>
+  <!-- Education -->
+  <section class="section-box education-bg" id="education">
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <h2>آموزش طب سنتی-سوزنی</h2>
+      <p>در این بخش مطالب آموزشی و محتوای علمی مربوط به طب سنتی و طب سوزنی برای علاقه‌مندان و مراجعین ارائه می‌شود.</p>
+      <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+    </div>
+  </section>
 
-    <!-- Address -->
-    <section class="address-box">
-        <div class="container">
-            <h3>آدرس مطب</h3>
-            <p><strong>اصفهان، خمینی شهر، خیابان شریعتی جنوبی، پاساژ الزهرا، طبقه ۳</strong></p>
-            <p>شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱ - ۰۳۱۳۳۶۷۷۱۸۲</p>
-        </div>
-    </section>
+  <!-- Address -->
+  <section class="address-box">
+    <div class="container">
+      <h3>آدرس مطب</h3>
+      <p><strong>اصفهان، خمینی‌شهر، خیابان شریعتی جنوبی، پاساژ الزهرا، طبقه ۳</strong></p>
+      <p>شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱ - ۰۳۱۳۳۶۷۷۱۸۲</p>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 contact-card">
-                    <h3 class="text-center mb-4" style="color:#1a4d2e">تماس با ما</h3>
-                    <div class="alert-info-custom">
-                        <i class="fa fa-clock"></i> مراجع گرامی، زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
-                    </div>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <input type="tel" class="form-control" placeholder="شماره تلفن" required>
-                            </div>
-                        </div>
-                        <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را اینجا بنویسید..." required></textarea>
-                        <button type="submit" class="btn-custom w-100">ارسال پیام به مدیریت</button>
-                    </form>
-                </div>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 contact-card">
+          <h3 class="text-center mb-4" style="color:#1a4d2e;">تماس با ما</h3>
+
+          <div class="alert-info-custom">
+            <i class="fa fa-clock"></i>
+            مراجع گرامی، زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
+          </div>
+
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required />
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="tel" class="form-control" placeholder="شماره تلفن" required />
+              </div>
             </div>
+
+            <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را اینجا بنویسید..." required></textarea>
+
+            <button type="submit" class="btn-custom w-100">ارسال پیام به مدیریت</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
-    </footer>
+  <footer>
+    <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
