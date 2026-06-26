@@ -7,15 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
 
         body {
             font-family: 'Vazirmatn', sans-serif;
             scroll-behavior: smooth;
             background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Header & Contact Info */
         .top-bar {
             background: #1a4d2e;
             color: white;
@@ -23,30 +24,48 @@
             font-size: 1rem;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 1050;
         }
+
         .top-bar a {
             color: #ffcc00;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 10px;
             border-bottom: 1px dashed #ffcc00;
         }
 
         .navbar-custom {
             background: white;
-            padding: 15px;
+            padding: 20px 15px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
+
         .navbar-custom h1 {
             color: #1a4d2e;
-            font-weight: 700;
-            font-size: 1.8rem;
+            font-weight: 800;
+            font-size: 2rem;
             margin: 0;
         }
 
-        /* Full Screen Sections */
+        .sub-links {
+            margin-top: 15px;
+        }
+
+        .sub-links a {
+            display: inline-block;
+            margin: 8px 10px;
+            color: #1a4d2e;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .sub-links a:hover {
+            color: #c79a00;
+        }
+
         .section-box {
             min-height: 100vh;
             display: flex;
@@ -64,63 +83,154 @@
 
         .overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            inset: 0;
+            background: rgba(0, 0, 0, 0.58);
         }
 
         .content-wrap {
             position: relative;
             z-index: 2;
-            max-width: 900px;
+            max-width: 950px;
         }
 
-        .content-wrap h2 { font-size: 2.8rem; margin-bottom: 25px; font-weight: 700; color: #ffcc00; }
-        .content-wrap p { font-size: 1.25rem; line-height: 1.8; margin-bottom: 30px; }
-
-        /* Guide Cards (Integrated from Guide page) */
-        .guide-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            margin-top: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+        .content-wrap h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+            color: #ffcc00;
         }
-        .info-card {
-            background: white;
-            color: #333;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: right;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+        .content-wrap p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 30px;
         }
-        .info-card h4 { color: #1a4d2e; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; }
-
-        /* Specific Backgrounds */
-        .hero-bg { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80'); }
-        .guide-bg { background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=1920&q=80'); }
-        .results-bg { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80'); }
-        .clinic-bg { background-image: url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80'); }
-        .homeopathy-bg { background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80'); }
-        .exercise-bg { background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80'); }
-
-        /* Contact Form */
-        #contact { background: #f4f7f6; padding: 80px 0; }
-        .contact-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .alert-info-custom { background: #e1f5fe; border-right: 5px solid #0288d1; padding: 15px; margin-bottom: 20px; color: #01579b; text-align: right; }
 
         .btn-custom {
-            padding: 12px 35px; border-radius: 50px; background: #ffcc00; color: #1a4d2e;
-            font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block;
+            padding: 12px 35px;
+            border-radius: 50px;
+            background: #ffcc00;
+            color: #1a4d2e;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+            border: none;
         }
-        .btn-custom:hover { background: #fff; transform: translateY(-3px); }
 
-        footer { background: #1a4d2e; color: white; padding: 20px; text-align: center; }
+        .btn-custom:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            color: #1a4d2e;
+        }
+
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .guide-bg {
+            background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .results-bg {
+            background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .doctors-bg {
+            background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .acupuncture-bg {
+            background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .homeopathy-bg {
+            background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .exercise-bg {
+            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .about-bg {
+            background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .research-bg {
+            background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .education-bg {
+            background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #contact {
+            background: #f4f7f6;
+            padding: 80px 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .alert-info-custom {
+            background: #e1f5fe;
+            border-right: 5px solid #0288d1;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #01579b;
+            text-align: right;
+        }
+
+        .address-box {
+            background: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .address-box h3 {
+            color: #1a4d2e;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .address-box p {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #1a4d2e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
         @media (max-width: 768px) {
-            .content-wrap h2 { font-size: 1.8rem; }
-            .section-box { background-attachment: scroll; }
+            .content-wrap h2 {
+                font-size: 1.9rem;
+            }
+
+            .content-wrap p {
+                font-size: 1rem;
+            }
+
+            .section-box {
+                background-attachment: scroll;
+            }
+
+            .navbar-custom h1 {
+                font-size: 1.4rem;
+            }
+
+            .sub-links a {
+                display: block;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
@@ -135,119 +245,137 @@
         </div>
     </div>
 
+    <!-- Header -->
     <div class="navbar-custom">
         <div class="container">
             <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
+            <div class="sub-links">
+                <a href="#about">درباره ما</a>
+                <a href="#guide">راهنمای مراجعین</a>
+                <a href="#results">گلچین نتایج درمان</a>
+                <a href="#doctors">معرفی پزشکان</a>
+                <a href="#research">مطالعات و تحقیقات</a>
+                <a href="#education">آموزش طب سنتی-سوزنی</a>
+                <a href="#contact">تماس با ما</a>
+            </div>
         </div>
     </div>
 
-    <!-- 1. Hero Section -->
+    <!-- Hero -->
     <section class="section-box hero-bg" id="home">
         <div class="overlay"></div>
         <div class="content-wrap">
             <h2>سلامتی با تکیه بر طبیعت</h2>
-            <p>درمان‌های تخصصی طب سنتی و سوزنی در محیطی آرام و علمی. ما همراه شما هستیم تا ریشه مشکلات سلامتی را با روش‌های طبیعی درمان کنیم.</p>
-            <a href="#guide" class="btn-custom">مشاهده راهنمای مراجعین</a>
+            <p>درمان‌های تخصصی طب سنتی و سوزنی در محیطی آرام، علمی و حرفه‌ای برای بازگشت به تعادل جسم و ذهن.</p>
+            <a href="#guide" class="btn-custom">مشاهده بخش‌ها</a>
         </div>
     </section>
 
-    <!-- 2. Integrated Guide Section (The content you sent before) -->
+    <!-- About -->
+    <section class="section-box about-bg" id="about">
+        <div class="overlay"></div>
+        <div class="content-wrap">
+            <h2>درباره ما</h2>
+            <p>کلینیک تخصصی طب سنتی-سوزنی حکیم با بهره‌گیری از دانش طب سنتی، طب سوزنی، همیوپاتی و حرکات اصلاحی، تلاش می‌کند درمانی ریشه‌ای، علمی و هدفمند برای مراجعین فراهم کند.</p>
+            <a href="#contact" class="btn-custom">ارتباط با ما</a>
+        </div>
+    </section>
+
+    <!-- Guide -->
     <section class="section-box guide-bg" id="guide">
         <div class="overlay"></div>
-        <div class="container content-wrap">
-            <h2>راهنمای جامع مراجعین</h2>
-            <div class="guide-container text-right">
-                <div class="row">
-                    <!-- نمره‌دهی -->
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <h4><i class="fa fa-star text-warning"></i> سیستم نمره‌دهی درمان</h4>
-                            <p>پیشرفت درمان خود را با دقت ثبت کنید. نمره ۱۰ به معنای بهبودی کامل و نمره ۰ به معنای شروع درمان است.</p>
-                        </div>
-                    </div>
-                    <!-- پرهیزات -->
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <h4><i class="fa fa-ban text-danger"></i> پرهیزات غذایی</h4>
-                            <p>از مصرف ترشیجات، سرکه، عدس، بادمجان و گوشت گاو در طول دوره درمان اکیداً خودداری کنید.</p>
-                        </div>
-                    </div>
-                    <!-- غذاهای مجاز -->
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <h4><i class="fa fa-check-circle text-success"></i> غذاهای مجاز</h4>
-                            <p>مصرف سیب، عسل، نخودآب و گوشت گوسفند جوان به سرعت بخشیدن روند درمان شما کمک می‌کند.</p>
-                        </div>
-                    </div>
-                    <!-- سوالات متداول -->
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <h4><i class="fa fa-question-circle text-primary"></i> طول دوره درمان</h4>
-                            <p>طول دوره درمان بسته به نوع بیماری و واکنش بدن شما متفاوت است، اما معمولاً تغییرات مثبت پس از ۳ جلسه مشهود خواهد بود.</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-white mt-3 small">تمامی نکات قبل و بعد از زالو، حجامت و فصد در این بخش قابل مطالعه است.</p>
-            </div>
+        <div class="content-wrap">
+            <h2>راهنمای مراجعین</h2>
+            <p>در این بخش شما توصیه های غذایی ، نکات قبل و بعد از دریافت درمانها ، سوالات متدوال مربوطه را میخوانید .</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 3. Results -->
-    <section class="section-box results-bg">
+    <!-- Results -->
+    <section class="section-box results-bg" id="results">
         <div class="overlay"></div>
         <div class="content-wrap">
             <h2>گلچین نتایج درمان</h2>
-            <p>مشاهده نمونه‌های موفق درمان بیماری‌های مزمن، دردهای اسکلتی و مشکلات گوارشی در بیماران قبلی کلینیک.</p>
-            <a href="#" class="btn-custom">مشاهده گزارشات تصویری</a>
+            <p>در این بخش تنوع بیماری هایی که در کلینیک ما تحت درمان بوده اند را می بینید و اطلاعات بیشتری برای درمان پیدا میکنید .</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 4. Team & Clinic -->
-    <section class="section-box clinic-bg">
+    <!-- Doctors -->
+    <section class="section-box doctors-bg" id="doctors">
         <div class="overlay"></div>
         <div class="content-wrap">
-            <h2>معرفی کلینیک و پزشکان</h2>
-            <p>تیمی متخصص و مجرب از پزشکان طب سنتی و همکاران بخش‌های تخصصی برای ارائه بهترین خدمات درمانی.</p>
-            <a href="#" class="btn-custom">رزومه تیم پزشکی</a>
+            <h2>معرفی پزشکان</h2>
+            <p>رزومه پزشکان و همکاران در این بخش نمایش داده می شود .</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 5. Acupuncture -->
-    <section class="section-box hero-bg" style="background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=1920&q=80');">
+    <!-- Acupuncture -->
+    <section class="section-box acupuncture-bg" id="acupuncture">
         <div class="overlay"></div>
         <div class="content-wrap">
-            <h2>طب سوزنی (Acupuncture)</h2>
-            <p>درمان تخصصی میگرن، دیسک کمر، و استرس با استفاده از سوزن‌های یکبار مصرف و متدهای علمی روز دنیا.</p>
-            <a href="#" class="btn-custom">اطلاعات بیشتر</a>
+            <h2>معرفی طب سوزنی</h2>
+            <p>با روش های طب سوزنی مورد استفاده در کلینیک ما آشنا شوید .</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 6. Homeopathy -->
-    <section class="section-box homeopathy-bg">
+    <!-- Homeopathy -->
+    <section class="section-box homeopathy-bg" id="homeopathy">
         <div class="overlay"></div>
         <div class="content-wrap">
-            <h2>همیوپاتی</h2>
-            <p>آشنایی با متد درمانی "مشابه، مشابه را درمان می‌کند"؛ روشی ایمن و بدون عوارض برای درمان ریشه‌ای بیماری‌ها.</p>
-            <a href="#" class="btn-custom">مشاهده ویدیو معرفی</a>
+            <h2>معرفی همیوپاتی</h2>
+            <p>با این روش معجزه آسا آشنا شوید.</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 7. Corrective Exercises -->
-    <section class="section-box exercise-bg">
+    <!-- Corrective Exercises -->
+    <section class="section-box exercise-bg" id="exercise">
         <div class="overlay"></div>
         <div class="content-wrap">
-            <h2>حرکات اصلاحی</h2>
-            <p>اصلاح ناهنجاری‌های قامتی، پای ضربدری و پرانتزی و بهبود دردهای کمر و گردن با تمرینات تخصصی.</p>
-            <a href="#" class="btn-custom">دریافت برنامه تمرینی</a>
+            <h2>معرفی حرکات اصلاحی</h2>
+            <p>با تخصصی که مجموعه ما در حیطه حرکات اصلاحی دارد و تجمیع تخصص های دیگر آشنا شوید.</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
         </div>
     </section>
 
-    <!-- 8. Contact Form -->
+    <!-- Research -->
+    <section class="section-box research-bg" id="research">
+        <div class="overlay"></div>
+        <div class="content-wrap">
+            <h2>مطالعات و تحقیقات</h2>
+            <p>در این بخش می‌توانید با مطالعات، پژوهش‌ها و رویکردهای علمی مورد استفاده در مجموعه ما بیشتر آشنا شوید.</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section-box education-bg" id="education">
+        <div class="overlay"></div>
+        <div class="content-wrap">
+            <h2>آموزش طب سنتی-سوزنی</h2>
+            <p>در این بخش مطالب آموزشی و محتوای علمی مربوط به طب سنتی و طب سوزنی برای علاقه‌مندان و مراجعین ارائه می‌شود.</p>
+            <a href="#" class="btn-custom">مشاهده اطلاعات</a>
+        </div>
+    </section>
+
+    <!-- Address -->
+    <section class="address-box">
+        <div class="container">
+            <h3>آدرس مطب</h3>
+            <p><strong>اصفهان، خمینی شهر، خیابان شریعتی جنوبی، پاساژ الزهرا، طبقه ۳</strong></p>
+            <p>شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱ - ۰۳۱۳۳۶۷۷۱۸۲</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 contact-card">
-                    <h3 class="text-center mb-4" style="color:#1a4d2e">تماس با ما و پرسش سوال</h3>
+                    <h3 class="text-center mb-4" style="color:#1a4d2e">تماس با ما</h3>
                     <div class="alert-info-custom">
                         <i class="fa fa-clock"></i> مراجع گرامی، زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
                     </div>
@@ -269,7 +397,7 @@
     </section>
 
     <footer>
-        <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی حکیم محفوظ است.</p>
+        <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
