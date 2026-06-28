@@ -1,81 +1,187 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آرشیو ویدیوهای درمان | کلینیک حکیم</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
-        body { font-family: 'Vazirmatn', sans-serif; background-color: #f4f7f6; color: #2d3436; }
-        .hero-section { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .video-card { background: white; border-radius: 20px; border: none; transition: all 0.3s ease; height: 100%; box-shadow: 0 6px 12px rgba(0,0,0,0.05); overflow: hidden; }
-        .video-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .btn-aparat { background-color: #df0000; color: white; border-radius: 10px; padding: 10px; font-weight: bold; transition: 0.3s; width: 100%; display: block; text-align: center; text-decoration: none; }
-        .btn-aparat:hover { background-color: #b30000; color: white; transform: scale(1.02); }
-        .card-body { padding: 20px; text-align: center; }
-        .card-title { font-size: 1.1rem; font-weight: 700; color: #1b4332; margin-bottom: 15px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
-        .back-link { color: #1b4332; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; margin-top: 40px; transition: 0.3s; }
-        .back-link:hover { color: #2d6a4f; }
-    </style>
-</head>
-<body>
+<!-- بخش نمایش ویدیوهای کلینیک حکیم -->
+<section id="clinic-videos" style="direction: rtl; padding: 50px 20px; background-color: #f4f4f4;">
+    <h2 style="text-align: center; color: #002147; margin-bottom: 30px; font-family: Tahoma, Arial;">گنجینه ویدیوهای درمانی کلینیک حکیم</h2>
+    
+    <div class="video-grid">
+        <!-- هر کارت ویدیو شامل عکس کاور و عنوان است -->
+        <div class="video-card" onclick="openVideo('ipgw675')">
+            <img src="stand12years.png" alt="درمان ایستادن ۱۲ سال">
+            <div class="video-title">درمان بیماری که ۱۲ سال نمی‌توانست بایستد</div>
+        </div>
 
-<header class="hero-section text-center">
-    <div class="container">
-        <i class="fas fa-play-circle fa-3x mb-3 text-warning"></i>
-        <h1 class="display-6 fw-bold">تجربیات واقعی درمان‌شدگان</h1>
-        <p class="lead opacity-75">گلچینی از نتایج درمان در کلینیک طب سوزنی حکیم</p>
+        <div class="video-card" onclick="openVideo('fbe93')">
+            <img src="skin.png" alt="بیماری پوستی">
+            <div class="video-title">درمان بیماری پوستی مقاوم</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('q8573')">
+            <img src="ovary.png" alt="تنبلی تخمدان">
+            <div class="video-title">درمان تنبلی تخمدان و فیبروم</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('n2986')">
+            <img src="disc.png" alt="دیسک کمر">
+            <div class="video-title">بهبودی کامل دیسک کمر شدید</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('y6483')">
+            <img src="surgery.png" alt="جراحی یاخچیدی">
+            <div class="video-title">توضیحات جراحی یاخچیدی</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('m0257')">
+            <img src="nausea.png" alt="تهوع بارداری">
+            <div class="video-title">رفع تهوع شدید بارداری</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('v5962')">
+            <img src="gallbladder.png" alt="سنگ کیسه صفرا">
+            <div class="video-title">درمان سنگ کیسه صفرا</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('z1234')">
+            <img src="asthma.png" alt="تنگی نفس">
+            <div class="video-title">بهبودی تنگی نفس و آسم</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('s9876')">
+            <img src="spine.png" alt="تنگی کانال نخاع">
+            <div class="video-title">درمان تنگی کانال نخاع</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('a4567')">
+            <img src="arthrosis.png" alt="آرتروز زانو">
+            <div class="video-title">درمان آرتروز شدید زانو</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('b3210')">
+            <img src="backpain.png" alt="کمردرد">
+            <div class="video-title">کمردرد مقاوم به درمان</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('h7890')">
+            <img src="heel.png" alt="خار پاشنه">
+            <div class="video-title">درمان قطعی خار پاشنه</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('p1122')">
+            <img src="postop.png" alt="پشتیبانی بعد عمل">
+            <div class="video-title">پشتیبانی و مراقبت‌های بعد از عمل</div>
+        </div>
+
+        <div class="video-card" onclick="openVideo('l3344')">
+            <img src="balance.png" alt="عدم تعادل">
+            <div class="video-title">درمان عدم تعادل و سرگیجه</div>
+        </div>
     </div>
-</header>
+</section>
 
-<div class="container pb-5">
-    <div class="row g-4">
-        <!-- ویدیوها بر اساس لیست شما -->
-        <script>
-            const videos = [
-                { title: "پوست مقاوم به درمان", link: "https://www.aparat.com/v/woj08x4" },
-                { title: "کیست تخمدان", link: "https://www.aparat.com/v/xllor6a" },
-                { title: "درمان دیسک پاره", link: "https://www.aparat.com/v/kppgrdg" },
-                { title: "جراحی یاخچیدی؟! (تجربه جراحی)", link: "https://www.aparat.com/v/oadaoq9" },
-                { title: "درمان تهوع و مشکلات گوارشی", link: "https://www.aparat.com/v/jrr68kw" },
-                { title: "درمان سنگ کیسه صفرا", link: "https://www.aparat.com/v/upm1l96" },
-                { title: "درمان آسم کودکان", link: "https://www.aparat.com/v/koejup7" },
-                { title: "تنگی کانال نخاعی", link: "https://www.aparat.com/v/ripg5o3" },
-                { title: "آرتروز شدید زانو", link: "https://www.aparat.com/v/kcz6803" },
-                { title: "کمردرد مقاوم به درمان", link: "https://www.aparat.com/v/vhd726n" },
-                { title: "درمان قطعی خارپاشنه", link: "https://www.aparat.com/v/lazyerp" },
-                { title: "بعد از عمل هم کنارتیم (بازتوانی)", link: "https://www.aparat.com/v/fbw917i" },
-                { title: "درمان عدم تعادل", link: "https://www.aparat.com/v/yarxs0k" },
-                { title: "بعد از ۱۲ سال ایستاد", link: "https://www.aparat.com/v/yarxs0k" }
-            ];
-
-            const container = document.currentScript.parentElement;
-            videos.forEach(vid => {
-                container.innerHTML += `
-                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                        <div class="video-card card">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <h5 class="card-title">${vid.title}</h5>
-                                <a href="${vid.link}" target="_blank" class="btn-aparat">
-                                    <i class="fas fa-play ms-2"></i> مشاهده ویدیو
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-        </script>
-    </div>
-
-    <div class="text-center">
-        <a href="index.html" class="back-link">
-            <i class="fas fa-arrow-right"></i> بازگشت به صفحه اصلی کلینیک
-        </a>
+<!-- مودال (پنجره پاپ‌آپ) برای پخش ویدیو -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <div id="aparatPlayer"></div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<style>
+    /* استایل کارت‌های ویدیو */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .video-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border: 2px solid #002147;
+    }
+    .video-card:hover {
+        transform: translateY(-5px);
+    }
+    .video-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .video-title {
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        color: #002147;
+        background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+    }
+
+    /* استایل مودال (پنجره پخش) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+        position: relative;
+        margin: 5% auto;
+        width: 80%;
+        max-width: 800px;
+        background: #000;
+        border: 3px solid #d4af37; /* رنگ طلایی */
+        border-radius: 10px;
+    }
+    .close-btn {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #aparatPlayer {
+        position: relative;
+        padding-bottom: 56.25%; /* نسبت ۱۶:۹ */
+        height: 0;
+    }
+    #aparatPlayer iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<script>
+    function openVideo(videoId) {
+        const modal = document.getElementById('videoModal');
+        const playerDiv = document.getElementById('aparatPlayer');
+        // ایجاد کد امبد آپارات به صورت آی‌فریم
+        playerDiv.innerHTML = `<iframe src="https://www.aparat.com/video/video/embed/videohash/${videoId}/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
+        modal.style.display = "block";
+    }
+
+    function closeVideo() {
+        const modal = document.getElementById('videoModal');
+        const playerDiv = document.getElementById('aparatPlayer');
+        playerDiv.innerHTML = ""; // متوقف کردن ویدیو با حذف آی‌فریم
+        modal.style.display = "none";
+    }
+
+    // بستن مودال با کلیک خارج از کادر
+    window.onclick = function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target == modal) {
+            closeVideo();
+        }
+    }
+</script>
