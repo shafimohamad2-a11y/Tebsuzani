@@ -1,247 +1,350 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آرشیو نتایج درمان | کلینیک حکیم</title>
-    <style>
-        :root {
-            --gold: #d4af37;
-            --bg: #0b1320;
-            --card-bg: #16263f;
-            --text: #ffffff;
-        }
-        body { 
-            margin: 0; 
-            font-family: 'Tahoma', 'Arial', sans-serif; 
-            background: var(--bg); 
-            color: var(--text); 
-            text-align: center; 
-            line-height: 1.6;
-        }
-        .header { 
-            padding: 50px 20px; 
-            background: linear-gradient(rgba(15, 28, 46, 0.9), rgba(15, 28, 46, 0.9)), url('header-bg.jpg'); /* در صورت وجود بک‌گراند */
-            background-size: cover;
-            border-bottom: 3px solid var(--gold); 
-        }
-        h1 { color: var(--gold); margin: 0; font-size: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-        
-        .back-btn { 
-            display: inline-block; 
-            margin-top: 20px; 
-            color: var(--gold); 
-            text-decoration: none; 
-            font-weight: bold; 
-            border: 1px solid var(--gold);
-            padding: 8px 20px;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
-        .back-btn:hover { background: var(--gold); color: var(--bg); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آرشیو نتایج درمان | کلینیک حکیم</title>
+  <meta name="description" content="آرشیو ویدیوهای نتایج درمان در کلینیک حکیم؛ مشاهده مستقیم ویدیوهای درمان طب سنتی و سوزنی داخل سایت." />
+  <style>
+    :root{
+      --gold:#d4af37;
+      --bg:#0b1320;
+      --card:#16263f;
+      --text:#fff;
+      --muted:#cfd8e3;
+    }
 
-        /* استایل پلیر ریسپانسیو */
-        .player-container { 
-            max-width: 900px; 
-            margin: 30px auto; 
-            padding: 15px; 
-            background: var(--card-bg); 
-            border-radius: 20px; 
-            display: none; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            border: 2px solid var(--gold);
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+    *{
+      box-sizing:border-box;
+    }
 
-        /* استایل گالری */
-        .video-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-            padding: 40px 20px; 
-            max-width: 1200px; 
-            margin: auto; 
-        }
-        .video-card { 
-            background: var(--card-bg); 
-            border-radius: 15px; 
-            overflow: hidden; 
-            cursor: pointer; 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            border: 1px solid #2a3f5a;
-            position: relative;
-        }
-        .video-card:hover { 
-            transform: translateY(-10px); 
-            border-color: var(--gold); 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.6); 
-        }
-        .video-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 2px solid #2a3f5a; }
-        .video-card h3 { font-size: 1.1rem; padding: 15px; margin: 0; color: #eee; }
-        
-        .play-icon {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(212, 175, 55, 0.85);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: 0.3s;
-        }
-        .video-card:hover .play-icon { opacity: 1; }
+    body{
+      margin:0;
+      font-family:Tahoma, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
 
-        @media (max-width: 768px) {
-            .video-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); padding: 20px; }
-            h1 { font-size: 1.5rem; }
-        }
-    </style>
+    .header{
+      text-align:center;
+      padding:50px 20px 35px;
+      border-bottom:2px solid var(--gold);
+      background:linear-gradient(180deg,#0f1c2e 0%, #0b1320 100%);
+    }
+
+    .header h1{
+      margin:0 0 10px;
+      color:var(--gold);
+      font-size:2rem;
+    }
+
+    .header p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .back-btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:10px 20px;
+      border:1px solid var(--gold);
+      border-radius:30px;
+      text-decoration:none;
+      color:var(--gold);
+      transition:.3s;
+      font-weight:bold;
+    }
+
+    .back-btn:hover{
+      background:var(--gold);
+      color:#0b1320;
+    }
+
+    .player-container{
+      max-width:1000px;
+      margin:30px auto 10px;
+      padding:0 20px;
+    }
+
+    .player-box{
+      background:var(--card);
+      border:1px solid rgba(212,175,55,.35);
+      border-radius:18px;
+      padding:15px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      display:none;
+    }
+
+    .video-wrapper{
+      position:relative;
+      width:100%;
+      padding-bottom:56.25%;
+      height:0;
+      overflow:hidden;
+      border-radius:12px;
+      background:#000;
+    }
+
+    .video-wrapper iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    #videoTitle{
+      margin:14px 0 4px;
+      color:var(--gold);
+      font-size:1.1rem;
+      text-align:center;
+    }
+
+    .video-grid{
+      max-width:1200px;
+      margin:0 auto;
+      padding:30px 20px 60px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:24px;
+    }
+
+    .video-card{
+      background:var(--card);
+      border-radius:16px;
+      overflow:hidden;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.08);
+      transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .video-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(212,175,55,.6);
+      box-shadow:0 14px 30px rgba(0,0,0,.35);
+    }
+
+    .thumb{
+      position:relative;
+      height:200px;
+      overflow:hidden;
+      background:#09101a;
+    }
+
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .play-badge{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:rgba(212,175,55,.92);
+      color:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      font-weight:bold;
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+    }
+
+    .video-card h3{
+      margin:0;
+      padding:14px 12px 18px;
+      font-size:1rem;
+      color:#fff;
+      text-align:center;
+    }
+
+    .note{
+      max-width:1000px;
+      margin:0 auto 40px;
+      padding:0 20px;
+      color:#c8d2dc;
+      text-align:center;
+      font-size:.95rem;
+    }
+
+    @media (max-width:768px){
+      .header h1{
+        font-size:1.6rem;
+      }
+
+      .thumb{
+        height:180px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header">
-        <h1>گلچین نتایج درمان در کلینیک حکیم</h1>
-        <p>تجربیات واقعی مراجعین از طب سنتی و سوزنی</p>
-        <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی</a>
-    </header>
+  <header class="header">
+    <h1>گلچین نتایج درمان در کلینیک حکیم</h1>
+    <p>مشاهده مستقیم ویدیوهای نتایج درمان داخل سایت</p>
+    <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
+  </header>
 
-    <!-- محل نمایش ویدیو پس از کلیک -->
-    <div id="mainPlayer" class="player-container">
-        <div class="video-wrapper" id="videoPlaceholder"></div>
-        <p id="videoTitle" style="margin-top: 15px; color: var(--gold); font-weight: bold;"></p>
+  <section class="player-container">
+    <div id="playerBox" class="player-box">
+      <div class="video-wrapper" id="videoPlaceholder"></div>
+      <h2 id="videoTitle">در حال پخش</h2>
+    </div>
+  </section>
+
+  <section class="video-grid">
+
+    <div class="video-card" onclick="playVideo('ipgw675','بعد از ۱۲ سال ایستاد')">
+      <div class="thumb">
+        <img src="stand12years.jpg" alt="بعد از ۱۲ سال ایستاد">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>بعد از ۱۲ سال ایستاد</h3>
     </div>
 
-    <div class="video-grid">
-        <!-- ویدیو ۱ -->
-        <div class="video-card" onclick="playVideo('ipgw675', 'بعد از ۱۲ سال ایستاد')">
-            <div class="play-icon">▶</div>
-            <img src="stand12years.jpg" alt="درمان ۱۲ سال">
-            <h3>بعد از ۱۲ سال ایستاد</h3>
-        </div>
-
-        <!-- ویدیو ۲ -->
-        <div class="video-card" onclick="playVideo('fbe93', 'آرتروز شدید زانو')">
-            <div class="play-icon">▶</div>
-            <img src="arthrosis.png" alt="آرتروز">
-            <h3>آرتروز شدید زانو</h3>
-        </div>
-
-        <!-- ویدیو ۳ -->
-        <div class="video-card" onclick="playVideo('z1234', 'آسم کودکان')">
-            <div class="play-icon">▶</div>
-            <img src="asthma.png" alt="آسم">
-            <h3>آسم کودکان</h3>
-        </div>
-
-        <!-- ویدیو ۴ -->
-        <div class="video-card" onclick="playVideo('b3210', 'کمردرد مقاوم')">
-            <div class="play-icon">▶</div>
-            <img src="backpain.png" alt="کمردرد">
-            <h3>کمردرد مقاوم</h3>
-        </div>
-
-        <!-- ویدیو ۵ -->
-        <div class="video-card" onclick="playVideo('l3344', 'درمان عدم تعادل')">
-            <div class="play-icon">▶</div>
-            <img src="balance.png" alt="تعادل">
-            <h3>درمان عدم تعادل</h3>
-        </div>
-
-        <!-- ویدیو ۶ -->
-        <div class="video-card" onclick="playVideo('n2986', 'درمان دیسک پاره')">
-            <div class="play-icon">▶</div>
-            <img src="disc.png" alt="دیسک">
-            <h3>درمان دیسک پاره</h3>
-        </div>
-
-        <!-- ویدیو ۷ -->
-        <div class="video-card" onclick="playVideo('v5962', 'سنگ کیسه صفرا')">
-            <div class="play-icon">▶</div>
-            <img src="gallbladder.png" alt="صفرا">
-            <h3>سنگ کیسه صفرا</h3>
-        </div>
-
-        <!-- ویدیو ۸ -->
-        <div class="video-card" onclick="playVideo('h7890', 'درمان خار پاشنه')">
-            <div class="play-icon">▶</div>
-            <img src="heel.png" alt="خار پاشنه">
-            <h3>درمان خار پاشنه</h3>
-        </div>
-
-        <!-- ویدیو ۹ -->
-        <div class="video-card" onclick="playVideo('m0257', 'درمان تهوع')">
-            <div class="play-icon">▶</div>
-            <img src="nausea.png" alt="تهوع">
-            <h3>درمان تهوع</h3>
-        </div>
-
-        <!-- ویدیو ۱۰ -->
-        <div class="video-card" onclick="playVideo('q8573', 'کیست تخمدان')">
-            <div class="play-icon">▶</div>
-            <img src="ovary.png" alt="تخمدان">
-            <h3>کیست تخمدان</h3>
-        </div>
-
-        <!-- ویدیو ۱۱ -->
-        <div class="video-card" onclick="playVideo('p1122', 'بعد از عمل هم کنارتیم')">
-            <div class="play-icon">▶</div>
-            <img src="postop.png" alt="پس از عمل">
-            <h3>بعد از عمل هم کنارتیم</h3>
-        </div>
-
-        <!-- ویدیو ۱۲ -->
-        <div class="video-card" onclick="playVideo('fbe93', 'پوست مقاوم به درمان')">
-            <div class="play-icon">▶</div>
-            <img src="skin.png" alt="پوست">
-            <h3>پوست مقاوم به درمان</h3>
-        </div>
-
-        <!-- ویدیو ۱۳ -->
-        <div class="video-card" onclick="playVideo('s9876', 'تنگی کانال نخاع')">
-            <div class="play-icon">▶</div>
-            <img src="spine.png" alt="نخاع">
-            <h3>تنگی کانال نخاع</h3>
-        </div>
-
-        <!-- ویدیو ۱۴ -->
-        <div class="video-card" onclick="playVideo('y6483', 'جراحی یاخچیدی')">
-            <div class="play-icon">▶</div>
-            <img src="surgery.png" alt="جراحی">
-            <h3>جراحی یاخچیدی</h3>
-        </div>
+    <div class="video-card" onclick="playVideo('yarxs0k','درمان تعادل')">
+      <div class="thumb">
+        <img src="balance.png" alt="درمان تعادل">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان تعادل</h3>
     </div>
 
-    <script>
-        function playVideo(hash, title) {
-            const playerDiv = document.getElementById('mainPlayer');
-            const placeholder = document.getElementById('videoPlaceholder');
-            const titleDisplay = document.getElementById('videoTitle');
-            
-            playerDiv.style.display = 'block';
-            titleDisplay.innerText = title;
-            placeholder.innerHTML = `<iframe src="https://www.aparat.com/video/video/embed/videohash/${hash}/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
-            
-            window.scrollTo({ top: 180, behavior: 'smooth' });
-        }
-    </script>
+    <div class="video-card" onclick="playVideo('fbw917i','بعد از عمل هم کنارتیم')">
+      <div class="thumb">
+        <img src="postop.png" alt="بعد از عمل هم کنارتیم">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>بعد از عمل هم کنارتیم</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('kcz6803','آرتروز شدید زانو')">
+      <div class="thumb">
+        <img src="arthrosis.png" alt="آرتروز شدید زانو">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>آرتروز شدید زانو</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('lazyerp','درمان خارپاشنه')">
+      <div class="thumb">
+        <img src="heel.png" alt="درمان خارپاشنه">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان خارپاشنه</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('vhd726n','کمردرد مقاوم به درمان')">
+      <div class="thumb">
+        <img src="backpain.png" alt="کمردرد مقاوم به درمان">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>کمردرد مقاوم به درمان</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('koejup7','آسم کودکان')">
+      <div class="thumb">
+        <img src="asthma.png" alt="آسم کودکان">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>آسم کودکان</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('ripg5o3','درمان تنگی کانال')">
+      <div class="thumb">
+        <img src="spine.png" alt="درمان تنگی کانال">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان تنگی کانال</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('jrr68kw','تهوع')">
+      <div class="thumb">
+        <img src="nausea.png" alt="تهوع">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>تهوع</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('upm1l96','درمان سنگ کیسه صفرا')">
+      <div class="thumb">
+        <img src="gallbladder.png" alt="درمان سنگ کیسه صفرا">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان سنگ کیسه صفرا</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('oadaoq9','جراحی یاخچیدی')">
+      <div class="thumb">
+        <img src="surgery.png" alt="جراحی یاخچیدی">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>جراحی یاخچیدی</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('kppgrdg','درمان دیسک پاره شده')">
+      <div class="thumb">
+        <img src="disc.png" alt="درمان دیسک پاره شده">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان دیسک پاره شده</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('xllor6a','درمان کیست تخمدان')">
+      <div class="thumb">
+        <img src="ovary.png" alt="درمان کیست تخمدان">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان کیست تخمدان</h3>
+    </div>
+
+    <div class="video-card" onclick="playVideo('woj08x4','درمان سوزش پوست')">
+      <div class="thumb">
+        <img src="skin.png" alt="درمان سوزش پوست">
+        <div class="play-badge">▶</div>
+      </div>
+      <h3>درمان سوزش پوست</h3>
+    </div>
+
+  </section>
+
+  <div class="note">
+    با کلیک روی هر کارت، ویدیو بدون خروج از سایت در بالای صفحه پخش می‌شود.
+  </div>
+
+  <script>
+    function playVideo(hash, title) {
+      const playerBox = document.getElementById('playerBox');
+      const placeholder = document.getElementById('videoPlaceholder');
+      const videoTitle = document.getElementById('videoTitle');
+
+      placeholder.innerHTML = `
+        <iframe
+          src="https://www.aparat.com/video/video/embed/videohash/${hash}/vt/frame"
+          title="${title}"
+          allowfullscreen="true"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true">
+        </iframe>
+      `;
+
+      videoTitle.textContent = title;
+      playerBox.style.display = 'block';
+      window.scrollTo({
+        top: playerBox.offsetTop - 20,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 
 </body>
 </html>
