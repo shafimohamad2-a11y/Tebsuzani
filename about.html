@@ -13,7 +13,6 @@
     
     body { font-family: 'Vazirmatn', sans-serif; background-color: #f8f9fa; color: #333; }
     
-    /* Header/Footer Styles (Consistent with Index) */
     .top-bar { background: #1a4d2e; color: #fff; padding: 12px 0; text-align: center; font-size: 0.9rem; }
     .top-bar a { color: #ffcc00; text-decoration: none; font-weight: 700; margin: 0 5px; }
     
@@ -24,9 +23,25 @@
     .about-content { padding: 60px 20px; }
     .section-title { color: #1a4d2e; font-weight: 800; margin-bottom: 30px; text-align: center; }
     
-    .card-team { border: none; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; padding: 20px; }
+    .card-team { 
+      border: none; 
+      border-radius: 15px; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+      transition: 0.3s; 
+      padding: 25px 20px; 
+      background: #fff;
+    }
     .card-team:hover { transform: translateY(-10px); }
-    .card-team h4 { color: #1a4d2e; margin-top: 15px; }
+    .card-team h4 { color: #1a4d2e; margin-top: 15px; font-weight: 800; }
+    
+    .doctor-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #e9f5ee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
     
     footer { background: #1a4d2e; color: #fff; padding: 20px; text-align: center; margin-top: 50px; }
   </style>
@@ -65,27 +80,31 @@
 
     <h2 class="section-title">تیم درمانی ما</h2>
     <div class="row g-4">
+        
         <div class="col-md-4">
             <div class="card-team text-center">
-                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <img src="Dr.baba.jpg" alt="دکتر بابائیان" class="doctor-img mb-3">
                 <h4>دکتر بابائیان</h4>
                 <p>متخصص طب سنتی</p>
             </div>
         </div>
+
         <div class="col-md-4">
             <div class="card-team text-center">
-                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <img src="Dr.haji.jpg" alt="دکتر حاجی‌حیدری" class="doctor-img mb-3">
                 <h4>دکتر حاجی‌حیدری</h4>
                 <p>متخصص طب سنتی</p>
             </div>
         </div>
+
         <div class="col-md-4">
             <div class="card-team text-center">
-                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <img src="Dr.shafi.png" alt="آقای شفیع‌زاده" class="doctor-img mb-3">
                 <h4>آقای شفیع‌زاده</h4>
                 <p>آکوپانچریست، هومیوپات و ارتوپد فنی</p>
             </div>
         </div>
+
     </div>
   </main>
 
