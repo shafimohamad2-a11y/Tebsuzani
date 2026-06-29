@@ -1,169 +1,99 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>درباره ما | کلینیک حکیم</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-font-family:'Vazirmatn',sans-serif;
-margin:0;
-background:#f4f7f6;
-color:#222;
-line-height:2;
-}
-
-.hero{
-height:60vh;
-background:url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1") center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-color:white;
-text-align:center;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.55);
-}
-
-.hero h1{
-position:relative;
-z-index:2;
-font-size:3rem;
-color:#ffcc00;
-}
-
-.section{
-padding:80px 20px;
-display:flex;
-justify-content:center;
-}
-
-.container{
-max-width:900px;
-}
-
-.glass-box{
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 40px rgba(0,0,0,0.15);
-}
-
-.bg1{
-background:url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874") center/cover fixed;
-}
-
-.bg2{
-background:url("https://images.unsplash.com/photo-1576091160550-2173dba999ef") center/cover fixed;
-}
-
-.bg3{
-background:url("https://images.unsplash.com/photo-1538108149393-fbbd81895907") center/cover fixed;
-}
-
-.section-title{
-text-align:center;
-font-size:2rem;
-font-weight:800;
-color:#1a4d2e;
-margin-bottom:30px;
-}
-
-.back-home{
-display:inline-block;
-margin-top:40px;
-background:#1a4d2e;
-color:white;
-padding:12px 30px;
-border-radius:40px;
-text-decoration:none;
-}
-
-.back-home:hover{
-background:#0f2f1d;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2rem;
-}
-
-.glass-box{
-padding:25px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>درباره ما | کلینیک تخصصی حکیم</title>
+  
+  <!-- CSS Links (Same as Index) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
+    
+    body { font-family: 'Vazirmatn', sans-serif; background-color: #f8f9fa; color: #333; }
+    
+    /* Header/Footer Styles (Consistent with Index) */
+    .top-bar { background: #1a4d2e; color: #fff; padding: 12px 0; text-align: center; font-size: 0.9rem; }
+    .top-bar a { color: #ffcc00; text-decoration: none; font-weight: 700; margin: 0 5px; }
+    
+    .navbar-custom { background: #ffffff; padding: 20px 15px; text-align: center; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .navbar-custom h1 { color: #1a4d2e; font-weight: 800; font-size: 1.5rem; margin: 0; }
+    .sub-links a { display: inline-block; margin: 8px 10px; color: #1a4d2e; text-decoration: none; font-weight: 700; }
+    
+    .about-content { padding: 60px 20px; }
+    .section-title { color: #1a4d2e; font-weight: 800; margin-bottom: 30px; text-align: center; }
+    
+    .card-team { border: none; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; padding: 20px; }
+    .card-team:hover { transform: translateY(-10px); }
+    .card-team h4 { color: #1a4d2e; margin-top: 15px; }
+    
+    footer { background: #1a4d2e; color: #fff; padding: 20px; text-align: center; margin-top: 50px; }
+  </style>
 </head>
-
 <body>
 
-<section class="hero">
-<h1>درباره کلینیک حکیم</h1>
-</section>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span><i class="fa fa-phone-alt"></i> کلینیک حکیم - اصفهان، خمینی‌شهر</span>
+    </div>
+  </div>
 
+  <!-- Header -->
+  <div class="navbar-custom">
+    <div class="container">
+      <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
+      <div class="sub-links">
+        <a href="index.html">بازگشت به صفحه اصلی</a>
+      </div>
+    </div>
+  </div>
 
-<section class="section bg1">
-<div class="container">
-<div class="glass-box">
+  <!-- Main Content -->
+  <main class="container about-content">
+    <h2 class="section-title">درباره کلینیک تخصصی حکیم</h2>
+    <p style="font-size: 1.2rem; line-height: 2.2; text-align: justify;">
+        کلینیک تخصصی حکیم از سال ۱۳۹۴ با هدف ارائه‌ درمانی ریشه‌ای، علمی و هدفمند آغاز به کار کرد. بنیان‌گذاران این مجموعه، <strong>دکتر بابائیان</strong> و <strong>دکتر حاجی‌حیدری</strong> (متخصصین طب سنتی)، با بهره‌گیری از تجربیات بالینی گسترده و دانش روز، رویکردی نوین را در درمان بیماری‌ها پایه‌گذاری کرده‌اند.
+        <br><br>
+        ما در کلینیک حکیم به این باور رسیده‌ایم که ادغام هوشمندانه روش‌های مختلف، کلید اصلی درمان است. با ترکیب طب نوین و طب مکمل — شامل <strong>طب سنتی، سوزنی، هومیوپاتی، حرکات اصلاحی و ماساژ</strong> — بسیاری از بیماری‌های مزمن که درمان‌های دیگر در برابر آن‌ها ناکام مانده‌اند، به مسیر بهبودی بازگشته‌اند. حضور ارزشمند <strong>جناب آقای شفیع‌زاده</strong> (آکوپانچریست، هومیوپات و ارتوپد فنی) در تیم ما، نگاه چندبعدی و تخصصی ما را تکمیل کرده است.
+        <br><br>
+        نتایج شگفت‌انگیز مراجعین ما گواهی بر اثربخشی این تلفیق علمی است؛ نتایجی که بسیاری از آن‌ها را به عنوان مستندات علمی و عملی در بخش «گلچین نتایج درمان» برای شما به اشتراک گذاشته‌ایم.
+    </p>
 
-<div class="section-title">معرفی کلینیک</div>
+    <hr class="my-5">
 
-<!-- متن فعلی خودت را دقیقاً اینجا قرار بده -->
-<p>
-متن فعلی شما بدون هیچ تغییری اینجا قرار می‌گیرد...
-</p>
+    <h2 class="section-title">تیم درمانی ما</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card-team text-center">
+                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <h4>دکتر بابائیان</h4>
+                <p>متخصص طب سنتی</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-team text-center">
+                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <h4>دکتر حاجی‌حیدری</h4>
+                <p>متخصص طب سنتی</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-team text-center">
+                <i class="fa fa-user-md fa-3x" style="color: #1a4d2e;"></i>
+                <h4>آقای شفیع‌زاده</h4>
+                <p>آکوپانچریست، هومیوپات و ارتوپد فنی</p>
+            </div>
+        </div>
+    </div>
+  </main>
 
-</div>
-</div>
-</section>
+  <!-- Footer -->
+  <footer>
+    <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
+  </footer>
 
-
-<section class="section bg2">
-<div class="container">
-<div class="glass-box">
-
-<div class="section-title">رویکرد درمانی</div>
-
-<p>
-ادامه متن فعلی شما اینجا قرار می‌گیرد بدون تغییر...
-</p>
-
-</div>
-</div>
-</section>
-
-
-<section class="section bg3">
-<div class="container">
-<div class="glass-box">
-
-<div class="section-title">هدف ما</div>
-
-<p>
-بخش پایانی متن درباره ما بدون هیچ تغییری اینجا قرار می‌گیرد...
-</p>
-
-<a class="back-home" href="index.html">بازگشت به صفحه اصلی</a>
-
-</div>
-</div>
-</section>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
