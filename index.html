@@ -166,45 +166,16 @@
       transform: translateY(-3px);
     }
 
-    .hero-bg {
-      background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .about-bg {
-      background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .guide-bg {
-      background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .results-bg {
-      background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .doctors-bg {
-      background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .acupuncture-bg {
-      background-image: url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .homeopathy-bg {
-      background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .exercise-bg {
-      background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .research-bg {
-      background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80');
-    }
-
-    .education-bg {
-      background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80');
-    }
+    .hero-bg { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80'); }
+    .about-bg { background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80'); }
+    .guide-bg { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80'); }
+    .results-bg { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80'); }
+    .doctors-bg { background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80'); }
+    .acupuncture-bg { background-image: url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80'); }
+    .homeopathy-bg { background-image: url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80'); }
+    .exercise-bg { background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80'); }
+    .research-bg { background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80'); }
+    .education-bg { background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80'); }
 
     .address-box {
       background: #ffffff;
@@ -265,31 +236,12 @@
     }
 
     @media (max-width: 768px) {
-      .content-wrap h2 {
-        font-size: 2rem;
-      }
-
-      .content-wrap p {
-        font-size: 1rem;
-      }
-
-      .navbar-custom h1 {
-        font-size: 1.4rem;
-      }
-
-      .sub-links a {
-        display: block;
-        margin: 8px 0;
-      }
-
-      .section-box {
-        background-attachment: scroll;
-        min-height: 80vh;
-      }
-
-      .contact-card {
-        padding: 25px;
-      }
+      .content-wrap h2 { font-size: 2rem; }
+      .content-wrap p { font-size: 1rem; }
+      .navbar-custom h1 { font-size: 1.4rem; }
+      .sub-links a { display: block; margin: 8px 0; }
+      .section-box { background-attachment: scroll; min-height: 80vh; }
+      .contact-card { padding: 25px; }
     }
   </style>
 </head>
@@ -310,7 +262,7 @@
       <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
       <div class="sub-links">
         <a href="about.html">درباره ما</a>
-        <a href="#guide">راهنمای مراجعین</a>
+        <a href="patient-guide.html">راهنمای مراجعین</a>
         <a href="#results">گلچین نتایج درمان</a>
         <a href="#doctors">معرفی پزشکان</a>
         <a href="#acupuncture">معرفی طب سوزنی</a>
@@ -331,7 +283,7 @@
     </div>
   </section>
 
-  <!-- About Section in Main Page -->
+  <!-- About Section -->
   <section class="section-box about-bg" id="about-info-section">
     <div class="overlay"></div>
     <div class="content-wrap">
@@ -341,13 +293,13 @@
     </div>
   </section>
 
-  <!-- Guide -->
+  <!-- Guide (Changed to Link) -->
   <section class="section-box guide-bg" id="guide">
     <div class="overlay"></div>
     <div class="content-wrap">
       <h2>راهنمای مراجعین</h2>
       <p>در این بخش شما توصیه های غذایی، نکات قبل و بعد از دریافت درمان‌ها، و سوالات متداول مربوطه را می‌خوانید.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
+      <a href="patient-guide.html" class="btn-custom">مشاهده اطلاعات</a>
     </div>
   </section>
 
@@ -391,7 +343,7 @@
     </div>
   </section>
 
-  <!-- Corrective Exercises -->
+  <!-- Exercises -->
   <section class="section-box exercise-bg" id="exercise">
     <div class="overlay"></div>
     <div class="content-wrap">
@@ -436,12 +388,10 @@
       <div class="row justify-content-center">
         <div class="col-md-8 contact-card">
           <h3 class="text-center mb-4" style="color:#1a4d2e;">تماس با ما</h3>
-
           <div class="alert-info-custom">
             <i class="fa fa-clock"></i>
             مراجع گرامی، زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
           </div>
-
           <form>
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -451,9 +401,7 @@
                 <input type="tel" class="form-control" placeholder="شماره تلفن" required />
               </div>
             </div>
-
             <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را اینجا بنویسید..." required></textarea>
-
             <button type="submit" class="btn-custom w-100">ارسال پیام به مدیریت</button>
           </form>
         </div>
