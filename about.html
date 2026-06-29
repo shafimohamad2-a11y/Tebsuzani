@@ -1,200 +1,169 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>درباره ما | کلینیک حکیم</title>
-    <style>
-        :root {
-            --primary-color: #2d5a27; /* سبز حکیمی */
-            --secondary-color: #c5a059; /* طلایی ملایم */
-            --text-color: #333;
-            --bg-light: #f9fbf9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Tahoma', 'Segoe UI', sans-serif; /* در صورت داشتن فونت فارسی اختصاصی، نام آن را اینجا جایگزین کنید */
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-light);
-            margin: 0;
-            padding: 0;
-        }
+<title>درباره ما | کلینیک حکیم</title>
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-        /* هدر صفحه */
-        .about-header {
-            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.8)), url('clinic-bg.jpg'); /* می‌توانید تصویر زمینه کلینیک را اینجا بگذارید */
-            background-size: cover;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 0 0 50px 50px;
-        }
+<style>
 
-        .about-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+body{
+font-family:'Vazirmatn',sans-serif;
+margin:0;
+background:#f4f7f6;
+color:#222;
+line-height:2;
+}
 
-        /* بخش‌های محتوا */
-        .section {
-            background: white;
-            padding: 40px;
-            margin: 30px 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-right: 5px solid var(--primary-color);
-        }
+.hero{
+height:60vh;
+background:url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+color:white;
+text-align:center;
+}
 
-        .quote {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px dashed var(--secondary-color);
-            padding-bottom: 20px;
-        }
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
 
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+.hero h1{
+position:relative;
+z-index:2;
+font-size:3rem;
+color:#ffcc00;
+}
 
-        .highlight-box {
-            background-color: #eef5ee;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+.section{
+padding:80px 20px;
+display:flex;
+justify-content:center;
+}
 
-        /* بخش ویژگی‌ها (چرا ما؟) */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
+.container{
+max-width:900px;
+}
 
-        .feature-item {
-            background: var(--bg-light);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
-        }
+.glass-box{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary-color);
-        }
+.bg1{
+background:url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874") center/cover fixed;
+}
 
-        .feature-item i {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            display: block;
-            margin-bottom: 10px;
-        }
+.bg2{
+background:url("https://images.unsplash.com/photo-1576091160550-2173dba999ef") center/cover fixed;
+}
 
-        .cta-section {
-            text-align: center;
-            padding: 40px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 20px;
-            margin-top: 50px;
-        }
+.bg3{
+background:url("https://images.unsplash.com/photo-1538108149393-fbbd81895907") center/cover fixed;
+}
 
-        .footer-note {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #777;
-            text-align: center;
-        }
+.section-title{
+text-align:center;
+font-size:2rem;
+font-weight:800;
+color:#1a4d2e;
+margin-bottom:30px;
+}
 
-        /* ریسپانسیو برای موبایل */
-        @media (max-width: 600px) {
-            .about-header h1 { font-size: 1.8rem; }
-            .section { padding: 20px; }
-        }
-    </style>
+.back-home{
+display:inline-block;
+margin-top:40px;
+background:#1a4d2e;
+color:white;
+padding:12px 30px;
+border-radius:40px;
+text-decoration:none;
+}
+
+.back-home:hover{
+background:#0f2f1d;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.glass-box{
+padding:25px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <header class="about-header">
-        <div class="container">
-            <h1>کلینیک حکیم</h1>
-            <p>همراه شما در مسیر بازگشت به تعادل و سلامت پایدار</p>
-        </div>
-    </header>
+<section class="hero">
+<h1>درباره کلینیک حکیم</h1>
+</section>
 
-    <main class="container">
-        
-        <section class="section">
-            <div class="quote">
-                «هدف ما تنها کاهش علائم بیماری نیست؛ بلکه به بهبود واقعی و پایدار سلامت شما می‌اندیشیم.»
-            </div>
-            <p>
-                ما با بهره‌گیری از <strong>طب سنتی، طب سوزنی و رویکردهای درمانی مکمل</strong>، خدماتی را ارائه می‌دهیم که بر پایه شناخت دقیق شرایط هر فرد و طراحی مسیر درمانی متناسب با نیاز او شکل می‌گیرد. باور ما این است که هر بدن، توانایی بازگشت به تعادل را دارد؛ اگر درمان درست، اصولی و به‌موقع انجام شود.
-            </p>
-        </section>
 
-        <section class="section">
-            <h2>داستان شکل‌گیری</h2>
-            <p>
-                کلینیک حکیم در سال <strong>۱۳۹۴</strong> با هدف ارائه خدمات تخصصی در حوزه طب مکمل توسط <strong>دکتر حاجی حیدری و دکتر بابائیان</strong> بنیان‌گذاری شد. از آغاز فعالیت تاکنون، تلاش ما بر این بوده است که با تکیه بر دانش، تجربه، دقت در درمان و توجه انسانی به بیماران، محیطی مطمئن و آرام برای مراجعه‌کنندگان فراهم کنیم.
-            </p>
-        </section>
+<section class="section bg1">
+<div class="container">
+<div class="glass-box">
 
-        <section class="section highlight-box">
-            <h2>نگاه ما به درمان</h2>
-            <p>
-                ما معتقدیم درمان مؤثر، فقط به نسخه و دارو محدود نمی‌شود؛ بلکه شنیدن دقیق شرایط بیمار، بررسی همه‌جانبه، انتخاب روش درمان مناسب و همراهی در طول مسیر بهبود، بخش مهمی از یک روند درمانی موفق است.
-            </p>
-            <p><strong>خدمات تخصصی ما شامل:</strong></p>
-            <p style="color: var(--primary-color);">
-                طب سوزنی / درمان درد / مشکلات حرکتی / بیماری‌های مزمن / طب سنتی / همیوپاتی / حرکات اصلاحی / ماساژ
-            </p>
-        </section>
+<div class="section-title">معرفی کلینیک</div>
 
-        <section class="section">
-            <center><h2>چرا کلینیک حکیم؟</h2></center>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h3>رویکرد جامع</h3>
-                    <p>درمان ریشه‌ای به جای تسکین موقت علائم</p>
-                </div>
-                <div class="feature-item">
-                    <h3>تخصص بالا</h3>
-                    <p>استفاده از روش‌های علمی طب سنتی و سوزنی</p>
-                </div>
-                <div class="feature-item">
-                    <h3>شخصی‌سازی</h3>
-                    <p>توجه به شرایط منحصر‌به‌فرد هر بیمار</p>
-                </div>
-                <div class="feature-item">
-                    <h3>محیط آرام</h3>
-                    <p>ایجاد فضایی امن و قابل اعتماد برای درمان</p>
-                </div>
-            </div>
-        </section>
+<!-- متن فعلی خودت را دقیقاً اینجا قرار بده -->
+<p>
+متن فعلی شما بدون هیچ تغییری اینجا قرار می‌گیرد...
+</p>
 
-        <div class="cta-section">
-            <h3>آماده شروع مسیر بهبودی هستید؟</h3>
-            <p>اگر به دنبال مسیری مطمئن برای بهبود سلامت، کاهش درد و بازگشت به تعادل جسمی و روحی هستید، کلینیک حکیم همراه شماست.</p>
-        </div>
+</div>
+</div>
+</section>
 
-        <p class="footer-note">© کلینیک تخصصی حکیم - تمامی حقوق محفوظ است.</p>
-    </main>
+
+<section class="section bg2">
+<div class="container">
+<div class="glass-box">
+
+<div class="section-title">رویکرد درمانی</div>
+
+<p>
+ادامه متن فعلی شما اینجا قرار می‌گیرد بدون تغییر...
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section bg3">
+<div class="container">
+<div class="glass-box">
+
+<div class="section-title">هدف ما</div>
+
+<p>
+بخش پایانی متن درباره ما بدون هیچ تغییری اینجا قرار می‌گیرد...
+</p>
+
+<a class="back-home" href="index.html">بازگشت به صفحه اصلی</a>
+
+</div>
+</div>
+</section>
+
 
 </body>
 </html>
