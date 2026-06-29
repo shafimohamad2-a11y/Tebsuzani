@@ -1,660 +1,233 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>راهنمای مراجعین | کلینیک حکیم</title>
 
-  <title>راهنمای تغذیه مراجعین | کلینیک حکیم</title>
-  <meta name="description" content="راهنمای تغذیه مراجعین کلینیک تخصصی طب سنتی-سوزنی حکیم" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;}
+body{font-family:'Vazirmatn',sans-serif;background:#f8f9fa;color:#222;margin:0}
 
-  <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+/* ====== همان استایل هدر سایت ====== */
+.top-bar{background:#1a4d2e;color:#fff;padding:12px 0;font-size:1rem;position:sticky;top:0;z-index:1100}
+.top-bar a{color:#ffcc00;text-decoration:none;font-weight:700;margin:0 10px;border-bottom:1px dashed #ffcc00}
+.navbar-custom{background:#fff;padding:20px 15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.navbar-custom h1{color:#1a4d2e;font-weight:800;font-size:2rem;margin:0}
+.sub-links{margin-top:15px}
+.sub-links a{display:inline-block;margin:8px 10px;color:#1a4d2e;text-decoration:none;font-weight:700;transition:.3s}
+.sub-links a:hover{color:#c79a00}
 
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: #f6f8f7;
-      margin: 0;
-      padding: 0;
-      color: #2c3e2d;
-      line-height: 1.9;
-    }
+/* ===== Hero ===== */
+.hero-guide{
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1920&q=80');
+background-size:cover;background-position:center;
+color:#fff;text-align:center;padding:120px 20px
+}
+.hero-guide h2{font-size:2.8rem;font-weight:800;color:#ffcc00}
 
-    /* ===== Top Bar ===== */
-    .top-bar {
-      background: #143d24;
-      color: #fff;
-      padding: 12px 0;
-      font-size: 0.95rem;
-      position: sticky;
-      top: 0;
-      z-index: 1100;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-    }
+/* ===== انتخاب بخش ===== */
+.choice-box{padding:70px 0;text-align:center}
+.choice-card{
+background:#fff;
+border-radius:20px;
+padding:40px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+.choice-card:before{
+content:"";
+position:absolute;
+top:-50%;left:-50%;
+width:200%;height:200%;
+background:radial-gradient(circle,#ffcc0033,transparent 60%);
+transform:rotate(25deg);
+}
+.choice-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 45px rgba(199,154,0,.35);
+}
+.choice-card i{font-size:45px;color:#c79a00;margin-bottom:20px}
+.choice-card h4{font-weight:800;color:#1a4d2e}
 
-    .top-bar a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 0 8px;
-      border-bottom: 1px dashed rgba(255,204,0,0.5);
-      transition: 0.3s;
-    }
+/* ===== سکشن محتوا ===== */
+.content-section{padding:80px 0;scroll-margin-top:140px}
+.section-title{text-align:center;font-weight:800;color:#1a4d2e;margin-bottom:50px;font-size:2.2rem;position:relative}
+.section-title:after{
+content:"";
+width:120px;height:3px;background:linear-gradient(to right,#c79a00,#ffdd66);
+display:block;margin:15px auto 0;border-radius:3px
+}
 
-    .top-bar a:hover {
-      color: #fff3b0;
-      border-bottom-color: #fff3b0;
-    }
+/* کارت لوکس */
+.lux-box{
+background:#fff;
+border-radius:18px;
+padding:35px;
+margin-bottom:30px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+border:1px solid rgba(199,154,0,.25);
+transition:.3s
+}
+.lux-box:hover{
+box-shadow:0 20px 45px rgba(199,154,0,.25);
+transform:translateY(-5px)
+}
 
-    /* ===== Navbar ===== */
-    .navbar-custom {
-      background: #ffffff;
-      padding: 24px 15px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      border-bottom: 3px solid #ffcc00;
-    }
+/* نمودار نیم دایره */
+.gauge{
+width:220px;height:110px;
+margin:30px auto;
+background:conic-gradient(#c79a00 0% 50%, #e9ecef 50% 100%);
+border-radius:220px 220px 0 0;
+position:relative
+}
+.gauge span{
+position:absolute;bottom:-30px;left:50%;
+transform:translateX(-50%);
+font-weight:700;color:#1a4d2e
+}
 
-    .navbar-custom h1 {
-      color: #143d24;
-      font-weight: 900;
-      font-size: 1.9rem;
-      margin: 0;
-      letter-spacing: -0.5px;
-    }
+/* نوار پیشرفت */
+.progress-lux{height:25px;background:#e9ecef;border-radius:50px;overflow:hidden;margin:20px 0}
+.progress-lux div{
+height:100%;width:70%;
+background:linear-gradient(to right,#c79a00,#ffdd66);
+box-shadow:0 0 15px #c79a0088;
+}
 
-    .navbar-custom h1 i {
-      color: #ffcc00;
-    }
+/* ویدیو */
+.video-wrap iframe{border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,.15)}
 
-    .sub-links {
-      margin-top: 14px;
-    }
-
-    .sub-links a {
-      display: inline-block;
-      margin: 6px 12px;
-      color: #143d24;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.98rem;
-      transition: 0.3s;
-      position: relative;
-    }
-
-    .sub-links a::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      right: 0;
-      width: 0;
-      height: 2px;
-      background: #ffcc00;
-      transition: width 0.3s;
-    }
-
-    .sub-links a:hover::after { width: 100%; }
-    .sub-links a:hover { color: #c79a00; }
-
-    /* ===== Hero ===== */
-    .hero-section {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&q=80');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      position: relative;
-      text-align: center;
-      color: #fff;
-      padding: 80px 20px;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(20,61,36,0.82), rgba(0,0,0,0.6));
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-    }
-
-    .hero-icon {
-      font-size: 3rem;
-      color: #ffcc00;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .hero-content h2 {
-      font-size: 3.2rem;
-      margin-bottom: 18px;
-      font-weight: 900;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    }
-
-    .hero-content h2 span {
-      color: #ffcc00;
-    }
-
-    .hero-content p {
-      font-size: 1.25rem;
-      line-height: 2;
-      margin: 0;
-      opacity: 0.95;
-    }
-
-    /* ===== Golden Divider ===== */
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 50px auto;
-      gap: 12px;
-    }
-
-    .divider .line {
-      height: 2px;
-      width: 80px;
-      background: linear-gradient(90deg, transparent, #ffcc00, transparent);
-    }
-
-    .divider i {
-      color: #ffcc00;
-      font-size: 1.6rem;
-    }
-
-    /* ===== Main Guide Section ===== */
-    .clinic-guide {
-      direction: rtl;
-      background: linear-gradient(to bottom, #f6f8f7, #ffffff 60%, #f6f8f7);
-      padding: 80px 20px;
-    }
-
-    .guide-container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-heading h2 {
-      font-size: 2.4rem;
-      color: #143d24;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
-
-    .section-heading .badge-icon {
-      display: inline-block;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      border-radius: 50%;
-      background: #143d24;
-      color: #ffcc00;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      box-shadow: 0 8px 20px rgba(20,61,36,0.25);
-    }
-
-    .section-heading p {
-      color: #666;
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 2;
-    }
-
-    /* ===== Banner ===== */
-    .section-banner {
-      margin-bottom: 40px;
-      border-radius: 24px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-      height: 380px;
-    }
-
-    .section-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .section-banner .banner-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(20,61,36,0.85), rgba(0,0,0,0.2));
-      display: flex;
-      align-items: flex-end;
-      padding: 35px;
-    }
-
-    .section-banner .banner-overlay h3 {
-      color: #fff;
-      font-size: 1.9rem;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .section-banner .banner-overlay h3 i {
-      color: #ffcc00;
-      margin-left: 10px;
-    }
-
-    /* ===== Cards ===== */
-    .guide-card {
-      background: #ffffff;
-      padding: 35px;
-      margin-bottom: 30px;
-      border-radius: 22px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.06);
-      line-height: 2.2;
-      font-size: 1rem;
-      transition: 0.35s ease;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #eef2f0;
-    }
-
-    .guide-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.1);
-    }
-
-    .guide-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #143d24, #ffcc00);
-    }
-
-    .card-header-row {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 22px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid #eef2f0;
-    }
-
-    .card-header-row .h-icon {
-      width: 55px;
-      height: 55px;
-      flex-shrink: 0;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-
-    .card-header-row h3 {
-      color: #143d24;
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .guide-card h4 {
-      margin-top: 25px;
-      margin-bottom: 12px;
-      color: #2d6a4f;
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .guide-card h4 i {
-      color: #ffcc00;
-    }
-
-    .guide-card p { margin-bottom: 14px; }
-
-    .guide-card ul {
-      padding-right: 22px;
-      margin-bottom: 0;
-    }
-
-    .guide-card li {
-      margin-bottom: 12px;
-      line-height: 2;
-    }
-
-    /* Card variants */
-    .danger .h-icon { background: #fde2e4; color: #c1121f; }
-    .danger { border-right: 6px solid #c1121f; }
-
-    .success .h-icon { background: #e3f5ec; color: #2d6a4f; }
-    .success { border-right: 6px solid #2d6a4f; }
-
-    .warning .h-icon { background: #fff4e3; color: #f4a261; }
-    .warning { border-right: 6px solid #f4a261; background: #fffaf5; }
-
-    .info .h-icon { background: #e6f4ec; color: #40916c; }
-    .info { border-right: 6px solid #40916c; background: #fbfdfb; }
-
-    /* Two-column layout for lists */
-    .two-col {
-      column-count: 2;
-      column-gap: 30px;
-    }
-
-    @media (max-width: 768px) {
-      .two-col { column-count: 1; }
-    }
-
-    /* Highlight box */
-    .highlight-box {
-      background: linear-gradient(135deg, #f4fbf6, #fffbef);
-      border-right: 5px solid #ffcc00;
-      padding: 20px;
-      border-radius: 14px;
-      margin-top: 22px;
-      font-weight: 700;
-      color: #143d24;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .highlight-box i {
-      color: #f4a261;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
-
-    /* Inline note */
-    .note-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 0;
-      border-bottom: 1px dashed #e0e6e2;
-    }
-
-    .note-line:last-child { border-bottom: none; }
-
-    .note-line .n-icon {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: #143d24;
-      color: #ffcc00;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-    }
-
-    /* ===== Back Button ===== */
-    .back-home-wrap {
-      text-align: center;
-      margin-top: 55px;
-    }
-
-    .btn-custom {
-      padding: 14px 40px;
-      border-radius: 50px;
-      background: #143d24;
-      color: #ffcc00;
-      font-weight: 800;
-      text-decoration: none;
-      transition: 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 2px solid #ffcc00;
-      font-size: 1.05rem;
-    }
-
-    .btn-custom:hover {
-      background: #ffcc00;
-      color: #143d24;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      background: #143d24;
-      color: #fff;
-      padding: 25px;
-      text-align: center;
-      border-top: 3px solid #ffcc00;
-    }
-
-    footer p { margin: 0; font-size: 0.95rem; }
-    footer i { color: #ffcc00; }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .navbar-custom h1 { font-size: 1.3rem; }
-      .sub-links a { display: block; margin: 8px 0; }
-      .hero-section { min-height: 55vh; background-attachment: scroll; }
-      .hero-content h2 { font-size: 2.1rem; }
-      .hero-content p { font-size: 1rem; }
-      .section-heading h2 { font-size: 1.8rem; }
-      .guide-card { padding: 22px; font-size: 0.92rem; }
-      .section-banner { height: 220px; }
-      .section-banner .banner-overlay h3 { font-size: 1.2rem; }
-      .card-header-row h3 { font-size: 1.15rem; }
-    }
-  </style>
+footer{background:#1a4d2e;color:#fff;padding:20px;text-align:center;margin-top:60px}
+</style>
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container d-flex justify-content-center flex-wrap">
-      <span><i class="fa-solid fa-phone-volume"></i> شماره‌های تماس مطب اصفهان: </span>
-      <a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
-      <a href="tel:03133677182">۰۳۱۳۳۶۷۷۱۸۲</a>
-    </div>
-  </div>
+<div class="top-bar">
+<div class="container d-flex justify-content-center flex-wrap">
+<span><i class="fa fa-phone-alt"></i> شماره‌های تماس مطب اصفهان: </span>
+<a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
+<a href="tel:03133677182">۰۳۱۳۳۶۷۷۱۸۲</a>
+</div>
+</div>
 
-  <!-- Header -->
-  <div class="navbar-custom">
-    <div class="container">
-      <h1><i class="fa-solid fa-leaf"></i> کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
-      <div class="sub-links">
-        <a href="index.html"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
-        <a href="about.html">درباره ما</a>
-        <a href="patient-guide.html">راهنمای مراجعین</a>
-        <a href="videos.html">گلچین نتایج درمان</a>
-      </div>
-    </div>
-  </div>
+<div class="navbar-custom">
+<div class="container">
+<h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
+<div class="sub-links">
+<a href="index.html">صفحه اصلی</a>
+<a href="#nutrition">راهنمای تغذیه</a>
+<a href="#score">راهنمای نمره‌دهی</a>
+</div>
+</div>
+</div>
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <i class="fa-solid fa-utensils hero-icon"></i>
-      <h2>راهنمای <span>تغذیه</span> مراجعین</h2>
-      <p>توصیه‌های غذایی و نکات مهم برای مراجعین گرامی کلینیک حکیم</p>
-    </div>
-  </section>
+<section class="hero-guide">
+<h2>راهنمای مراجعین کلینیک حکیم</h2>
+<p>لطفاً پیش از شروع درمان، این بخش‌ها را با دقت مطالعه فرمایید</p>
+</section>
 
-  <section class="clinic-guide">
-    <div class="guide-container">
+<section class="choice-box container">
+<div class="row g-4">
+<div class="col-md-6">
+<a href="#nutrition">
+<div class="choice-card">
+<i class="fa-solid fa-bowl-food"></i>
+<h4>راهنمای تغذیه</h4>
+</div>
+</a>
+</div>
+<div class="col-md-6">
+<a href="#score">
+<div class="choice-card">
+<i class="fa-solid fa-chart-line"></i>
+<h4>راهنمای نمره‌دهی</h4>
+</div>
+</a>
+</div>
+</div>
+</section>
 
-      <div class="section-heading">
-        <span class="badge-icon"><i class="fa-solid fa-notes-medical"></i></span>
-        <h2>راهنمای تغذیه مراجعین</h2>
-        <p>مطالب زیر جهت آگاهی بیشتر مراجعین گرامی کلینیک حکیم ارائه شده است.</p>
-      </div>
+<section id="nutrition" class="content-section container">
+<h3 class="section-title">راهنمای تغذیه مراجعین</h3>
 
-      <div class="divider">
-        <span class="line"></span>
-        <i class="fa-solid fa-leaf"></i>
-        <span class="line"></span>
-      </div>
+<div class="lux-box">
+<h5>❌ غذاهای مضر</h5>
+<p>رشته‌ها، غذاهای خیلی سرد، غذاهای سنگین و پیچیده</p>
+</div>
 
-      <!-- Banner -->
-      <div class="section-banner">
-        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80" alt="راهنمای تغذیه مراجعین">
-        <div class="banner-overlay">
-          <h3><i class="fa-solid fa-heart-pulse"></i>تغذیه صحیح، بخشی از مسیر درمان</h3>
-        </div>
-      </div>
+<div class="lux-box">
+<h5>✅ غذاهای مجاز</h5>
+<p>صبحانه، ناهار و شام مناسب، میان‌وعده‌های سالم</p>
+</div>
 
-      <!-- غذاهای مضر -->
-      <div class="guide-card danger">
-        <div class="card-header-row">
-          <div class="h-icon"><i class="fa-solid fa-ban"></i></div>
-          <h3>غذاهای مضر برای افراد دارای درد</h3>
-        </div>
-        <p>غذاهای زیر برای مراجعه کنندگان(کسانی که دردی دارند) مضر است و باعث می شود یک یا دو روز درد هایشان بیشتر شود</p>
+<div class="lux-box">
+<h5>نکات مهم</h5>
+<p>حجم غذا، نظم تغذیه، حساسیت‌های فردی</p>
+</div>
 
-        <ul>
-          <li>❌️ رشته ها( ماکارونی ، آش رشته ، رشته سوپ)</li>
-          <li>❌ غذاهای خیلی سرد (مثل ماهی،خیار،ماست،دوغ،هندوانه،گرمک و سمسوری ،کشک و بادمجان،لبو،باقالی،عدسی و...)</li>
-          <li>❌ غذاهای خیلی سنگین(یعنی غذاهایی که هضم آنها خیلی طول میکشد) ؛ مثل بریانی(غذای محبوب اصفهانی) ، کله پاچه ، گوشت و لوبیا(گوشت به تنهایی و یا لوبیا به تنهایی منعی ندارد و فقط ترکیب گوشت و لوبیا سنگین است) ، سمنو.</li>
-          <li>❌ غذاهای پیچیده(غذاهایی که از ترکیب سبزیجات،گوشت،غلات،لبنیات درست شده اند) ؛ مثل الویه ،فست فودها، در هم خوری .</li>
-        </ul>
+</section>
 
-        <div class="highlight-box">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span>💢توجه کنید که کاهو ،برنج ، مرغ ، آلو،عناب ،هلو و... خنک اند و خیلی سرد نیستند بنابراین مصرفشان منعی ندارد💢</span>
-        </div>
-      </div>
+<section id="score" class="content-section container">
+<h3 class="section-title">۳- راهنمای نمره دادن در مطب</h3>
 
-      <div class="divider">
-        <span class="line"></span>
-        <i class="fa-solid fa-leaf"></i>
-        <span class="line"></span>
-      </div>
+<div class="gauge"><span>0 تا 20</span></div>
 
-      <!-- Banner 2 -->
-      <div class="section-banner">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&q=80" alt="غذاهای سالم و مجاز">
-        <div class="banner-overlay">
-          <h3><i class="fa-solid fa-circle-check"></i>انتخاب درست غذا، همراه درمان بهتر</h3>
-        </div>
-      </div>
+<div class="lux-box">
+<p>❇️  هر فرد بصورت جلسه ای یا هفته ای به من نمره ای از صفر تا ۲۰ میده ؛ این نمره بیانگر میزان پیشرفت درمانه(افراد با نمره ی صفر وارد پروسه درمان میشند و باید آروم اروم به ۲۰ نزدیک بشند)</p>
+<p>صفر=بد    ۲۰=عالی</p>
+</div>
 
-      <!-- نکته -->
-      <div class="guide-card warning">
-        <div class="card-header-row">
-          <div class="h-icon"><i class="fa-solid fa-circle-info"></i></div>
-          <h3>نکته مهم</h3>
-        </div>
-        <p>⚠️ نکته؛ بعضی غذاها مثل قورمه سبزی ، زردآلو ، تمر و قارا(قره قروت) ،لواشک، شیر، نان جو درد همه بیماران رو افزایش نمیده و توصیه میکنیم اگر فردی بعد از مصرفشان احساس افزایش درد داشت در لیست منعیات اضافه نماید .</p>
-      </div>
+<div class="lux-box">
+<p>✅ هر درد دو فاکتور برای سنجش داره؛ ⚠️زمان ⚠️ شدت
+مثلا فردی که در یک هفته چهار بار سردرد میگرفته وقتی درمانشو انجام میده تعداد / مدت زمان سردردها کمتر میشه و اروم اروم مثل دایره هایی که مشاهده کردید از بین میره .
+شدت درد هم یعنی میزان درد که مشخصا فرد رو مجبور به خوردن مسکن میکرده .
+هرچه شدت و زمان یک درد کمتر میشه ما به هدفمون(یعنی نمره ۲۰) نزدیکتر میشیم و از بیمار میخایم که نمرشو به ما گزارش بده .
+ اگر بیمار امروز درد زیادی داشت نمیتونه نمره صفر به ما بده و یا اگر هیچ دردی نداشت نمیتونه نمره ۲۰ بده ، بلکه باید بازه ی زمانی یک/ دو هفته قبل از طب سوزنی رو با یک / دو هفته حین درمان مقایسه کنه و نمره بده.</p>
+</div>
 
-      <!-- info -->
-      <div class="guide-card info">
-        <div class="card-header-row">
-          <div class="h-icon"><i class="fa-solid fa-book-medical"></i></div>
-          <h3>توصیه قدیمی و علمی</h3>
-        </div>
-        <p>🔆🔆🔆🔆🔆🔆🔆🔆🔆🔆<br>از قدیم بین علما و مردم مرسوم بوده و در کتب طب جدید هم وارد شده که افراد بیمار و دردمند نباید حجم غذایشان زیاد باشد و نظم تغذیه مورد تاکید است.</p>
-      </div>
+<div class="progress-lux"><div></div></div>
 
-      <div class="divider">
-        <span class="line"></span>
-        <i class="fa-solid fa-leaf"></i>
-        <span class="line"></span>
-      </div>
+<div class="lux-box">
+<p>💢خیلی از افراد این نمره دادن رو جدی نمیگیرند ولی باید بدونید که روند درمان رو همین نمرات تعین میکنن و نمرات اشتباه زمان درمانتون طولانی میکنه.
+ 💢 افرادی که افتی در نمراتشون اتفاق می افته حتما باید علت رو شناسایی کنند و همون موقع بگند‌ که من در ادامه درمان حواسم باشه چون افت های با دلیل و بی دلیل با همدیگه خیلی فرق دارن ؛مثلا فردی با زانو درد مراجعه کرده و الان نمره ی ۱۲ به ما میده . هفته بعد میاد و میگه نمرم ۸ شده ؛معمولا در این مواقع میپرسم چرا افت داشتی اگر فرد بگه مثلا مجبور شدم چند طبقه پله برم بالا و پایین ما شدت درمانشو بالاتر میگیریم که جبران بشه.اما اگر بدون دلیل بوده این افت یعنی ما باید شدت درمان رو کمتر کنیم! 
+پس میبینید که عدد ها چقدر با ما حرف میزنن...</p>
+</div>
 
-      <!-- مجاز -->
-      <div class="guide-card success">
-        <div class="card-header-row">
-          <div class="h-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h3>لیست غذاهایی که بیماران میتونن بخورند</h3>
-        </div>
+<div class="lux-box">
+<p>💢 افرادی که نمیتونن نمره بدند در کلینیک ما مدت زمان طولانی تحت درمان قرار میگیرند و نتیجه ی دلخواهشون رو نمیگیرند.</p>
+<p>💢 افرادی که در حین درمان ، نمیتونن از سلامتی خودشون مراقبت کنند قطعا زمان طولانی تری باید صرف کنند و نتیجه کمتری میگیرند.</p>
+</div>
 
-        <div class="highlight-box">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span>💢دقت کنید که این لیست برای رژیم های گلوتن،زخم های گوارشی یا حساسیت های پوستی،چربی خون،دیابت و... ممکن است تغیرات جزئی داشته باشد(مثلا کسی که چربی خون بالایی دارد مشخصا نباید خامه بخورد و تفکیک این موارد برای هر شخص در مطب انجام میشود)💢</span>
-        </div>
+<div class="lux-box">
+<p>💢 درمان طب سوزنی دو مدل میتونه صورت بگیره ؛ تسکینی و درمانی.
+طب سوزنی تسکینی موقتی است ، سریع انجام میشود و تا وقتی که اثر تسکینی اون هست شما دردی ندارید و حین درمان شما رعایت بکنید یا نکنید آن طب سوزنی کار خودشو میکنه(این مدل در کلینیک ما انجام نمیشود)
+طب سوزنی درمانی باز سازی مفاصل یا ارگانی است که در آن ایرادی هست و زمان طولانی تری لازم داره تا بتواند مشکل را رفع کند و اگر حین درمان رعایت نکنید زمان درمان را طولانی تر می کنید چون هرآنچه بافته را رشته میکنید(این مدل در کلینیک ما انجام میشود).</p>
+</div>
 
-        <h4><i class="fa-solid fa-mug-saucer"></i>✅ صبحانه؛</h4>
-        <div class="two-col">
-          <p>انواع نان ، ارده و شیره،تخم مرغ/بلدرچین/کبک، انواع عسل،کره محلی،انواع پنیر، انواع مربا مثل سیب،به،هویج،بالنگ،زردک،شاه توت و... (بجز مربای توت فرنگی و آلبالو) ، گردو و خرما، حلوا ارده، حلیم گندم، شیر ، خامه</p>
-        </div>
+<div class="lux-box">
+<p>💢 میزان بازسازی یک مشکل به  سن،رعایت های فرد حین درمان،شغل،نظم جلسات،میزان تخریب، ویژگی های جسمی،نظم تغذیه و خواب(نظم متابولیسمی) و مدت زمانی که بیمار دچار آن مشکل بوده مربوط است .</p>
+</div>
 
-        <h4><i class="fa-solid fa-utensils"></i>✅ ناهار و شام؛</h4>
-        <div class="two-col">
-          <p>
-            انواع کوکو ها<br>
-            انواع غذاهایی که با گوشت گوسفند / گوساله / شتر / بوقلمون درست میشند(مثل تاس کباب، آبگوشتها ، پلوها،خورشت ها)<br>
-            گوشت پرندگان(بلدرچین،مرغ،کبک)، میگو، انواع پلو ها (پلو هویج/قمری/ماش/مرغ/زردک/شوید/کلم)<br>
-            انواع خورشت(قورمه سبزی،قیمه،کرفس،به، سیب، آلو،فسنجان،بامیه)<br>
-            انواع سوپ ها و انواع آش های سنتی (طبق تجربه آش های بازاری باعث افزایش درد ها میشند)،شیربرنج
-          </p>
-        </div>
+<div class="video-wrap mt-5">
+<iframe src="https://www.aparat.com/video/video/embed/videohash/mln1w0h/vt/frame"
+width="100%" height="420" allowfullscreen></iframe>
+</div>
 
-        <h4><i class="fa-solid fa-cookie-bite"></i>✅ میان‌وعده</h4>
-        <p>✅انواع جوانه ها،پسته ، بادام ، مویز و کشمش، تخمه ها(کلا در مصرف تخمه ها نباید زیاده روی بشه) ، نخودچی و گندم برشته و مواردی ازین دست بعنوان میان وعده هیچ مشکلی ندارند.</p>
-      </div>
+</section>
 
-      <div class="divider">
-        <span class="line"></span>
-        <i class="fa-solid fa-leaf"></i>
-        <span class="line"></span>
-      </div>
+<footer>
+<p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
+</footer>
 
-      <!-- نکات پایانی -->
-      <div class="guide-card info">
-        <div class="card-header-row">
-          <div class="h-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-          <h3>نکات پایانی</h3>
-        </div>
-
-        <div class="note-line">
-          <div class="n-icon"><i class="fa-solid fa-1"></i></div>
-          <p>🔆 افرادی که غذاهایی مصرف میکنند که در لیست بالا نیست روی یک برگه لیستش رو بنویسند تا در مطب مواردی که براشون ممنوعه مشخص بشه.</p>
-        </div>
-
-        <div class="note-line">
-          <div class="n-icon"><i class="fa-solid fa-2"></i></div>
-          <p>🔆 همچنین اگر فردی نسبت به غذایی حساسه خودش حذفش کنه(مثلا برخی میگرنی ها به قورمه سبزی حساس هستن)</p>
-        </div>
-
-        <div class="note-line">
-          <div class="n-icon"><i class="fa-solid fa-3"></i></div>
-          <p>🔆 خواهشا وقتی در بیمارستان به بیمارتون ماهی / ماکارونی / عدس پلو و... میدن شما نذارید بخوره ، یه غذا از خونه ببرید که بیمارتون درد کمتری بکشه و زودتر خوب بشه.</p>
-        </div>
-      </div>
-
-      <div class="back-home-wrap">
-        <a href="index.html" class="btn-custom">
-          <i class="fa-solid fa-arrow-right-long"></i> بازگشت به صفحه اصلی
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <p><i class="fa-solid fa-leaf"></i> © ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
