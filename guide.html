@@ -1,148 +1,152 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پنل راهنمای جامع بیماران | کلینیک حکیم</title>
-    <!-- Bootstrap 5 RTL -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root { --primary-color: #1a5e45; --secondary-color: #2d6a4f; --danger-color: #d90429; --warning-color: #ffb703; --info-color: #0077b6; --dark-blue: #1b263b; }
-        body { font-family: 'Vazirmatn', sans-serif; background-color: #f8fafc; color: #2b2d42; line-height: 1.9; }
-        .hero-section { background: linear-gradient(rgba(26, 94, 69, 0.9), rgba(45, 106, 79, 0.9)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; padding: 100px 0 140px 0; text-align: center; clip-path: ellipse(150% 100% at 50% 0%); }
-        .quick-nav { margin-top: -70px; margin-bottom: 50px; }
-        .nav-btn { background: white; border: none; border-radius: 20px; padding: 20px 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.08); transition: 0.4s; text-decoration: none; color: var(--primary-color); display: flex; flex-direction: column; align-items: center; font-weight: bold; }
-        .nav-btn:hover { transform: translateY(-10px); background: var(--primary-color); color: white; }
-        .main-card { background: white; border: none; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 50px; overflow: hidden; }
-        .card-header-custom { padding: 30px; font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; border-bottom: 2px solid #f1f5f9; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        ul { padding-right: 20px; }
-        li { margin-bottom: 10px; }
-        .essential-item { background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px; text-align: center; border-radius: 18px; font-weight: bold; color: var(--info-color); }
-        .main-footer { background: var(--dark-blue); color: #e2e8f0; padding: 70px 0 30px 0; margin-top: 100px; border-radius: 50px 50px 0 0; }
-        .footer-link { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 10px; }
-    </style>
-</head>
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
 
-<section class="hero-section">
-    <div class="container">
-        <h1 class="fw-extrabold mb-3">پورتال آموزشی و درمانی کلینیک حکیم</h1>
-        <p class="lead opacity-75">راهنمای جامع مراقبت‌های قبل و بعد از درمان برای مراجعین عزیز</p>
+<section class="clinic-guide">
+  <div class="guide-container">
+
+    <h2 class="guide-title">راهنمای تغذیه مراجعین</h2>
+
+    <div class="guide-hero">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Healthy Food">
     </div>
+
+    <!-- غذاهای مضر -->
+    <div class="guide-card danger">
+      <h3>غذاهای مضر برای افراد دارای درد</h3>
+      <p>غذاهای زیر برای مراجعه کنندگان(کسانی که دردی دارند) مضر است و باعث می شود یک یا دو روز درد هایشان بیشتر شود</p>
+
+      <ul>
+        <li>❌️ رشته ها( ماکارونی ، آش رشته ، رشته سوپ)</li>
+        <li>❌ غذاهای خیلی سرد (مثل ماهی،خیار،ماست،دوغ،هندوانه،گرمک و سمسوری ،کشک و بادمجان،لبو،باقالی،عدسی و...)</li>
+        <li>❌ غذاهای خیلی سنگین(یعنی غذاهایی که هضم آنها خیلی طول میکشد) ؛ مثل بریانی(غذای محبوب اصفهانی) ، کله پاچه ، گوشت و لوبیا(گوشت به تنهایی و یا لوبیا به تنهایی منعی ندارد و فقط ترکیب گوشت و لوبیا سنگین است) ، سمنو.</li>
+        <li>❌ غذاهای پیچیده(غذاهایی که از ترکیب سبزیجات،گوشت،غلات،لبنیات درست شده اند) ؛ مثل الویه ،فست فودها، در هم خوری .</li>
+      </ul>
+
+      <div class="highlight-box">
+        💢توجه کنید که کاهو ،برنج ، مرغ ، آلو،عناب ،هلو و... خنک اند و خیلی سرد نیستند بنابراین مصرفشان منعی ندارد💢
+      </div>
+    </div>
+
+    <!-- نکته -->
+    <div class="guide-card warning">
+      <p>⚠️ نکته؛ بعضی غذاها مثل قورمه سبزی ، زردآلو ، تمر و قارا(قره قروت) ،لواشک، شیر، نان جو درد همه بیماران رو افزایش نمیده و توصیه میکنیم اگر فردی بعد از مصرفشان احساس افزایش درد داشت در لیست منعیات اضافه نماید .</p>
+    </div>
+
+    <div class="guide-card info">
+      <p>
+        🔆🔆🔆🔆🔆🔆🔆🔆🔆🔆<br>
+        از قدیم بین علما و مردم مرسوم بوده و در کتب طب جدید هم وارد شده که افراد بیمار و دردمند نباید حجم غذایشان زیاد باشد و نظم تغذیه مورد تاکید است.
+      </p>
+    </div>
+
+    <!-- مجاز -->
+    <div class="guide-card success">
+      <h3>لیست غذاهایی که بیماران میتونن بخورند</h3>
+
+      <div class="highlight-box">
+        💢دقت کنید که این لیست برای رژیم های گلوتن،زخم های گوارشی یا حساسیت های پوستی،چربی خون،دیابت و... ممکن است تغیرات جزئی داشته باشد(مثلا کسی که چربی خون بالایی دارد مشخصا نباید خامه بخورد و تفکیک این موارد برای هر شخص در مطب انجام میشود)💢
+      </div>
+
+      <h4>✅ صبحانه؛</h4>
+      <p>
+        انواع نان ، ارده و شیره،تخم مرغ/بلدرچین/کبک، انواع عسل،کره محلی،انواع پنیر، انواع مربا مثل سیب،به،هویج،بالنگ،زردک،شاه توت و... (بجز مربای توت فرنگی و آلبالو) ، گردو و خرما، حلوا ارده، حلیم گندم، شیر ، خامه
+      </p>
+
+      <h4>✅ ناهار و شام؛</h4>
+      <p>
+        انواع کوکو ها <br>
+        انواع غذاهایی که با گوشت گوسفند / گوساله / شتر / بوقلمون درست میشند(مثل تاس کباب، آبگوشتها ، پلوها،خورشت ها) <br>
+        گوشت پرندگان(بلدرچین،مرغ،کبک)، میگو، انواع پلو ها (پلو هویج/قمری/ماش/مرغ/زردک/شوید/کلم) <br>
+        انواع خورشت(قورمه سبزی،قیمه،کرفس،به، سیب، آلو،فسنجان،بامیه) <br>
+        انواع سوپ ها و انواع آش های سنتی (طبق تجربه آش های بازاری باعث افزایش درد ها میشند)،شیربرنج
+      </p>
+
+      <p>
+        ✅انواع جوانه ها،پسته ، بادام ، مویز و کشمش، تخمه ها(کلا در مصرف تخمه ها نباید زیاده روی بشه) ، نخودچی و گندم برشته و مواردی ازین دست بعنوان میان وعده هیچ مشکلی ندارند.
+      </p>
+    </div>
+
+    <!-- نکات پایانی -->
+    <div class="guide-card info">
+      <p>🔆 افرادی که غذاهایی مصرف میکنند که در لیست بالا نیست روی یک برگه لیستش رو بنویسند تا در مطب مواردی که براشون ممنوعه مشخص بشه.</p>
+      <p>🔆 همچنین اگر فردی نسبت به غذایی حساسه خودش حذفش کنه(مثلا برخی میگرنی ها به قورمه سبزی حساس هستن)</p>
+      <p>🔆 خواهشا وقتی در بیمارستان به بیمارتون ماهی / ماکارونی / عدس پلو و... میدن شما نذارید بخوره ، یه غذا از خونه ببرید که بیمارتون درد کمتری بکشه و زودتر خوب بشه.</p>
+    </div>
+
+  </div>
 </section>
 
-<div class="container quick-nav">
-    <div class="row g-2 justify-content-center">
-        <div class="col-3"><a href="#scoring" class="nav-btn"><i class="fas fa-star"></i>نمره</a></div>
-        <div class="col-3"><a href="#diet" class="nav-btn"><i class="fas fa-utensils"></i>تغذیه</a></div>
-        <div class="col-3"><a href="#hijamat" class="nav-btn"><i class="fas fa-droplet"></i>حجامت/زالو</a></div>
-        <div class="col-3"><a href="#faq" class="nav-btn"><i class="fas fa-clock"></i>زمان</a></div>
-    </div>
-</div>
+<style>
+.clinic-guide {
+  direction: rtl;
+  background: linear-gradient(to bottom, #f6f9f6, #ffffff);
+  padding: 80px 20px;
+  font-family: 'Vazirmatn', sans-serif;
+}
 
-<div class="container">
+.guide-container {
+  max-width: 1000px;
+  margin: auto;
+}
 
-    <!-- بخش ۱: سیستم نمره دهی -->
-    <div class="main-card" id="scoring">
-        <div class="card-header-custom text-success"><i class="fas fa-chart-line"></i> سیستم نمره‌دهی به درمان</div>
-        <div class="card-body p-4 p-md-5">
-            <p>هر فرد بصورت جلسه‌ای یا هفته‌ای به ما نمره‌ای از <strong>۰ تا ۲۰</strong> می‌دهد؛ این نمره بیانگر میزان پیشرفت درمان است. (افراد با نمره صفر وارد پروسه درمان می‌شوند و باید آرام‌آرام به ۲۰ نزدیک شوند).</p>
-            <p>هر درد دو فاکتور برای سنجش دارد: <strong>زمان</strong> و <strong>شدت</strong>. نمره را باید بر اساس مقایسه بازه یک یا دو هفته قبل از درمان با بازه حین درمان بدهید.</p>
-            <div class="alert alert-warning my-4">⚠️ <strong>نکته مهم:</strong> نمرات اشتباه، روند درمان را طولانی می‌کند. افت نمرات بدون دلیل باید گزارش شود تا در مورد شدت درمان تصمیم‌گیری کنیم.</div>
-            <div class="video-wrapper">
-                <iframe src="https://www.aparat.com/video/video/embed/videohash/mln1w0h/vt/frame" allowFullScreen="true"></iframe>
-            </div>
-        </div>
-    </div>
+.guide-title {
+  text-align: center;
+  font-size: 34px;
+  color: #1b4332;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
 
-    <!-- بخش ۲: تغذیه -->
-    <div id="diet" class="main-card">
-        <div class="card-header-custom text-primary"><i class="fas fa-utensils"></i> رژیم غذایی و پرهیزات</div>
-        <div class="card-body p-4 p-md-5">
-            <h5 class="text-danger fw-bold">❌ غذاهای مضر (پرهیزات)</h5>
-            <p>مصرف موارد زیر باعث تشدید درد برای ۱ تا ۲ روز می‌شود:</p>
-            <ul>
-                <li><strong>رشته‌ها:</strong> ماکارونی، آش رشته، رشته سوپ.</li>
-                <li><strong>سردیجات قوی:</strong> ماهی، خیار، ماست، دوغ، هندوانه، گرمک، سمسوری، کشک بادمجان، لبو، باقالی، عدسی.</li>
-                <li><strong>غذاهای خیلی سنگین:</strong> بریانی، کله‌پاچه، ترکیب گوشت و لوبیا، سمنو.</li>
-                <li><strong>غذاهای پیچیده:</strong> الویه، فست‌فودها، در هم‌خوری.</li>
-            </ul>
-            <hr>
-            <h5 class="text-success fw-bold">✅ غذاهای مجاز</h5>
-            <p><strong>صبحانه:</strong> انواع نان، ارده و شیره، تخم‌مرغ/بلدرچین/کبک، عسل، کره محلی، انواع پنیر، مربا (بجز توت‌فرنگی و آلبالو)، گردو و خرما، حلوا ارده، حلیم گندم، شیر و خامه.</p>
-            <p><strong>ناهار و شام:</strong> انواع کوکوها، غذاهای تهیه شده با گوشت گوسفند/گوساله/شتر/بوقلمون، انواع پلو (هویج، قمری، ماش، شوید و...)، انواع خورشت (قورمه‌سبزی، قیمه، کرفس، بامیه و...)، سوپ‌ها و آش‌های خانگی.</p>
-            <p><strong>میان‌وعده‌ها:</strong> جوانه‌ها، پسته، بادام، مویز، کشمش، تخمه (در حد متعادل)، نخودچی و گندم برشته.</p>
-            <p class="text-muted small"><em>توصیه: کاهو، برنج، مرغ، آلو، عناب و هلو طبع خنک دارند و مصرفشان منعی ندارد.</em></p>
-        </div>
-    </div>
+.guide-hero img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
 
-    <!-- بخش ۳: حجامت و اعمال یداوی -->
-    <div class="main-card" id="hijamat">
-        <div class="card-header-custom text-info"><i class="fas fa-hand-holding-medical"></i> راهنمای اعمال یداوی (حجامت، زالو، فصد)</div>
-        <div class="card-body p-4 p-md-5">
-            <h5 class="fw-bold text-danger">⚠️ این افراد نباید حجامت کنند (قبل از حجامت با متخصص مشورت کنند):</h5>
-            <ul>
-                <li>افراد با کمخونی شدید.</li>
-                <li>کسانی که معده سرد، زخم معده، پولیپ معده، کولیت، آلزایمر دارند.</li>
-                <li>کسانی که مکررا دچار افت فشار میشوند.</li>
-                <li>کسانی که ریزش موی ناشی از کمبود املاح، ویتامین‌ها و یا کمخونی دارند.</li>
-                <li>افرادی که افتادگی مثانه، رحم یا حتی معده دارند.</li>
-                <li>افرادی که زود ضعف میکنند.</li>
-                <li>افرادی که افتادگی دریچه میترال دارند.</li>
-                <li>افرادی که سکته اصطلاحا شل کرده‌اند.</li>
-                <li>کسانی که شبها در خواب از دهنشون آب میره.</li>
-            </ul>
-            <hr>
-            <h5 class="fw-bold mt-4">دستورات قبل و بعد:</h5>
-            <ul>
-                <li>۲۴ ساعت قبل و بعد از حجامت/زالو/فصد، از مصرف غذاهای بسیار سرد (ماهی، خیار، هندوانه، عدس، باقالی، لبو) پرهیز کنید.</li>
-                <li>پیش از مراجعه، حمام بروید و موضع را با آب و صابون بشویید.</li>
-                <li>پیش از زالو اندازی، از مصرف شامپو بدن یا شوینده‌های خوشبو پرهیز کنید.</li>
-                <li>تا ۲۴ ساعت بعد از خونگیری، از فعالیت شدید و رابطه جنسی پرهیز کنید.</li>
-                <li>فاصله انجام آزمایش‌های خون رایج با روش‌های خونگیری سنتی باید حداقل ۴۸ ساعت باشد.</li>
-            </ul>
-            <h6 class="fw-bold mt-4">لوازم ضروری برای زالو اندازی (در منزل):</h6>
-            <div class="row g-2 mt-2">
-                <div class="col-3"><div class="essential-item">عسل</div></div>
-                <div class="col-3"><div class="essential-item">زردچوبه</div></div>
-                <div class="col-3"><div class="essential-item">گاز استریل</div></div>
-                <div class="col-3"><div class="essential-item">تتراسایکلین</div></div>
-            </div>
-        </div>
-    </div>
+.guide-card {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  line-height: 2.1;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
 
-    <!-- بخش ۴: سوالات متداول -->
-    <div class="main-card" id="faq">
-        <div class="card-header-custom"><i class="fas fa-question-circle"></i> طول درمان چقدر است؟</div>
-        <div class="card-body p-4">
-            <p>درمان (نه تسکین) یک پروسه زمان‌بر است. دوره زندگی سلول‌های بدن حدود ۳ ماه است؛ بنابراین بازسازی نواحی آسیب‌دیده <strong>حداقل ۳ ماه</strong> زمان و مراقبت نیاز دارد.</p>
-            <p>هرچه عمق تخریب بیشتر و مراقبت کمتر باشد، طول درمان بیشتر می‌شود. بدن ما قابلیت بازسازی دارد، اما اگر فشارهای نامتعارف و غیرقابل تحمل به آن وارد کنید، این روند ترمیم متوقف شده و روند فرسایشی ادامه می‌یابد.</p>
-        </div>
-    </div>
+.guide-card:hover {
+  transform: translateY(-5px);
+}
 
-</div>
+.guide-card h3 {
+  color: #1b4332;
+  margin-bottom: 15px;
+}
 
-<footer class="main-footer">
-    <div class="container text-center">
-        <h3 class="mb-4 text-white">کلینیک تخصصی حکیم</h3>
-        <p class="small opacity-75">مرکز تخصصی طب سنتی و اعمال یداوی</p>
-        <div class="mt-4">
-            <a href="#scoring" class="footer-link d-inline-block mx-3">سیستم نمره‌دهی</a>
-            <a href="#diet" class="footer-link d-inline-block mx-3">پرهیزات غذایی</a>
-            <a href="#hijamat" class="footer-link d-inline-block mx-3">اعمال یداوی</a>
-        </div>
-        <hr class="mt-4 opacity-25">
-        <p class="small opacity-50">تمامی حقوق برای کلینیک حکیم محفوظ است © ۱۴۰۵</p>
-    </div>
-</footer>
+.guide-card h4 {
+  margin-top: 20px;
+  color: #2d6a4f;
+}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+.guide-card ul {
+  padding-right: 20px;
+}
+
+.highlight-box {
+  background: #edf6f0;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.danger { border-right: 6px solid #c1121f; }
+.success { border-right: 6px solid #2d6a4f; }
+.warning { border-right: 6px solid #f4a261; }
+.info { border-right: 6px solid #40916c; }
+
+@media (max-width:768px){
+  .guide-title { font-size: 26px; }
+  .guide-card { padding: 20px; font-size: 14px; }
+}
+</style>
