@@ -24,8 +24,14 @@
     .sticky-nav a { color: #1a4d2e; font-weight: 700; text-decoration: none; padding: 8px 15px; border: 1px solid #1a4d2e; border-radius: 20px; transition: 0.3s; font-size: 0.9rem; }
     .sticky-nav a:hover { background: #1a4d2e; color: #fff; }
 
-    /* بخش‌ها با padding مناسب برای نمایش صحیح زیر منوی چسبان */
+    /* بخش‌ها با اصلاح تصاویر */
     .section-guide { min-height: 90vh; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding: 100px 20px; scroll-margin-top: 120px; }
+    
+    /* تصاویر پس‌زمینه با لینک‌های مستقیم و جایگزین */
+    .bg-1 { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1920'); }
+    .bg-2 { background-image: url('https://images.unsplash.com/photo-1512069772995-83643f1118a8?q=80&w=1920'); }
+    .bg-3 { background-image: url('https://images.unsplash.com/photo-1493246333333-e9622d6b38c0?q=80&w=1920'); }
+
     .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.75); }
     .content-wrap { position: relative; z-index: 2; max-width: 900px; color: #fff; text-align: justify; }
     
@@ -33,16 +39,9 @@
     p { font-size: 1.15rem; line-height: 2.3; margin-bottom: 20px; }
     strong { color: #ffcc00; }
 
-    /* گرافیک اصلاح شده */
     .score-gauge { background: linear-gradient(to right, #ff4d4d, #ffff00, #4dff88); height: 40px; border-radius: 20px; position: relative; margin: 30px 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font-weight: 800; color: #000; font-size: 1.1rem; }
-
-    /* ویدیو */
     .video-container { width: 100%; max-width: 700px; margin: 30px auto; border: 5px solid #fff; border-radius: 10px; overflow: hidden; background: #000; }
     
-    .bg-1 { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80'); }
-    .bg-2 { background-image: url('https://images.unsplash.com/photo-1512069772995-83643f1118a8?auto=format&fit=crop&w=1920&q=80'); }
-    .bg-3 { background-image: url('https://images.unsplash.com/photo-1493246333333-e9622d6b38c0?auto=format&fit=crop&w=1920&q=80'); }
-
     footer { background: #1a4d2e; color: #fff; padding: 20px; text-align: center; }
   </style>
 </head>
@@ -97,12 +96,10 @@
       <h2>راهنمای نمره دهی</h2>
       <p>این مطلب بسیار با اهمیت است؛</p>
       
-      <!-- پلیر آپارات اصلاح شده -->
       <div class="video-container ratio ratio-16x9">
         <iframe src="https://www.aparat.com/video/video/embed/videohash/mln1w0h/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
       </div>
 
-      <!-- نمودار اصلاح شده -->
       <div class="score-gauge">
         <span>۰ (بد)</span>
         <span>۲۰ (عالی)</span>
