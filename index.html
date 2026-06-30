@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>کلینیک حکیم | طب سوزنی و خدمات طب سنتی</title>
-  <meta name="description" content="کلینیک تخصصی حکیم ارائه‌دهنده خدمات طب سنتی، طب سوزنی، همیوپاتی و حرکات اصلاحی با رویکردی تخصصی و جامع در اصفهان خمینی‌شهر." />
+  <title>کلینیک تخصصی حکیم | مرکز طب سوزنی و طب سنتی در اصفهان و خمینی‌شهر</title>
+  <meta name="description" content="کلینیک تخصصی حکیم در اصفهان و خمینی‌شهر؛ ارائه دهنده خدمات طب سوزنی، طب سنتی، هومیوپاتی و حرکات اصلاحی توسط دکتر بابائیان، دکتر حاجی‌حیدری و آقای شفیع‌زاده." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://hakim-clinic.ir/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fa_IR" />
-  <meta property="og:title" content="کلینیک حکیم | طب سوزنی و خدمات طب سنتی" />
-  <meta property="og:description" content="کلینیک تخصصی حکیم ارائه‌دهنده خدمات طب سنتی، طب سوزنی، همیوپاتی و حرکات اصلاحی با رویکردی تخصصی و جامع." />
+  <meta property="og:title" content="کلینیک حکیم | طب سوزنی و خدمات طب سنتی در اصفهان و خمینی‌شهر" />
+  <meta property="og:description" content="مرکز تخصصی درمان‌های مکمل شامل طب سوزنی، طب سنتی و هومیوپاتی در اصفهان و خمینی‌شهر با تیم پزشکی مجرب." />
   <meta property="og:url" content="https://hakim-clinic.ir/" />
   <meta property="og:site_name" content="کلینیک حکیم" />
 
-  <!-- Google Medical Clinic Schema -->
+  <!-- Enhanced Medical Clinic Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,8 +28,10 @@
       "@type": "PostalAddress",
       "streetAddress": "خمینی‌شهر، خیابان شریعتی جنوبی، پاساژ الزهرا، طبقه ۳",
       "addressLocality": "اصفهان",
+      "addressRegion": "اصفهان",
       "addressCountry": "IR"
-    }
+    },
+    "medicalSpecialty": ["طب سوزنی", "طب سنتی", "هومیوپاتی", "حرکات اصلاحی"]
   }
   </script>
 
@@ -39,133 +41,30 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Vazirmatn', sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #222; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    .top-bar { background: #1a4d2e; color: #fff; padding: 12px 0; font-size: 1rem; position: sticky; top: 0; z-index: 1100; }
+    .top-bar a { color: #ffcc00; text-decoration: none; font-weight: 700; margin: 0 10px; border-bottom: 1px dashed #ffcc00; }
+    .top-bar a:hover { color: #fff3b0; }
 
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
+    .navbar-custom { background: #ffffff; padding: 20px 15px; text-align: center; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .navbar-custom h1 { color: #1a4d2e; font-weight: 800; font-size: 2rem; margin: 0; }
+    .sub-links { margin-top: 15px; }
+    .sub-links a { display: inline-block; margin: 8px 10px; color: #1a4d2e; text-decoration: none; font-weight: 700; transition: 0.3s; }
+    .sub-links a:hover { color: #c79a00; }
 
-    .top-bar {
-      background: #1a4d2e;
-      color: #fff;
-      padding: 12px 0;
-      font-size: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1100;
-    }
+    .section-box { min-height: 100vh; display: flex; align-items: center; justify-content: center; background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; position: relative; text-align: center; color: #fff; padding: 60px 20px; }
+    .overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.58); }
+    .content-wrap { position: relative; z-index: 2; max-width: 950px; }
+    .content-wrap h2 { font-size: 2.8rem; margin-bottom: 25px; font-weight: 800; color: #ffcc00; }
+    .content-wrap p { font-size: 1.2rem; line-height: 2; margin-bottom: 30px; }
 
-    .top-bar a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 0 10px;
-      border-bottom: 1px dashed #ffcc00;
-    }
+    .btn-custom { padding: 12px 35px; border-radius: 50px; background: #ffcc00; color: #1a4d2e; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; border: none; }
+    .btn-custom:hover { background: #ffffff; color: #1a4d2e; transform: translateY(-3px); }
 
-    .top-bar a:hover {
-      color: #fff3b0;
-    }
-
-    .navbar-custom {
-      background: #ffffff;
-      padding: 20px 15px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    .navbar-custom h1 {
-      color: #1a4d2e;
-      font-weight: 800;
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    .sub-links {
-      margin-top: 15px;
-    }
-
-    .sub-links a {
-      display: inline-block;
-      margin: 8px 10px;
-      color: #1a4d2e;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .sub-links a:hover {
-      color: #c79a00;
-    }
-
-    .section-box {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      position: relative;
-      text-align: center;
-      color: #fff;
-      padding: 60px 20px;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.58);
-    }
-
-    .content-wrap {
-      position: relative;
-      z-index: 2;
-      max-width: 950px;
-    }
-
-    .content-wrap h2 {
-      font-size: 2.8rem;
-      margin-bottom: 25px;
-      font-weight: 800;
-      color: #ffcc00;
-    }
-
-    .content-wrap p {
-      font-size: 1.2rem;
-      line-height: 2;
-      margin-bottom: 30px;
-    }
-
-    .btn-custom {
-      padding: 12px 35px;
-      border-radius: 50px;
-      background: #ffcc00;
-      color: #1a4d2e;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-      display: inline-block;
-      border: none;
-    }
-
-    .btn-custom:hover {
-      background: #ffffff;
-      color: #1a4d2e;
-      transform: translateY(-3px);
-    }
-
+    /* Background Images Remain the same */
     .hero-bg { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80'); }
     .about-bg { background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1920&q=80'); }
     .guide-bg { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80'); }
@@ -177,63 +76,16 @@
     .research-bg { background-image: url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1920&q=80'); }
     .education-bg { background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80'); }
 
-    .address-box {
-      background: #ffffff;
-      padding: 60px 20px;
-      text-align: center;
-    }
+    .address-box { background: #ffffff; padding: 60px 20px; text-align: center; }
+    .address-box h3 { color: #1a4d2e; font-weight: 800; margin-bottom: 20px; font-size: 2rem; }
+    .address-box p { color: #333; font-size: 1.1rem; margin-bottom: 10px; line-height: 2; }
 
-    .address-box h3 {
-      color: #1a4d2e;
-      font-weight: 800;
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    .address-box p {
-      color: #333;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      line-height: 2;
-    }
-
-    #contact {
-      background: #f4f7f6;
-      padding: 80px 0;
-    }
-
-    .contact-card {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .alert-info-custom {
-      background: #e1f5fe;
-      border-right: 5px solid #0288d1;
-      padding: 15px;
-      margin-bottom: 20px;
-      color: #01579b;
-      text-align: right;
-      border-radius: 8px;
-    }
-
-    .form-control {
-      padding: 12px 15px;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #1a4d2e;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-    }
+    #contact { background: #f4f7f6; padding: 80px 0; }
+    .contact-card { background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+    .alert-info-custom { background: #e1f5fe; border-right: 5px solid #0288d1; padding: 15px; margin-bottom: 20px; color: #01579b; text-align: right; border-radius: 8px; }
+    .form-control { padding: 12px 15px; border-radius: 10px; }
+    footer { background: #1a4d2e; color: #fff; padding: 20px; text-align: center; }
+    footer p { margin: 0; }
 
     @media (max-width: 768px) {
       .content-wrap h2 { font-size: 2rem; }
@@ -250,7 +102,7 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container d-flex justify-content-center flex-wrap">
-      <span><i class="fa fa-phone-alt"></i> شماره‌های تماس مطب اصفهان: </span>
+      <span><i class="fa fa-phone-alt"></i> کلینیک حکیم - اصفهان و خمینی‌شهر: </span>
       <a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
       <a href="tel:03133677182">۰۳۱۳۳۶۷۷۱۸۲</a>
     </div>
@@ -259,17 +111,12 @@
   <!-- Header -->
   <div class="navbar-custom">
     <div class="container">
-      <h1>کلینیک تخصصی طب سنتی-سوزنی حکیم</h1>
+      <h1>کلینیک تخصصی طب سنتی و طب سوزنی حکیم</h1>
       <div class="sub-links">
         <a href="about.html">درباره ما</a>
         <a href="patient-guide.html">راهنمای مراجعین</a>
-        <a href="#results">گلچین نتایج درمان</a>
-        <a href="#doctors">معرفی پزشکان</a>
-        <a href="#acupuncture">معرفی طب سوزنی</a>
-        <a href="#homeopathy">معرفی همیوپاتی</a>
-        <a href="#exercise">معرفی حرکات اصلاحی</a>
-        <a href="#research">مطالعات و تحقیقات</a>
-        <a href="#education">آموزش طب سنتی-سوزنی</a>
+        <a href="videos.html">گلچین نتایج درمان</a>
+        <a href="about.html#doctors">معرفی پزشکان</a>
         <a href="#contact">تماس با ما</a>
       </div>
     </div>
@@ -279,7 +126,8 @@
   <section class="section-box hero-bg" id="home">
     <div class="overlay"></div>
     <div class="content-wrap">
-      <h2>سلامتی با تکیه بر طبیعت</h2>
+      <h2>کلینیک حکیم: درمان ریشه‌ای بیماری‌ها</h2>
+      <p>تلفیق طب سنتی، طب سوزنی و روش‌های نوین درمانی در اصفهان و خمینی‌شهر</p>
     </div>
   </section>
 
@@ -287,19 +135,19 @@
   <section class="section-box about-bg" id="about-info-section">
     <div class="overlay"></div>
     <div class="content-wrap">
-      <h2>درباره ما</h2>
-      <p>کلینیک حکیم با بهره‌گیری از متخصصین مجرب، خدماتی ریشه‌ای، علمی و هدفمند برای مراجعین فراهم می‌کند.</p>
-      <a href="about.html" class="btn-custom">مطالعه بیشتر درباره کلینیک</a>
+      <h2>درباره کلینیک حکیم</h2>
+      <p>ارائه خدمات تخصصی طب سنتی و طب سوزنی با رویکرد علمی و هدفمند برای بیماران در اصفهان و خمینی‌شهر.</p>
+      <a href="about.html" class="btn-custom">مطالعه بیشتر درباره تیم درمانی</a>
     </div>
   </section>
 
-  <!-- Guide (Changed to Link) -->
+  <!-- Guide -->
   <section class="section-box guide-bg" id="guide">
     <div class="overlay"></div>
     <div class="content-wrap">
       <h2>راهنمای مراجعین</h2>
-      <p>در این بخش شما توصیه های غذایی، نکات قبل و بعد از دریافت درمان‌ها، و سوالات متداول مربوطه را می‌خوانید.</p>
-      <a href="patient-guide.html" class="btn-custom">مشاهده اطلاعات</a>
+      <p>اطلاعات ضروری، توصیه‌های قبل از درمان و سوالات متداول بیماران کلینیک حکیم.</p>
+      <a href="patient-guide.html" class="btn-custom">مشاهده راهنما</a>
     </div>
   </section>
 
@@ -308,8 +156,8 @@
     <div class="overlay"></div>
     <div class="content-wrap">
       <h2>گلچین نتایج درمان</h2>
-      <p>در این بخش تنوع بیماری‌هایی که در کلینیک ما تحت درمان بوده‌اند را می‌بینید و اطلاعات بیشتری برای درمان پیدا می‌کنید.</p>
-      <a href="videos.html" class="btn-custom">مشاهده اطلاعات</a>
+      <p>نمونه‌های موفق درمانی در کلینیک طب سنتی و سوزنی حکیم.</p>
+      <a href="videos.html" class="btn-custom">مشاهده ویدئوها</a>
     </div>
   </section>
 
@@ -318,79 +166,56 @@
     <div class="overlay"></div>
     <div class="content-wrap">
       <h2>معرفی پزشکان</h2>
-      <p>رزومه پزشکان و همکاران در این بخش نمایش داده می‌شود.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
+      <p>آشنایی با دکتر بابائیان، دکتر حاجی‌حیدری و آقای شفیع‌زاده متخصصین کلینیک حکیم.</p>
+      <a href="about.html#doctors" class="btn-custom">مشاهده رزومه پزشکان</a>
     </div>
   </section>
 
-  <!-- Acupuncture -->
+  <!-- Remaining sections adjusted for link logic -->
   <section class="section-box acupuncture-bg" id="acupuncture">
     <div class="overlay"></div>
     <div class="content-wrap">
-      <h2>معرفی طب سوزنی</h2>
-      <p>با روش‌های طب سوزنی مورد استفاده در کلینیک ما آشنا شوید.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
+      <h2>خدمات طب سوزنی</h2>
+      <p>درمان تخصصی بیماری‌ها با طب سوزنی در اصفهان توسط کلینیک حکیم.</p>
+      <a href="#contact" class="btn-custom">دریافت مشاوره</a>
     </div>
   </section>
 
-  <!-- Homeopathy -->
   <section class="section-box homeopathy-bg" id="homeopathy">
     <div class="overlay"></div>
     <div class="content-wrap">
-      <h2>معرفی همیوپاتی</h2>
-      <p>با این روش معجزه‌آسا آشنا شوید.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
+      <h2>خدمات هومیوپاتی</h2>
+      <p>درمان ریشه‌ای با متدهای هومیوپاتی در مجموعه حکیم.</p>
+      <a href="#contact" class="btn-custom">دریافت مشاوره</a>
     </div>
   </section>
 
-  <!-- Exercises -->
   <section class="section-box exercise-bg" id="exercise">
     <div class="overlay"></div>
     <div class="content-wrap">
-      <h2>معرفی حرکات اصلاحی</h2>
-      <p>با تخصصی که مجموعه ما در حیطه حرکات اصلاحی دارد و تجمیع تخصص‌های دیگر آشنا شوید.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
+      <h2>حرکات اصلاحی</h2>
+      <p>تلفیق طب سنتی و حرکات اصلاحی برای بهبود مشکلات اسکلتی و مفصلی.</p>
+      <a href="#contact" class="btn-custom">دریافت مشاوره</a>
     </div>
   </section>
 
-  <!-- Research -->
-  <section class="section-box research-bg" id="research">
-    <div class="overlay"></div>
-    <div class="content-wrap">
-      <h2>مطالعات و تحقیقات</h2>
-      <p>در این بخش می‌توانید با مطالعات، پژوهش‌ها و رویکردهای علمی مورد استفاده در مجموعه ما بیشتر آشنا شوید.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="section-box education-bg" id="education">
-    <div class="overlay"></div>
-    <div class="content-wrap">
-      <h2>آموزش طب سنتی-سوزنی</h2>
-      <p>در این بخش مطالب آموزشی و محتوای علمی مربوط به طب سنتی و طب سوزنی برای علاقه‌مندان و مراجعین ارائه می‌شود.</p>
-      <a href="#contact" class="btn-custom">مشاهده اطلاعات</a>
-    </div>
-  </section>
-
-  <!-- Address -->
+  <!-- Address & Footer -->
   <section class="address-box">
     <div class="container">
-      <h3>آدرس مطب</h3>
+      <h3>آدرس مطب کلینیک حکیم</h3>
       <p><strong>اصفهان، خمینی‌شهر، خیابان شریعتی جنوبی، پاساژ الزهرا، طبقه ۳</strong></p>
-      <p>شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱ - ۰۳۱۳۳۶۷۷۱۸۲</p>
+      <p>تلفن نوبت‌دهی: ۰۳۱۳۳۶۷۷۱۸۱ - ۰۳۱۳۳۶۷۷۱۸۲</p>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 contact-card">
-          <h3 class="text-center mb-4" style="color:#1a4d2e;">تماس با ما</h3>
+          <h3 class="text-center mb-4" style="color:#1a4d2e;">تماس با مدیریت کلینیک</h3>
           <div class="alert-info-custom">
             <i class="fa fa-clock"></i>
-            مراجع گرامی، زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
+            زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
           </div>
           <form>
             <div class="row">
@@ -401,8 +226,8 @@
                 <input type="tel" class="form-control" placeholder="شماره تلفن" required />
               </div>
             </div>
-            <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را اینجا بنویسید..." required></textarea>
-            <button type="submit" class="btn-custom w-100">ارسال پیام به مدیریت</button>
+            <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را درباره طب سنتی یا طب سوزنی اینجا بنویسید..." required></textarea>
+            <button type="submit" class="btn-custom w-100">ارسال پیام</button>
           </form>
         </div>
       </div>
