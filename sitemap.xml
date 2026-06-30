@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- صفحه اصلی -->
   <url>
     <loc>https://hakim-clinic.ir/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- اگر صفحات دیگری مثل تماس با ما یا آرشیو ویدیوها دارید، به شکل زیر اضافه کنید: -->
+  <!--
+  <url>
+    <loc>https://hakim-clinic.ir/videos.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
 </urlset>
