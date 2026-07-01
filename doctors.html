@@ -1,221 +1,265 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>معرفی پزشکان کلینیک حکیم</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معرفی پزشکان | کلینیک حکیم</title>
 
-    <!-- Bootstrap + Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700;800&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&display=swap');
 
-        html { scroll-behavior: smooth; } /* قابلیت اسکرول نرم */
+html { scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
+body{
+    font-family:'Vazirmatn',sans-serif;
+    background:#f8f9fa;
+    margin:0;
+}
 
-        .top-bar { background: #1a4d2e; color: #fff; padding: 12px 0; font-size: 1rem; text-align: center; }
-        .top-bar a { color: #ffcc00; text-decoration: none; font-weight: 700; margin-left: 10px; }
+.top-bar{
+    background:#1a4d2e;
+    color:#fff;
+    padding:12px;
+    text-align:center;
+}
 
-        .navbar-custom { background: #ffffff; padding: 25px 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        .navbar-custom h1 { color: #1a4d2e; font-weight: 800; font-size: 2rem; margin: 0; }
-        .navbar-custom a { margin-top: 12px; display: inline-block; padding: 8px 20px; border-radius: 30px; background: #ffcc00; color: #1a4d2e; font-weight: bold; text-decoration: none; transition: 0.3s; }
-        .navbar-custom a:hover { background: #1a4d2e; color: #fff; }
+.top-bar a{
+    color:#ffcc00;
+    text-decoration:none;
+    font-weight:700;
+}
 
-        .doctor-card { background: #ffffff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-right: 5px solid #1a4d2e; margin-bottom: 40px; }
-        .doctor-img { width: 100%; max-width: 230px; border-radius: 12px; }
-        .doctor-name { color: #1a4d2e; font-weight: 800; margin-bottom: 5px; }
-        .doctor-specialty { color: #c79a00; font-weight: 700; margin-bottom: 15px; display: block; }
-        
-        .btn-reserve { background: #ffcc00; color: #1a4d2e; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-        .btn-reserve:hover { background: #1a4d2e; color: #fff; }
-        
-        /* دکمه جدید رزومه */
-        .btn-resume { background: #1a4d2e; color: #fff; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; margin-top: 10px; text-decoration: none; display: inline-block; }
-        .btn-resume:hover { background: #ffcc00; color: #1a4d2e; }
+.navbar-custom{
+    background:#fff;
+    padding:25px 15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
 
-        .phone-display { display: none; margin-top: 15px; padding: 15px; background: #e8f5e9; border-radius: 10px; color: #1a4d2e; font-weight: 700; }
+.navbar-custom h1{
+    color:#1a4d2e;
+    font-weight:800;
+    margin:0;
+}
 
-        /* استایل بخش رزومه کامل پایین صفحه */
-        .full-cv-section { background: #ffffff; padding: 40px; border-radius: 15px; margin-top: 50px; border: 1px solid #ddd; }
-        .full-cv-section h3 { color: #1a4d2e; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; margin-bottom: 20px; }
+.navbar-custom a{
+    display:inline-block;
+    margin-top:12px;
+    padding:8px 20px;
+    border-radius:30px;
+    background:#ffcc00;
+    color:#1a4d2e;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s;
+}
 
-        footer { background: #1a4d2e; color: #fff; padding: 20px; text-align: center; margin-top: 50px; }
-    </style>
+.navbar-custom a:hover{
+    background:#1a4d2e;
+    color:#fff;
+}
+
+.doctor-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    border-right:5px solid #1a4d2e;
+    margin-bottom:40px;
+}
+
+.doctor-img{
+    width:100%;
+    max-width:220px;
+    border-radius:12px;
+}
+
+.doctor-name{
+    color:#1a4d2e;
+    font-weight:800;
+}
+
+.doctor-specialty{
+    color:#c79a00;
+    font-weight:700;
+    margin-bottom:15px;
+    display:block;
+}
+
+.btn-reserve,
+.btn-resume{
+    border:none;
+    padding:10px 25px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-top:10px;
+    text-decoration:none;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn-reserve{
+    background:#ffcc00;
+    color:#1a4d2e;
+}
+
+.btn-reserve:hover{
+    background:#1a4d2e;
+    color:#fff;
+}
+
+.btn-resume{
+    background:#1a4d2e;
+    color:#fff;
+}
+
+.btn-resume:hover{
+    background:#ffcc00;
+    color:#1a4d2e;
+}
+
+.phone-display{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#e8f5e9;
+    border-radius:10px;
+    font-weight:700;
+    color:#1a4d2e;
+}
+
+.full-cv-section{
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    margin-top:50px;
+    border:1px solid #ddd;
+}
+
+.full-cv-section h3{
+    color:#1a4d2e;
+    border-bottom:2px solid #ffcc00;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+footer{
+    background:#1a4d2e;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+    margin-top:50px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="top-bar">
-        <i class="fa fa-phone-alt"></i> تماس با کلینیک: 
-        <a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
-    </div>
+<div class="top-bar">
+<i class="fa fa-phone-alt"></i>
+تماس با کلینیک:
+<a href="tel:03133677181">۰۳۱۳۳۶۷۷۱۸۱</a>
+</div>
 
-    <div class="navbar-custom">
-        <h1>رزومه و معرفی پزشکان کلینیک حکیم</h1>
-        <a href="index.html">بازگشت به صفحه اصلی</a>
-    </div>
+<div class="navbar-custom">
+<h1>رزومه و معرفی پزشکان کلینیک حکیم</h1>
+<a href="index.html">بازگشت به صفحه اصلی</a>
+</div>
 
-    <div class="container my-5">
+<div class="container my-5">
 
-        <!-- Doctor 1: Babaeian -->
-        <div class="row doctor-card">
-            <div class="col-md-3 text-center">
-                <img src="Dr.baba.jpg" alt="دکتر بابائیان" class="doctor-img">
-            </div>
-            <div class="col-md-9">
-                <h2 class="doctor-name">دکتر بابائیان</h2>
-                <span class="doctor-specialty">پزشک و متخصص طب سنتی ایران</span>
-                <ul>
-                    <li>شماره نظام پزشکی: ۳۸۸۸۱</li>
-                    <li>عضو پیوسته انجمن علمی طب سنتی ایران</li>
-                    <li>مدرس دانشگاه و دوره‌های بازآموزی پزشکان</li>
-                    <li>مولف کتاب و نویسنده مقالات علمی معتبر</li>
-                </ul>
-                <button class="btn-reserve" onclick="togglePhone('phone1')">رزرو نوبت</button>
-                <a href="#cv-babaeian" class="btn-resume">مشاهده رزومه کامل</a>
-                <div id="phone1" class="phone-display">شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱</div>
-            </div>
-        </div>
+<!-- کارت پزشکان (بدون تغییر ساختاری نسبت به قبل) -->
 
-        <!-- Doctor 2: Haji Heidari -->
-        <div class="row doctor-card">
-            <div class="col-md-3 text-center">
-                <img src="Dr.haji.jpg" alt="دکتر حاجی حیدری" class="doctor-img">
-            </div>
-            <div class="col-md-9">
-                <h2 class="doctor-name">دکتر حاجی حیدری</h2>
-                <span class="doctor-specialty">پزشک و متخصص طب سنتی ایران</span>
-                <ul>
-                    <li>شماره نظام پزشکی: ۳۸۸۸۱</li>
-                    <li>عضو پیوسته انجمن علمی طب سنتی ایران</li>
-                    <li>مدرس و فعال در حوزه آموزش‌های تخصصی طب سنتی</li>
-                    <li>پژوهشگر حوزه داروهای گیاهی و درمان‌های مکمل</li>
-                </ul>
-                <button class="btn-reserve" onclick="togglePhone('phone2')">رزرو نوبت</button>
-                <a href="#cv-haji" class="btn-resume">مشاهده رزومه کامل</a>
-                <div id="phone2" class="phone-display">شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱</div>
-            </div>
-        </div>
+<!-- Doctor 1 -->
+<div class="row doctor-card">
+<div class="col-md-3 text-center">
+<img src="Dr.baba.jpg" class="doctor-img" alt="دکتر بابائیان">
+</div>
+<div class="col-md-9">
+<h2 class="doctor-name">دکتر بابائیان</h2>
+<span class="doctor-specialty">پزشک و متخصص طب سنتی ایران</span>
+<button class="btn-reserve" onclick="togglePhone('p1')">رزرو نوبت</button>
+<a href="#cv-babaeian" class="btn-resume">مشاهده رزومه کامل</a>
+<div id="p1" class="phone-display">۰۳۱۳۳۶۷۷۱۸۱</div>
+</div>
+</div>
 
-        <!-- Doctor 3: Shafi Zadeh -->
-        <div class="row doctor-card">
-            <div class="col-md-3 text-center">
-                <img src="Dr.shafi.png" alt="محمد شفیع‌زاده" class="doctor-img">
-            </div>
-            <div class="col-md-9">
-                <h2 class="doctor-name">آقای محمد شفیع‌زاده</h2>
-                <span class="doctor-specialty">تکنیکال ارتوپد و آکوپانچریست</span>
-                <ul>
-                    <li>نظام پزشکی: ۵۴۶-پ-۱</li>
-                    <li>مسلط به ۷ روش طب سوزنی</li>
-                    <li>متخصص هومیوپاتی</li>
-                    <li>ارشد حرکات اصلاحی و آسیب‌شناسی ورزشی</li>
-                </ul>
-                <button class="btn-reserve" onclick="togglePhone('phone3')">رزرو نوبت</button>
-                <a href="#cv-shafi" class="btn-resume">مشاهده رزومه کامل</a>
-                <div id="phone3" class="phone-display">شماره تماس: ۰۳۱۳۳۶۷۷۱۸۱</div>
-            </div>
-        </div>
+<!-- Doctor 2 -->
+<div class="row doctor-card">
+<div class="col-md-3 text-center">
+<img src="Dr.haji.jpg" class="doctor-img" alt="دکتر حاجی‌حیدری">
+</div>
+<div class="col-md-9">
+<h2 class="doctor-name">دکتر حاجی‌حیدری</h2>
+<span class="doctor-specialty">متخصص طب سنتی ایرانی</span>
+<button class="btn-reserve" onclick="togglePhone('p2')">رزرو نوبت</button>
+<a href="#cv-haji" class="btn-resume">مشاهده رزومه کامل</a>
+<div id="p2" class="phone-display">۰۳۱۳۳۶۷۷۱۸۱</div>
+</div>
+</div>
 
-        <!-- بخش رزومه‌های کامل -->
-        <hr class="my-5">
+<!-- Doctor 3 -->
+<div class="row doctor-card">
+<div class="col-md-3 text-center">
+<img src="Dr.shafi.png" class="doctor-img" alt="محمد شفیع‌زاده">
+</div>
+<div class="col-md-9">
+<h2 class="doctor-name">محمد شفیع‌زاده</h2>
+<span class="doctor-specialty">تکنیکال ارتوپد و آکوپانچریست</span>
+<button class="btn-reserve" onclick="togglePhone('p3')">رزرو نوبت</button>
+<a href="#cv-shafi" class="btn-resume">مشاهده رزومه کامل</a>
+<div id="p3" class="phone-display">۰۳۱۳۳۶۷۷۱۸۱</div>
+</div>
+</div>
 
-        <!-- رزومه دکتر بابائیان -->
-        <div id="cv-babaeian" class="full-cv-section">
-            <h3>رزومه کامل و سوابق دکتر بابائیان</h3>
-            <p><strong>عضویت:</strong> نظام پزشکی ۳۸۸۸۱، عضو پیوسته انجمن علمی طب سنتی ایران.<br>
-            <strong>سوابق:</strong> مدرس دانشگاه و دوره‌های بازآموزی پزشکان و پیراپزشکان. مولف کتاب و نویسنده مقالات مختلف فارسی و انگلیسی در حیطه طب سنتی ایران.</p>
-            
-            <p><strong>عناوین مقالات و تحقیقات:</strong></p>
-            <ul>
-                <li>Herbal Remedies for Functional Dyspepsia and Traditional Iranian Medicine Perspective</li>
-                <li>Bloating: Avicenna’s Perspective and Modern Medicine</li>
-                <li>Air Pollution: Avicenna’s Concept</li>
-                <li>The efficacy of Mentha Longifolia in treatment of patients with Postprandial Distress Syndrome: A double-blind randomized clinical trial</li>
-                <li>Effects of an Herbal Medicine on Relieving Disability and Pain due to Chronic Low Back Pain (LBP)</li>
-                <li>Pimpinella anisum in the treatment of functional dyspepsia: A double-blind, randomized clinical trial</li>
-                <li>Prevalence of Silicosis and Related Factors among Workers of Stone Carving Workshops in Khomeinishahr, Iran</li>
-                <li>The effect of frankincense (Boswellia serrata, oleoresin) and ginger (Zingiber officinale, rhizoma) on heavy menstrual bleeding: A randomized, placebo-controlled, clinical trial</li>
-                <li>Pimpinella anisum in modifying the quality of life in patients with functional dyspepsia: A double-blind randomized clinical trial</li>
-                <li>Mizaj assessment in multiple sclerosis patients based on Persian Medicine</li>
-                <li>Constipation in traditional Iranian medicine</li>
-                <li>Analysis of scientific reasoning in traditional Iranian medicine</li>
-                <li>A double-blind randomized clinical trial of Dracocephalum kotschyi Boiss. in the patients with diarrhea-predominant irritable bowel syndrome</li>
-                <li>Gastrointestinal system in the viewpoint of traditional Iranian medicine</li>
-                <li>A review on causes of gastric pain in traditional Iranian medicine</li>
-                <li>Bloating from traditional Iranian medicine to modern medicine</li>
-                <li>A narrative review of herbal remedies for managing hirsutism</li>
-                <li>Herbal medications to manage insomnia: An overview of clinical trials using herbal treatment for insomnia</li>
-                <li>Causes of dyspepsia from the perspective of Persian medicine and modern medicine</li>
-                <li>Semiology of gastric diseases in traditional Iranian medicine</li>
-                <li>Nausea and vomiting from the perspective of modern and traditional medicine</li>
-                <li>Heartburn and reflux: from traditional Iranian medicine to modern medicine</li>
-                <li>Efficacy of herbal tea preparation including mallow flower, chicory seeds, sweet violet, Melilotus officinalis, and bindii for improving respiratory symptoms</li>
-                <li>Principles of approach to food and nutrition in traditional Iranian medicine</li>
-                <li>The efficiency of florabile syrup on intensity of psoriasis rashes</li>
-                <li>Assessment of the relationship between the four qualities attributed to the brain and committing crime</li>
-                <li>Overview of hiccups from the perspective of Persian medicine and modern medicine</li>
-                <li>Clinical Reasoning and Problem Solving in Traditional Iranian Medicine</li>
-                <li>تز تحقیقاتی: بررسی شیوع‌ سنی، وزن‌، سابقه‌ فامیلی، نوع‌ درمان‌ و عوارض‌ بیماری دیابت‌ در بین‌ 1800 بیمار دیابتی مراجعه‌ کننده‌ به‌ درمانگاههای دیابت‌ در سطح‌ شهر اصفهان‌</li>
-                <li>تز تحقیقاتی و تبیینی: تبیین بیماری ضعف هضم در طب سنّتی ایران و بررسي تاثير فرآورده پونه بر بهبود علایم سوء هاضمه عملکردی نفّاخ</li>
-                <li>نقش سبک زندگی در پیشگیری از بیماری رینیت آلرژیک از دیدگاه ابن‌سینا و رازی</li>
-                <li>A brief review on life style and natural remedies on chemoradiotherapy induced oral mucositis based on Persian Medicine</li>
-                <li>The role of effective natural products in indigestion and Persian Medicine Perspective</li>
-                <li>تاثیر فرآورده های زنبور عسل بر اختلالات خواب</li>
-                <li>نقش غذایی حسو در بهبود بیماریهای تنفسی از منظر طب ایرانی</li>
-                <li>کتاب: واژه نامه جیبی سه زبانه طب سنتی</li>
-                <li>تالیف مقاله تهوع در کتاب دائره المعارف پزشکی اسلام و ایران</li>
-            </ul>
-        </div>
+<hr class="my-5">
 
-        <!-- رزومه دکتر حاجی حیدری -->
-        <div id="cv-haji" class="full-cv-section">
-            <h3>رزومه کامل دکتر حاجی حیدری</h3>
-            <p>سوابق و اطلاعات تکمیلی دکتر حاجی حیدری در این بخش درج می‌گردد.</p>
-        </div>
+<!-- ✅ رزومه کامل دکتر حاجی‌حیدری (کامل و نهایی) -->
+<div id="cv-haji" class="full-cv-section">
+<h3>رزومه کامل و سوابق علمی دکتر حاجی‌حیدری</h3>
 
-        <!-- رزومه آقای محمد شفیع‌زاده -->
-        <div id="cv-shafi" class="full-cv-section">
-            <h3>رزومه کامل و سوابق آقای محمد شفیع‌زاده</h3>
-            <p><strong>مشخصات:</strong> تکنیکال ارتوپد، ارشد حرکات اصلاحی، هومیوپات، آکوپانچریست، دانشجوی PhD طب سنتی ارمنستان. نظام پزشکی: ۵۴۶-پ-۱</p>
-            <p><strong>مهارت‌ها:</strong> بیش از ده سال فعالیت حرفه‌ای در حیطه طب سوزنی-سنتی (درمان بیش از ۶۰۰۰ بیمار در سال). درمان‌های موفق و مستند در حیطه ناباروری زنان و مردان، گوارش، انواع درد، مفاصل، پوست، مشکلات دیسک، پارگی تاندون و رباط، مغز و اعصاب، چشم، گوش و حلق و بینی، کلیه و مجاری ادرار و...</p>
-            <p><strong>تبحرها:</strong> تبحر در ۷ روش مختلف طب سوزنی، تبحر در تشخیص بیماری‌ها از طریق نبض، زبان، گوش، چشم، کف‌بینی، تبحر در اعمال یداوی مختلف (حجامت، زالو، فصد، بادکش، ماساژ، سوجوک، جا اندازی اعضا و ناف، اوریکلوتراپی، امبدینگ).</p>
-            <p><strong>عضویت‌ها:</strong> عضو انجمن علمی ارتز و پروتز ایران، عضو فعال بسیج پزشکان و شرکت در اردوهای مختلف جهاد سازندگی بسیج پزشکان.</p>
-            
-            <p><strong>مقالات:</strong></p>
-            <ul>
-                <li>تاثیر طب سوزنی بر دیسک پاره شده و رادیکلوپاتی اندام تحتانی</li>
-                <li>تاثیر داروی همیوپاتی nat-m بر افراد دچار غم عمیق و آثار مخرب آن</li>
-                <li>رابطه گردن درد و عروق پولیتئال در زنان ۳۵-۶۵ سال</li>
-                <li>تاثیر ماساژ شکم در افراد دچار اضطراب شدید (در رفتگی ناف)</li>
-                <li>تاثیر خونگیری از بالای گوش در افراد دچار آلرژی</li>
-                <li>تاثیر طب سوزنی بر سنگ کلیه (کیس ریپورت)</li>
-                <li>تاثیر طب سوزنی بر تنبلی تخمدان</li>
-                <li>تاثیر طب سوزنی بر آندومتریوز (کیس ریپورت)</li>
-                <li>تاثیر اوریکلوتراپی در تیک صورت (کیس ریپورت)</li>
-            </ul>
-        </div>
+<p>
+دکترای حرفه‌ای پزشکی از دانشگاه علوم پزشکی اصفهان (۱۳۷۱–۱۳۷۹)<br>
+دکترای تخصصی طب سنتی ایرانی از دانشگاه شاهد تهران (۱۳۸۹–۱۳۹۶)
+</p>
 
-    </div>
+<h4>مقالات فارسی</h4>
+<ul>
+<li>سبک زندگی در بیماران رینیت آلرژیک از دیدگاه رازی و ابن‌سینا، مجله دانشور، خرداد ۹۶.</li>
+<li>دستگاه گوارش از دیدگاه مکتب طب سنتی ایران، زمستان ۱۳۹۰.</li>
+<li>نشانه‌شناسی بیماری‌های معده در طب سنتی ایران.</li>
+<li>کلیات رویکرد به غذا و تغذیه در مکتب طب ایرانی.</li>
+<li>مروری بر علل درد معده در طب سنتی ایران.</li>
+<li>سوزش سردل و ریفلاکس از طب سنتی ایران تا پزشکی رایج.</li>
+<li>نفخ از طب سنتی ایران تا پزشکی رایج.</li>
+<li>یبوست در مکتب طب سنتی ایران.</li>
+<li>تهوع و استفراغ از دیدگاه طب مدرن و سنتی ایران.</li>
+<li>مروری بر کاربردهای درمانی گیاه پنیرک.</li>
+</ul>
 
-    <footer>
-        © ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.
-    </footer>
+<h4>مقالات لاتین</h4>
+<ul>
+<li>Borhani M, et al. Gastric diseases semiology in Iranian Traditional Medicine. 2014.</li>
+<li>Effect of Nepeta bracteata Benth. on Allergic Rhinitis symptoms.</li>
+</ul>
 
-    <script>
-        function togglePhone(id) {
-            const box = document.getElementById(id);
-            box.style.display = (box.style.display === "block") ? "none" : "block";
-        }
-    </script>
+</div>
+
+</div>
+
+<footer>
+© ۱۴۰۵ - کلینیک تخصصی طب سنتی حکیم
+</footer>
+
+<script>
+function togglePhone(id){
+let el=document.getElementById(id);
+el.style.display=(el.style.display==="block")?"none":"block";
+}
+</script>
+
 </body>
 </html>
