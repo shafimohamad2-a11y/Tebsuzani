@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>طب سوزنی اصفهان | محمد شفیع‌زاده | کلینیک تخصصی حکیم</title>
+
+  <meta name="description"
+    content="مرکز تخصصی طب سوزنی در اصفهان و خمینی‌شهر زیر نظر محمد شفیع‌زاده. درمان دیسک کمر، تنگی کانال، سیاتیک، میگرن، مشکلات زنان، ناباروری، کبد چرب، آسم و دردهای مزمن با روش‌های پیشرفته طب سوزنی." />
+
+  <meta name="keywords"
+    content="طب سوزنی اصفهان, محمد شفیع زاده, درمان دیسک کمر, درمان تنگی کانال, درمان سیاتیک, طب سوزنی خمینی شهر, درمان میگرن, درمان ناباروری, درمان کمر درد, طب سنتی اصفهان, کلینیک حکیم" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://hakim-clinic.ir/acupuncture-esfahan.html" />
+
+  <!-- فونت -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- بوت استرپ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- آیکون -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- فونت وزیر -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Vazirmatn',sans-serif;
+      background:#f5f7fa;
+      color:#222;
+      line-height:2;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    /* TOP BAR */
+
+    .top-bar{
+      background:#0d3b2e;
+      color:#fff;
+      padding:10px;
+      text-align:center;
+      font-size:14px;
+    }
+
+    .top-bar i{
+      color:#ffcc00;
+      margin-left:8px;
+    }
+
+    /* NAVBAR */
+
+    .navbar-custom{
+      background:#fff;
+      padding:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .navbar-brand{
+      font-size:28px;
+      font-weight:900;
+      color:#0d3b2e !important;
+    }
+
+    .nav-link{
+      color:#222 !important;
+      font-weight:700;
+      margin:0 10px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#0d3b2e !important;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+      linear-gradient(rgba(13,59,46,0.85),rgba(13,59,46,0.85)),
+      url('https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      padding:120px 20px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:55px;
+      font-weight:900;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      max-width:900px;
+      margin:auto;
+      font-size:22px;
+      line-height:2.2;
+    }
+
+    .hero-btns{
+      margin-top:40px;
+    }
+
+    .btn-main{
+      background:#ffcc00;
+      color:#0d3b2e;
+      padding:15px 35px;
+      border-radius:60px;
+      font-weight:800;
+      margin:10px;
+      display:inline-block;
+      transition:0.3s;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-main:hover{
+      transform:translateY(-5px);
+      background:#fff;
+      color:#0d3b2e;
+    }
+
+    .btn-outline-custom{
+      border:2px solid #fff;
+      color:#fff;
+      padding:15px 35px;
+      border-radius:60px;
+      font-weight:800;
+      margin:10px;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn-outline-custom:hover{
+      background:#fff;
+      color:#0d3b2e;
+    }
+
+    /* SECTION */
+
+    .section{
+      padding:90px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#0d3b2e;
+      font-weight:900;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      max-width:850px;
+      margin:auto;
+      color:#555;
+      font-size:18px;
+    }
+
+    /* CARDS */
+
+    .service-card{
+      background:#fff;
+      border-radius:25px;
+      padding:35px;
+      height:100%;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      border-top:5px solid #0d3b2e;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .service-card i{
+      font-size:45px;
+      color:#0d3b2e;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      font-size:24px;
+      font-weight:800;
+      margin-bottom:15px;
+      color:#0d3b2e;
+    }
+
+    /* STATS */
+
+    .stats{
+      background:#0d3b2e;
+      color:#fff;
+      border-radius:30px;
+      padding:50px 20px;
+    }
+
+    .stat-box{
+      text-align:center;
+      padding:20px;
+    }
+
+    .stat-box h3{
+      font-size:50px;
+      font-weight:900;
+      color:#ffcc00;
+    }
+
+    .stat-box p{
+      font-size:20px;
+    }
+
+    /* LIST */
+
+    .feature-list{
+      list-style:none;
+      padding:0;
+    }
+
+    .feature-list li{
+      margin-bottom:18px;
+      background:#fff;
+      padding:18px 22px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+      font-weight:600;
+    }
+
+    .feature-list i{
+      color:#0d3b2e;
+      margin-left:10px;
+    }
+
+    /* VIDEO */
+
+    .video-box{
+      position:relative;
+      overflow:hidden;
+      border-radius:25px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .video-box iframe{
+      width:100%;
+      height:550px;
+      border:none;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:
+      linear-gradient(rgba(13,59,46,0.9),rgba(13,59,46,0.9)),
+      url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      text-align:center;
+      padding:100px 20px;
+      border-radius:30px;
+    }
+
+    .cta h2{
+      font-size:45px;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      font-size:22px;
+      max-width:850px;
+      margin:auto auto 35px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#081f18;
+      color:#fff;
+      padding:50px 20px 20px;
+      margin-top:80px;
+    }
+
+    .footer-title{
+      font-size:22px;
+      font-weight:800;
+      margin-bottom:20px;
+      color:#ffcc00;
+    }
+
+    .footer-link{
+      display:block;
+      color:#ddd;
+      margin-bottom:10px;
+    }
+
+    .footer-link:hover{
+      color:#ffcc00;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:30px;
+      padding-top:20px;
+      text-align:center;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section-title h2{
+        font-size:32px;
+      }
+
+      .cta h2{
+        font-size:34px;
+      }
+
+      .video-box iframe{
+        height:250px;
+      }
+
+    }
+
+  </style>
+
+  <!-- Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalClinic",
+    "name":"کلینیک تخصصی حکیم",
+    "url":"https://hakim-clinic.ir",
+    "telephone":"+989130000000",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"اصفهان",
+      "addressCountry":"IR"
+    },
+    "medicalSpecialty":[
+      "طب سوزنی",
+      "طب سنتی",
+      "درمان درد",
+      "درمان دیسک کمر"
+    ],
+    "employee":{
+      "@type":"Person",
+      "name":"محمد شفیع زاده"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    <i class="fa-solid fa-location-dot"></i>
+    مرکز تخصصی طب سوزنی و طب سنتی در اصفهان و خمینی‌شهر
+  </div>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        کلینیک تخصصی حکیم
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMenu">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">صفحه اصلی</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="doctors.html">پزشکان</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services">خدمات</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#video">نمونه درمان</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">تماس</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>
+        مرکز تخصصی طب سوزنی اصفهان
+      </h1>
+
+      <p>
+        درمان تخصصی دیسک کمر، تنگی کانال، سیاتیک، میگرن،
+        مشکلات زنان، ناباروری، دردهای مزمن و بیماری‌های داخلی
+        با استفاده از پیشرفته‌ترین متدهای طب سوزنی جهان
+        زیر نظر محمد شفیع‌زاده
+      </p>
+
+      <div class="hero-btns">
+
+        <a href="#contact" class="btn-main">
+          دریافت مشاوره
+        </a>
+
+        <a href="#video" class="btn-outline-custom">
+          مشاهده نمونه درمان
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          چرا کلینیک حکیم؟
+        </h2>
+
+        <p>
+          تجربه، تخصص، مستندات واقعی درمان و استفاده از چندین متد تخصصی طب سوزنی،
+          باعث شده بیماران زیادی از سراسر کشور برای درمان به کلینیک حکیم مراجعه کنند.
+        </p>
+
+      </div>
+
+      <div class="stats">
+
+        <div class="row">
+
+          <div class="col-md-4">
+
+            <div class="stat-box">
+
+              <h3>10+</h3>
+
+              <p>
+                سال سابقه تخصصی
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+
+            <div class="stat-box">
+
+              <h3>6000+</h3>
+
+              <p>
+                بیمار در سال
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+
+            <div class="stat-box">
+
+              <h3>7</h3>
+
+              <p>
+                متد تخصصی طب سوزنی
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="section bg-light" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          خدمات تخصصی طب سوزنی
+        </h2>
+
+        <p>
+          درمان تخصصی بیماری‌ها با استفاده از روش‌های علمی و مدرن طب سوزنی
+        </p>
+
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-bone"></i>
+
+            <h3>
+              دیسک و ستون فقرات
+            </h3>
+
+            <p>
+              درمان دیسک کمر، تنگی کانال نخاع، سیاتیک، گردن درد،
+              آرتروز و دردهای مزمن مفصلی بدون جراحی
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>
+              اعصاب و مغز
+            </h3>
+
+            <p>
+              درمان میگرن، استرس، اضطراب، بی‌خوابی،
+              آپنه خواب و دردهای عصبی
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <h3>
+              داخلی و گوارش
+            </h3>
+
+            <p>
+              درمان کبد چرب، مشکلات معده، یبوست،
+              سنگ صفرا و اختلالات گوارشی
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-person-pregnant"></i>
+
+            <h3>
+              مشکلات زنان
+            </h3>
+
+            <p>
+              درمان ناباروری، تنبلی تخمدان، فیبروم،
+              آندومتریوز و مشکلات هورمونی
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-lungs"></i>
+
+            <h3>
+              تنفس و ریه
+            </h3>
+
+            <p>
+              درمان آسم، تنگی نفس، آلرژی،
+              سرفه‌های مزمن و مشکلات تنفسی
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="service-card">
+
+            <i class="fa-solid fa-droplet"></i>
+
+            <h3>
+              پوست و مو
+            </h3>
+
+            <p>
+              درمان ریزش مو، مشکلات پوستی،
+              جوش، حساسیت و اختلالات هورمونی
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- METHODS -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          ۷ متد تخصصی طب سوزنی جهان
+        </h2>
+
+        <p>
+          استفاده همزمان از متدهای مختلف باعث افزایش دقت درمان و نتیجه‌گیری بهتر می‌شود.
+        </p>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          <ul class="feature-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              طب سنتی چین (TCM)
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              مستر تانگ (Master Tung)
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Acunova
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Yamamoto
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <ul class="feature-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              طب سوزنی ژاپنی
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Western Acupuncture
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              تکنیک‌های ترکیبی تخصصی
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              درمان مستند با MRI
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO -->
+
+  <section class="section bg-light" id="video">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          نمونه درمان واقعی
+        </h2>
+
+        <p>
+          مشاهده درمان دیسک پاره بدون جراحی با استفاده از طب سوزنی
+        </p>
+
+      </div>
+
+      <div class="video-box">
+
+        <iframe
+          src="https://www.aparat.com/video/video/embed/videohash/kppgrdg/vt/frame"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta" id="contact">
+
+        <h2>
+          رزرو مشاوره و نوبت درمان
+        </h2>
+
+        <p>
+          برای دریافت مشاوره تخصصی و تعیین وقت درمان
+          با کلینیک حکیم تماس بگیرید.
+        </p>
+
+        <a href="tel:+989130000000" class="btn-main">
+          تماس با کلینیک
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4">
+
+          <h3 class="footer-title">
+            کلینیک تخصصی حکیم
+          </h3>
+
+          <p>
+            مرکز تخصصی طب سوزنی، طب سنتی و درمان درد در اصفهان و خمینی‌شهر
+          </p>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <h3 class="footer-title">
+            لینک‌های سریع
+          </h3>
+
+          <a href="index.html" class="footer-link">
+            صفحه اصلی
+          </a>
+
+          <a href="doctors.html" class="footer-link">
+            پزشکان
+          </a>
+
+          <a href="#services" class="footer-link">
+            خدمات
+          </a>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <h3 class="footer-title">
+            شبکه‌های اجتماعی
+          </h3>
+
+          <a href="#" class="footer-link">
+            اینستاگرام: Tebsuzani_hakim
+          </a>
+
+          <a href="https://www.aparat.com/v/kppgrdg" class="footer-link">
+            آپارات کلینیک
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+
+        © تمامی حقوق متعلق به کلینیک تخصصی حکیم می‌باشد.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
