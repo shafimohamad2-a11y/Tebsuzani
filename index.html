@@ -71,7 +71,7 @@
     .content-wrap h2 { font-size: 2.8rem; margin-bottom: 25px; font-weight: 800; color: #ffcc00; }
     .content-wrap p { font-size: 1.2rem; line-height: 2; margin-bottom: 30px; }
 
-    .btn-custom { padding: 12px 35px; border-radius: 50px; background: #ffcc00; color: #1a4d2e; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; border: none; }
+    .btn-custom { padding: 12px 35px; border-radius: 50px; background: #ffcc00; color: #1a4d2e; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
     .btn-custom:hover { background: #ffffff; color: #1a4d2e; transform: translateY(-3px); }
 
     .hero-bg { background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1920&q=80'); }
@@ -80,7 +80,6 @@
     .results-bg { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80'); }
     .doctors-bg { background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80'); }
     
-    /* آدرس جدید و تست شده برای پس‌زمینه طب سوزنی */
     .acupuncture-bg { background-image: url('https://img.freepik.com/free-photo/close-up-doctor-holding-needles_23-2149117362.jpg?t=st=1719931327~exp=1719934927~hmac=5c6a125b2f28a2a912163b4f9e9a4d8d4a5b4c3e2f1a0b9d8c7b6a5e4d3c2b1a&w=1380'); }
     
     .homeopathy-bg { background-image: url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1920&q=80'); }
@@ -211,6 +210,7 @@
     </div>
   </section>
 
+  <!-- بخش فرم تماس اصلاح شده و متصل به Formspree -->
   <section id="contact">
     <div class="container">
       <div class="row justify-content-center">
@@ -220,17 +220,25 @@
             <i class="fa fa-clock"></i>
             زمان پاسخ‌دهی به سوالات شما بین ۱ تا ۳ روز کاری است.
           </div>
-          <form>
+          
+          <form id="hakim-contact-form" action="https://formspree.io/f/xzdlkgwa" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required />
+                <input type="text" name="name" class="form-control" placeholder="نام و نام خانوادگی" required />
               </div>
               <div class="col-md-6 mb-3">
-                <input type="tel" class="form-control" placeholder="شماره تلفن" required />
+                <input type="tel" name="phone" class="form-control" placeholder="شماره تلفن" required />
               </div>
             </div>
-            <textarea class="form-control mb-3" rows="5" placeholder="سوال خود را درباره طب سنتی یا طب سوزنی اینجا بنویسید..." required></textarea>
-            <button type="submit" class="btn-custom w-100">ارسال پیام</button>
+            <textarea name="message" class="form-control mb-3" rows="5" placeholder="سوال خود را درباره طب سنتی یا طب سوزنی اینجا بنویسید..." required></textarea>
+            
+            <!-- فیلد مخفی ضد اسپم -->
+            <input type="text" name="_gotcha" style="display:none">
+            
+            <button type="submit" id="submit-btn" class="btn-custom w-100">ارسال پیام</button>
+            
+            <!-- محل نمایش پیام وضعیت -->
+            <div id="form-status" class="text-center mt-3" style="display:none; font-weight: bold;"></div>
           </form>
         </div>
       </div>
@@ -242,5 +250,52 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- اسکریپت جاوا اسکریپت برای ارسال AJAX فرم بدون رفرش صفحه -->
+  <script>
+    var form = document.getElementById("hakim-contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("form-status");
+      var data = new FormData(event.target);
+      var button = document.getElementById("submit-btn");
+
+      button.disabled = true;
+      status.style.display = "block";
+      status.innerHTML = "در حال ارسال پیام...";
+      status.style.color = "#0288d1";
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "پیام شما با موفقیت ارسال شد. بزودی با شما تماس می‌گیریم.";
+          status.style.color = "green";
+          form.reset();
+          button.disabled = false;
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerHTML = "خطایی رخ داد. لطفا دوباره تلاش کنید.";
+            }
+            status.style.color = "red";
+            button.disabled = false;
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "خطا در برقراری ارتباط! اینترنت خود را چک کنید.";
+        status.style.color = "red";
+        button.disabled = false;
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 </body>
 </html>
