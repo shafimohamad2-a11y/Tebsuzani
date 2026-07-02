@@ -465,105 +465,80 @@ alt="داروی هومیوپاتی">
 
 <div class="note">
 
-لطفاً تمام بخش‌ها را با دقت پر کنید.
-پس از تکمیل فرم، از صفحه اسکرین‌شات گرفته و به شماره
-<strong>09211846386</strong>
-در ایتا ارسال نمایید.
+فرم زیر را تکمیل کنید. اطلاعات مستقیماً برای شما در ایتا ارسال خواهد شد.
 
 </div>
 
-<form>
+<form action="send_to_eitaa.php" method="POST">
 
 <h4>1) مشخصات فردی</h4>
 
-<input class="form-control" placeholder="نام و نام خانوادگی">
-
-<input class="form-control" placeholder="سن">
-
-<input class="form-control" placeholder="محل سکونت">
-
-<input class="form-control" placeholder="شماره تماس">
+<input class="form-control" name="name" placeholder="نام و نام خانوادگی" required>
+<input class="form-control" name="age" placeholder="سن">
+<input class="form-control" name="location" placeholder="محل سکونت">
+<input class="form-control" name="phone" placeholder="شماره تماس" required>
 
 <h4>2) شکایات اصلی بیمار</h4>
 
-<textarea class="form-control" rows="3" placeholder="شکایات اصلی شما چیست؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="از چه زمانی شروع شده‌اند؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="شدت علائم چقدر است؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="از نظر خودتان علت چیست؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="اطرافیان علت را چه می‌دانند؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="آیا با عوامل محیطی، غذایی یا روحی ارتباط دارد؟"></textarea>
+<textarea class="form-control" name="complaint_1" rows="3" placeholder="شکایات اصلی شما چیست؟"></textarea>
+<textarea class="form-control" name="complaint_2" rows="3" placeholder="از چه زمانی شروع شده‌اند؟"></textarea>
+<textarea class="form-control" name="complaint_3" rows="3" placeholder="شدت علائم چقدر است؟"></textarea>
+<textarea class="form-control" name="complaint_4" rows="3" placeholder="از نظر خودتان علت چیست؟"></textarea>
+<textarea class="form-control" name="complaint_5" rows="3" placeholder="اطرافیان علت را چه می‌دانند؟"></textarea>
+<textarea class="form-control" name="complaint_6" rows="3" placeholder="آیا با عوامل محیطی، غذایی یا روحی ارتباط دارد؟"></textarea>
 
 <h4>3) علائم ذهنی</h4>
 
-<input class="form-control" placeholder="میزان تمرکز">
-
-<input class="form-control" placeholder="قدرت تجزیه و تحلیل">
-
-<input class="form-control" placeholder="در حساب و کتاب چگونه است؟">
-
-<input class="form-control" placeholder="حضور ذهن">
-
-<input class="form-control" placeholder="کارهای هنری">
-
-<input class="form-control" placeholder="میزان خلاقیت">
-
-<input class="form-control" placeholder="میزان هوشیاری">
-
-<input class="form-control" placeholder="میزان ابتکار">
+<input class="form-control" name="focus" placeholder="میزان تمرکز">
+<input class="form-control" name="analysis" placeholder="قدرت تجزیه و تحلیل">
+<input class="form-control" name="math" placeholder="در حساب و کتاب چگونه است؟">
+<input class="form-control" name="presence" placeholder="حضور ذهن">
+<input class="form-control" name="art" placeholder="کارهای هنری">
+<input class="form-control" name="creativity" placeholder="میزان خلاقیت">
+<input class="form-control" name="alertness" placeholder="میزان هوشیاری">
+<input class="form-control" name="initiative" placeholder="میزان ابتکار">
 
 <h4>4) مشکلات جسمی</h4>
 
-<textarea class="form-control" rows="4" placeholder="تمام نواحی دارای درد یا ناراحتی را توضیح دهید"></textarea>
+<textarea class="form-control" name="physical_problems" rows="4" placeholder="تمام نواحی دارای درد یا ناراحتی را توضیح دهید"></textarea>
 
 <h4>5) سوابق شخصی</h4>
 
-<textarea class="form-control" rows="3" placeholder="سوابق بیماری‌های قبلی"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="واکنش به واکسن‌ها یا گزش‌ها"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="اعمال جراحی"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="سابقه بستری"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="فشارهای روحی شدید"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="آیا هنگام مصاحبه گریه می‌کنید؟"></textarea>
-
-<textarea class="form-control" rows="3" placeholder="حالات خاص"></textarea>
+<textarea class="form-control" name="history_1" rows="3" placeholder="سوابق بیماری‌های قبلی"></textarea>
+<textarea class="form-control" name="history_2" rows="3" placeholder="واکنش به واکسن‌ها یا گزش‌ها"></textarea>
+<textarea class="form-control" name="history_3" rows="3" placeholder="اعمال جراحی"></textarea>
+<textarea class="form-control" name="history_4" rows="3" placeholder="سابقه بستری"></textarea>
+<textarea class="form-control" name="history_5" rows="3" placeholder="فشارهای روحی شدید"></textarea>
+<textarea class="form-control" name="history_6" rows="3" placeholder="آیا هنگام مصاحبه گریه می‌کنید؟"></textarea>
+<textarea class="form-control" name="history_7" rows="3" placeholder="حالات خاص"></textarea>
 
 <h4>6) سوابق خانوادگی</h4>
 
-<textarea class="form-control" rows="4" placeholder="فشار خون، دیابت، سرطان، بیماری قلبی، روانی و ..."></textarea>
+<textarea class="form-control" name="family_history" rows="4" placeholder="فشار خون، دیابت، سرطان، بیماری قلبی، روانی و ..."></textarea>
 
 <h4>7) وضعیت عمومی و مزاجی</h4>
 
-<textarea class="form-control" rows="4" placeholder="واکنش به سرما، گرما، تشنگی، غذاها، تعریق، میل جنسی و ..."></textarea>
+<textarea class="form-control" name="general_health" rows="4" placeholder="واکنش به سرما، گرما، تشنگی، غذاها، تعریق، میل جنسی و ..."></textarea>
 
 <h4>8) علائم رفتاری</h4>
 
-<textarea class="form-control" rows="5" placeholder="ویژگی‌های شخصیتی و رفتاری کامل"></textarea>
+<textarea class="form-control" name="behavioral_symptoms" rows="5" placeholder="ویژگی‌های شخصیتی و رفتاری کامل"></textarea>
 
 <h4>9) علائم هیجانی و عاطفی</h4>
 
-<textarea class="form-control" rows="5" placeholder="ترس‌ها، اضطراب، غم، عشق، نفرت و احساسات"></textarea>
+<textarea class="form-control" name="emotional_symptoms" rows="5" placeholder="ترس‌ها، اضطراب، غم، عشق، نفرت و احساسات"></textarea>
 
 <h4>10) خواب، گفتار و عملکرد ذهنی</h4>
 
-<textarea class="form-control" rows="4" placeholder="وضعیت خواب، تکلم، تمرکز و توهم احتمالی"></textarea>
+<textarea class="form-control" name="sleep_speech" rows="4" placeholder="وضعیت خواب، تکلم، تمرکز و توهم احتمالی"></textarea>
 
 <h4>11) وضعیت خلق و واکنش‌های روزمره</h4>
 
-<textarea class="form-control" rows="4" placeholder="وقتی عصبانی یا ناراحت می‌شوید چه می‌کنید؟"></textarea>
-
-<textarea class="form-control" rows="4" placeholder="وقتی تنها هستید چه حالتی دارید؟"></textarea>
+<textarea class="form-control" name="mood_1" rows="4" placeholder="وقتی عصبانی یا ناراحت می‌شوید چه می‌کنید؟"></textarea>
+<textarea class="form-control" name="mood_2" rows="4" placeholder="وقتی تنها هستید چه حالتی دارید؟"></textarea>
 
 <button type="submit">
-تکمیل فرم
+ارسال فرم به کلینیک
 </button>
 
 </form>
