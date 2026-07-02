@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,156 +10,334 @@
 
 <meta name="description" content="درمان اضطراب، وسواس، استرس، افسردگی و بیماری‌های روان‌تنی با هومیوپاتی در اصفهان و خمینی شهر. کلینیک حکیم با رویکرد تخصصی و متد ویتولکاس.">
 
+<meta name="keywords" content="هومیوپاتی اصفهان, درمان اضطراب با هومیوپاتی, درمان وسواس, درمان استرس, درمان اعصاب طبیعی, هومیوپاتی خمینی شهر, کلینیک حکیم">
+
+<meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://hakim-clinic.ir/homeopathy-esfahan.html">
 
+<meta property="og:title" content="هومیوپاتی در اصفهان | کلینیک حکیم">
+<meta property="og:description" content="درمان تخصصی اضطراب، وسواس و مشکلات روحی با هومیوپاتی">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hakim-clinic.ir/homeopathy-esfahan.html">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MedicalClinic",
+ "name": "کلینیک طب سنتی و طب سوزنی حکیم",
+ "url": "https://hakim-clinic.ir",
+ "telephone": "03133677181",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "خمینی شهر",
+   "addressCountry": "IR"
+ },
+ "medicalSpecialty": ["Homeopathy","Traditional Chinese Medicine"]
+}
+</script>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-body{
-    font-family: Vazirmatn;
-    background:#f8fafb;
-    margin:0;
-    color:#23423f; /* رنگ جذاب‌تر و درمانی */
+
+html{
+scroll-behavior:smooth;
 }
 
-/* هدر */
+body{
+font-family:'Vazirmatn',sans-serif;
+margin:0;
+background:#f3f6f5;
+color:#23403b;
+line-height:2.2;
+overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+
 header{
-    background:#1a4d2e;
-    color:white;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+background:linear-gradient(135deg,#0f3d2f,#1f6b53);
+padding:22px;
+text-align:center;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 25px rgba(0,0,0,0.15);
+backdrop-filter:blur(10px);
+}
+
+header h2{
+font-weight:800;
+margin-bottom:15px;
+font-size:1.8rem;
 }
 
 header a{
-    color:#ffd54f;
-    text-decoration:none;
-    margin:0 10px;
-    font-weight:bold;
+color:#ffe082;
+text-decoration:none;
+margin:0 12px;
+font-weight:700;
+transition:0.3s;
 }
 
 header a:hover{
-    color:#fff6c7;
+color:white;
 }
 
-/* تصویر جذاب داروی هومیوپاتی */
+/* ===== HERO ===== */
+
 .hero{
-    background-image:url('https://images.unsplash.com/photo-1580281658629-45a8fbb165ec?auto=format&fit=crop&w=1600&q=80');
-    background-size:cover;
-    background-position:center;
-    padding:100px 20px;
-    color:white;
-    text-align:center;
-    position:relative;
+position:relative;
+min-height:92vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+overflow:hidden;
+background:
+linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.58)),
+url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1974&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.55);
-}
-
-.hero h1, .hero p{
-    position:relative;
-    z-index:2;
+.hero-content{
+max-width:950px;
+z-index:2;
+animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
-    font-weight:800;
-    font-size:2.5rem;
-    color:#ffeb74;
+font-size:3rem;
+font-weight:900;
+color:#ffe082;
+margin-bottom:25px;
+text-shadow:0 4px 18px rgba(0,0,0,0.5);
 }
 
 .hero p{
-    font-size:1.2rem;
-    margin-top:15px;
+font-size:1.3rem;
+color:white;
+line-height:2.2;
+margin-bottom:45px;
 }
 
-/* بخش‌ها */
+/* ===== TOP BUTTONS ===== */
+
+.top-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.top-buttons a{
+background:linear-gradient(135deg,#ffd54f,#ffec99);
+color:#184234;
+padding:16px 35px;
+border-radius:60px;
+font-weight:800;
+text-decoration:none;
+font-size:1rem;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+transition:0.35s;
+}
+
+.top-buttons a:hover{
+transform:translateY(-5px) scale(1.03);
+background:white;
+}
+
+/* ===== SECTION ===== */
+
 .section{
-    padding:70px 20px;
+padding:90px 20px;
 }
 
 .box{
-    background:white;
-    max-width:1100px;
-    margin:auto;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.09);
-    line-height:2.2;
-    border:1px solid #e8ecec;
+max-width:1150px;
+margin:auto;
+background:white;
+border-radius:28px;
+padding:50px;
+box-shadow:
+0 10px 40px rgba(0,0,0,0.08),
+0 2px 10px rgba(0,0,0,0.04);
+position:relative;
+overflow:hidden;
+}
+
+.box::before{
+content:'';
+position:absolute;
+top:0;
+right:0;
+width:100%;
+height:8px;
+background:linear-gradient(90deg,#ffd54f,#0f6b52);
 }
 
 .box h2{
-    color:#0e5a45;
-    font-weight:800;
-    margin-bottom:25px;
-    text-align:center;
-    font-size:1.9rem;
+text-align:center;
+font-size:2.2rem;
+font-weight:900;
+color:#0d5b46;
+margin-bottom:35px;
+position:relative;
+}
+
+.box h2::after{
+content:'';
+display:block;
+width:120px;
+height:4px;
+margin:18px auto 0;
+border-radius:10px;
+background:linear-gradient(90deg,#ffd54f,#0f6b52);
+}
+
+.box p{
+font-size:1.08rem;
+color:#314b46;
+margin-bottom:20px;
+}
+
+/* ===== IMAGE ===== */
+
+.homeopathy-image{
+margin:45px auto;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
+}
+
+.homeopathy-image img{
+width:100%;
+display:block;
+}
+
+/* ===== FORM ===== */
+
+.note{
+background:#fff9d7;
+border-right:6px solid #ffd54f;
+padding:18px;
+border-radius:18px;
+margin-bottom:35px;
+font-size:1rem;
+color:#5c4c12;
 }
 
 h4{
-    margin-top:35px;
-    color:#166858;
-    font-weight:700;
-    border-right:4px solid #ffd54f;
-    padding-right:10px;
+margin-top:45px;
+margin-bottom:18px;
+font-size:1.15rem;
+font-weight:800;
+color:#0f5d49;
+padding-right:14px;
+border-right:5px solid #ffd54f;
 }
 
-/* فرم */
 .form-control{
-    margin-bottom:12px;
-    border-radius:12px;
-    padding:12px;
-    font-size:0.95rem;
-    border:1px solid #cfd9d9;
+border-radius:16px;
+padding:15px;
+margin-bottom:14px;
+border:1px solid #d6e1dd;
+font-size:0.96rem;
+transition:0.3s;
+background:#fbfdfc;
 }
 
 .form-control:focus{
-    border-color:#1a4d2e;
-    box-shadow:0 0 6px rgba(26,77,46,0.25);
+border-color:#0f6b52;
+box-shadow:0 0 0 0.2rem rgba(15,107,82,0.15);
+background:white;
 }
 
-.note{
-    background:#fff9d7;
-    padding:15px;
-    border-radius:12px;
-    margin-bottom:25px;
-    border-right:5px solid #ffd54f;
+textarea.form-control{
+min-height:120px;
 }
 
-/* دکمه */
+/* ===== BUTTON ===== */
+
 button{
-    background:#ffcf4d;
-    border:none;
-    padding:17px;
-    border-radius:30px;
-    font-weight:bold;
-    width:100%;
-    margin-top:30px;
-    font-size:1.1rem;
-    color:#204430;
-    transition:0.3s;
+width:100%;
+padding:18px;
+border:none;
+border-radius:60px;
+background:linear-gradient(135deg,#ffd54f,#ffec99);
+font-weight:900;
+font-size:1.1rem;
+color:#173e31;
+margin-top:35px;
+transition:0.35s;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 button:hover{
-    background:white;
-    border:2px solid #ffcf4d;
-    color:#1a4d2e;
+transform:translateY(-4px);
+background:linear-gradient(135deg,#ffe082,#fff4c2);
 }
 
-/* فوتر */
+/* ===== FOOTER ===== */
+
 footer{
-    background:#1a4d2e;
-    color:white;
-    text-align:center;
-    padding:35px;
-    margin-top:60px;
-    font-size:0.95rem;
+margin-top:80px;
+background:linear-gradient(135deg,#0e3f30,#1c6a52);
+color:white;
+text-align:center;
+padding:45px 20px;
 }
+
+footer p{
+margin:8px 0;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.box{
+padding:28px;
+}
+
+.box h2{
+font-size:1.7rem;
+}
+
+.top-buttons a{
+width:100%;
+max-width:320px;
+}
+
+}
+
 </style>
 
 </head>
@@ -166,24 +345,69 @@ footer{
 <body>
 
 <header>
+
 <h2>کلینیک تخصصی طب سنتی و طب سوزنی حکیم</h2>
+
 <div>
 <a href="index.html">صفحه اصلی</a>
 <a href="acupuncture-esfahan.html">طب سوزنی</a>
 <a href="#form">فرم هومیوپاتی</a>
 </div>
-<p>تماس: 03133677181 | 03133677182</p>
+
+<p>
+تماس:
+03133677181 |
+03133677182
+</p>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
-<h1>درمان تخصصی مشکلات اعصاب و روان با هومیوپاتی در اصفهان</h1>
-<p>درمان ریشه‌ای اضطراب، وسواس، استرس، ترس‌ها و بیماری‌های روان‌تنی با متد علمی ویتولکاس</p>
+
+<div class="hero-content">
+
+<h1>
+درمان تخصصی مشکلات اعصاب و روان با هومیوپاتی در اصفهان
+</h1>
+
+<p>
+درمان ریشه‌ای اضطراب، وسواس، استرس، ترس‌ها و بیماری‌های روان‌تنی با متد علمی ویتولکاس
+</p>
+
+<div class="top-buttons">
+
+<a href="#intro">
+معرفی هومیوپاتی
+</a>
+
+<a href="#form">
+فرم هومیوپاتی
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
+<!-- INTRO -->
+
+<section class="section" id="intro">
+
 <div class="box">
 
-<h2>معرفی کامل هومیوپاتی</h2>
+<h2>
+معرفی کامل هومیوپاتی
+</h2>
+
+<div class="homeopathy-image">
+
+<img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=1974&auto=format&fit=crop"
+alt="داروی هومیوپاتی">
+
+</div>
 
 <p>
 هومیوپاتی یک روش درمانی مکمل و علمی است که تمرکز اصلی آن بر ریشه‌های روانی و عصبی بیماری‌ها می‌باشد.
@@ -200,90 +424,140 @@ footer{
 </p>
 
 </div>
+
 </section>
 
-
+<!-- FORM -->
 
 <section class="section" id="form">
+
 <div class="box">
 
-<h2>فرم ارزیابی و شرح حال کامل بیمار</h2>
+<h2>
+فرم ارزیابی و شرح حال کامل بیمار
+</h2>
 
 <div class="note">
+
 لطفاً تمام بخش‌ها را با دقت پر کنید.
 پس از تکمیل فرم، از صفحه اسکرین‌شات گرفته و به شماره
 <strong>09211846386</strong>
 در ایتا ارسال نمایید.
+
 </div>
 
 <form>
 
 <h4>1) مشخصات فردی</h4>
+
 <input class="form-control" placeholder="نام و نام خانوادگی">
+
 <input class="form-control" placeholder="سن">
+
 <input class="form-control" placeholder="محل سکونت">
+
 <input class="form-control" placeholder="شماره تماس">
 
 <h4>2) شکایات اصلی بیمار</h4>
+
 <textarea class="form-control" rows="3" placeholder="شکایات اصلی شما چیست؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="از چه زمانی شروع شده‌اند؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="شدت علائم چقدر است؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="از نظر خودتان علت چیست؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="اطرافیان علت را چه می‌دانند؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="آیا با عوامل محیطی، غذایی یا روحی ارتباط دارد؟"></textarea>
 
 <h4>3) علائم ذهنی</h4>
+
 <input class="form-control" placeholder="میزان تمرکز">
+
 <input class="form-control" placeholder="قدرت تجزیه و تحلیل">
+
 <input class="form-control" placeholder="در حساب و کتاب چگونه است؟">
+
 <input class="form-control" placeholder="حضور ذهن">
+
 <input class="form-control" placeholder="کارهای هنری">
+
 <input class="form-control" placeholder="میزان خلاقیت">
+
 <input class="form-control" placeholder="میزان هوشیاری">
+
 <input class="form-control" placeholder="میزان ابتکار">
 
 <h4>4) مشکلات جسمی</h4>
+
 <textarea class="form-control" rows="4" placeholder="تمام نواحی دارای درد یا ناراحتی را توضیح دهید"></textarea>
 
 <h4>5) سوابق شخصی</h4>
+
 <textarea class="form-control" rows="3" placeholder="سوابق بیماری‌های قبلی"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="واکنش به واکسن‌ها یا گزش‌ها"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="اعمال جراحی"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="سابقه بستری"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="فشارهای روحی شدید"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="آیا هنگام مصاحبه گریه می‌کنید؟"></textarea>
+
 <textarea class="form-control" rows="3" placeholder="حالات خاص"></textarea>
 
 <h4>6) سوابق خانوادگی</h4>
+
 <textarea class="form-control" rows="4" placeholder="فشار خون، دیابت، سرطان، بیماری قلبی، روانی و ..."></textarea>
 
 <h4>7) وضعیت عمومی و مزاجی</h4>
+
 <textarea class="form-control" rows="4" placeholder="واکنش به سرما، گرما، تشنگی، غذاها، تعریق، میل جنسی و ..."></textarea>
 
 <h4>8) علائم رفتاری</h4>
+
 <textarea class="form-control" rows="5" placeholder="ویژگی‌های شخصیتی و رفتاری کامل"></textarea>
 
 <h4>9) علائم هیجانی و عاطفی</h4>
+
 <textarea class="form-control" rows="5" placeholder="ترس‌ها، اضطراب، غم، عشق، نفرت و احساسات"></textarea>
 
 <h4>10) خواب، گفتار و عملکرد ذهنی</h4>
+
 <textarea class="form-control" rows="4" placeholder="وضعیت خواب، تکلم، تمرکز و توهم احتمالی"></textarea>
 
 <h4>11) وضعیت خلق و واکنش‌های روزمره</h4>
+
 <textarea class="form-control" rows="4" placeholder="وقتی عصبانی یا ناراحت می‌شوید چه می‌کنید؟"></textarea>
+
 <textarea class="form-control" rows="4" placeholder="وقتی تنها هستید چه حالتی دارید؟"></textarea>
 
-<button type="submit">تکمیل فرم</button>
+<button type="submit">
+تکمیل فرم
+</button>
 
 </form>
 
 </div>
+
 </section>
 
 <footer>
-<p>© تمامی حقوق برای کلینیک طب سنتی و طب سوزنی حکیم محفوظ است</p>
-<p>خمینی شهر – خیابان شریعتی جنوبی – پاساژ الزهرا – طبقه سوم</p>
+
+<p>
+© تمامی حقوق برای کلینیک طب سنتی و طب سوزنی حکیم محفوظ است
+</p>
+
+<p>
+خمینی شهر – خیابان شریعتی جنوبی – پاساژ الزهرا – طبقه سوم
+</p>
+
 </footer>
 
 </body>
+
 </html>
