@@ -465,106 +465,109 @@ alt="داروی هومیوپاتی">
 
 <div class="note">
 
-لطفاً تمام بخش‌ها را با دقت پر کنید.
-پس از تکمیل فرم، از صفحه اسکرین‌شات گرفته و به شماره
-<strong>09211846386</strong>
-در ایتا ارسال نمایید.
+فرم زیر را با دقت پر کنید هر قسمتی که نمی دانید چه چیزی باید بنویسید بصورت حضوری بپرسید. هرچه اطلاعات وارده بیشتر و جامع تر باشد نتیجه بهتری حاصل می شود.
 
 </div>
 
-<form>
+<form id="homeopathy-form" action="https://formspree.io/f/mqevgovd" method="POST">
 
 <h4>1) مشخصات فردی</h4>
 
-<input class="form-control" placeholder="نام و نام خانوادگی">
+<input type="text" name="نام_و_نام_خانوادگی" class="form-control" placeholder="نام و نام خانوادگی" required>
 
-<input class="form-control" placeholder="سن">
+<input type="text" name="سن" class="form-control" placeholder="سن" required>
 
-<input class="form-control" placeholder="محل سکونت">
+<input type="text" name="محل_سکونت" class="form-control" placeholder="محل سکونت" required>
 
-<input class="form-control" placeholder="شماره تماس">
+<input type="tel" name="شماره_تماس" class="form-control" placeholder="شماره تماس" required>
 
 <h4>2) شکایات اصلی بیمار</h4>
 
-<textarea class="form-control" rows="3" placeholder="شکایات اصلی شما چیست؟"></textarea>
+<textarea name="شکایات_اصلی" class="form-control" rows="3" placeholder="شکایات اصلی شما چیست؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="از چه زمانی شروع شده‌اند؟"></textarea>
+<textarea name="زمان_شروع_علائم" class="form-control" rows="3" placeholder="از چه زمانی شروع شده‌اند؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="شدت علائم چقدر است؟"></textarea>
+<textarea name="شدت_علائم" class="form-control" rows="3" placeholder="شدت علائم چقدر است؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="از نظر خودتان علت چیست؟"></textarea>
+<textarea name="علت_از_نظر_خودتان" class="form-control" rows="3" placeholder="از نظر خودتان علت چیست؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="اطرافیان علت را چه می‌دانند؟"></textarea>
+<textarea name="علت_از_نظر_اطرافیان" class="form-control" rows="3" placeholder="اطرافیان علت را چه می‌دانند؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="آیا با عوامل محیطی، غذایی یا روحی ارتباط دارد؟"></textarea>
+<textarea name="ارتباط_با_عوامل_محیطی_غذایی_روحی" class="form-control" rows="3" placeholder="آیا با عوامل محیطی، غذایی یا روحی ارتباط دارد؟" required></textarea>
 
 <h4>3) علائم ذهنی</h4>
 
-<input class="form-control" placeholder="میزان تمرکز">
+<input type="text" name="میزان_تمرکز" class="form-control" placeholder="میزان تمرکز" required>
 
-<input class="form-control" placeholder="قدرت تجزیه و تحلیل">
+<input type="text" name="قدرت_تجزیه_و_تحلیل" class="form-control" placeholder="قدرت تجزیه و تحلیل" required>
 
-<input class="form-control" placeholder="در حساب و کتاب چگونه است؟">
+<input type="text" name="عملکرد_در_حساب_و_کتاب" class="form-control" placeholder="در حساب و کتاب چگونه است؟" required>
 
-<input class="form-control" placeholder="حضور ذهن">
+<input type="text" name="حضور_ذهن" class="form-control" placeholder="حضور ذهن" required>
 
-<input class="form-control" placeholder="کارهای هنری">
+<input type="text" name="کارهای_هنری" class="form-control" placeholder="کارهای هنری" required>
 
-<input class="form-control" placeholder="میزان خلاقیت">
+<input type="text" name="میزان_خلاقیت" class="form-control" placeholder="میزان خلاقیت" required>
 
-<input class="form-control" placeholder="میزان هوشیاری">
+<input type="text" name="میزان_هوشیاری" class="form-control" placeholder="میزان هوشیاری" required>
 
-<input class="form-control" placeholder="میزان ابتکار">
+<input type="text" name="میزان_ابتکار" class="form-control" placeholder="میزان ابتکار" required>
 
 <h4>4) مشکلات جسمی</h4>
 
-<textarea class="form-control" rows="4" placeholder="تمام نواحی دارای درد یا ناراحتی را توضیح دهید"></textarea>
+<textarea name="مشکلات_جسمی_نواحی_درد" class="form-control" rows="4" placeholder="تمام نواحی دارای درد یا ناراحتی را توضیح دهید" required></textarea>
 
 <h4>5) سوابق شخصی</h4>
 
-<textarea class="form-control" rows="3" placeholder="سوابق بیماری‌های قبلی"></textarea>
+<textarea name="سوابق_بیماریهای_قبلی" class="form-control" rows="3" placeholder="سوابق بیماری‌های قبلی" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="واکنش به واکسن‌ها یا گزش‌ها"></textarea>
+<textarea name="واکنش_به_واکسنها_یا_گزشها" class="form-control" rows="3" placeholder="واکنش به واکسن‌ها یا گزش‌ها" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="اعمال جراحی"></textarea>
+<textarea name="اعمال_جراحی" class="form-control" rows="3" placeholder="اعمال جراحی" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="سابقه بستری"></textarea>
+<textarea name="سابقه_بستری" class="form-control" rows="3" placeholder="سابقه بستری" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="فشارهای روحی شدید"></textarea>
+<textarea name="فشارهای_روحی_شدید" class="form-control" rows="3" placeholder="فشارهای روحی شدید" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="آیا هنگام مصاحبه گریه می‌کنید؟"></textarea>
+<textarea name="گریه_هنگام_مصاحبه" class="form-control" rows="3" placeholder="آیا هنگام مصاحبه گریه می‌کنید؟" required></textarea>
 
-<textarea class="form-control" rows="3" placeholder="حالات خاص"></textarea>
+<textarea name="حالات_خاص" class="form-control" rows="3" placeholder="حالات خاص" required></textarea>
 
 <h4>6) سوابق خانوادگی</h4>
 
-<textarea class="form-control" rows="4" placeholder="فشار خون، دیابت، سرطان، بیماری قلبی، روانی و ..."></textarea>
+<textarea name="سوابق_خانوادگی" class="form-control" rows="4" placeholder="فشار خون، دیابت، سرطان، بیماری قلبی، روانی و ..." required></textarea>
 
 <h4>7) وضعیت عمومی و مزاجی</h4>
 
-<textarea class="form-control" rows="4" placeholder="واکنش به سرما، گرما، تشنگی، غذاها، تعریق، میل جنسی و ..."></textarea>
+<textarea name="وضعیت_عمومی_و_مزاجی" class="form-control" rows="4" placeholder="واکنش به سرما، گرما، تشنگی، غذاها، تعریق، میل جنسی و ..." required></textarea>
 
 <h4>8) علائم رفتاری</h4>
 
-<textarea class="form-control" rows="5" placeholder="ویژگی‌های شخصیتی و رفتاری کامل"></textarea>
+<textarea name="علائم_رفتاری" class="form-control" rows="5" placeholder="ویژگی‌های شخصیتی و رفتاری کامل" required></textarea>
 
 <h4>9) علائم هیجانی و عاطفی</h4>
 
-<textarea class="form-control" rows="5" placeholder="ترس‌ها، اضطراب، غم، عشق، نفرت و احساسات"></textarea>
+<textarea name="علائم_هیجانی_و_عاطفی" class="form-control" rows="5" placeholder="ترس‌ها، اضطراب، غم، عشق، نفرت و احساسات" required></textarea>
 
 <h4>10) خواب، گفتار و عملکرد ذهنی</h4>
 
-<textarea class="form-control" rows="4" placeholder="وضعیت خواب، تکلم، تمرکز و توهم احتمالی"></textarea>
+<textarea name="خواب_گفتار_و_عملکرد_ذهنی" class="form-control" rows="4" placeholder="وضعیت خواب، تکلم، تمرکز و توهم احتمالی" required></textarea>
 
 <h4>11) وضعیت خلق و واکنش‌های روزمره</h4>
 
-<textarea class="form-control" rows="4" placeholder="وقتی عصبانی یا ناراحت می‌شوید چه می‌کنید؟"></textarea>
+<textarea name="واکنش_هنگام_عصبانیت_یا_ناراحتی" class="form-control" rows="4" placeholder="وقتی عصبانی یا ناراحت می‌شوید چه می‌کنید؟" required></textarea>
 
-<textarea class="form-control" rows="4" placeholder="وقتی تنها هستید چه حالتی دارید؟"></textarea>
+<textarea name="حالت_هنگام_تنهایی" class="form-control" rows="4" placeholder="وقتی تنها هستید چه حالتی دارید؟" required></textarea>
 
-<button type="submit">
+<!-- فیلد مخفی ضد اسپم -->
+<input type="text" name="_gotcha" style="display:none">
+
+<button type="submit" id="submit-btn">
 تکمیل فرم
 </button>
+
+<!-- محل نمایش پیام وضعیت ارسال -->
+<div id="form-status" style="display:none; text-align:center; margin-top:25px; font-weight:bold; font-size:1.1rem;"></div>
 
 </form>
 
@@ -583,6 +586,53 @@ alt="داروی هومیوپاتی">
 </p>
 
 </footer>
+
+<!-- اسکریپت جاوا اسکریپت برای ارسال بدون رفرش صفحه و نمایش پیام مناسب -->
+<script>
+  var form = document.getElementById("homeopathy-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("form-status");
+    var data = new FormData(event.target);
+    var button = document.getElementById("submit-btn");
+
+    button.disabled = true;
+    status.style.display = "block";
+    status.innerHTML = "در حال ارسال اطلاعات فرم... لطفاً منتظر بمانید.";
+    status.style.color = "#0f5d49";
+
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "فرم ارزیابی شما با موفقیت ارسال شد. در اسرع وقت اطلاعات شما بررسی و تماس گرفته خواهد شد.";
+        status.style.color = "green";
+        form.reset();
+        button.disabled = false;
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          } else {
+            status.innerHTML = "خطایی در ارسال رخ داد. لطفاً فیلدها را چک کرده و دوباره تلاش کنید.";
+          }
+          status.style.color = "red";
+          button.disabled = false;
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "خطا در اتصال به سرور! لطفاً وضعیت اینترنت خود را بررسی کنید.";
+      status.style.color = "red";
+      button.disabled = false;
+    });
+  }
+  form.addEventListener("submit", handleSubmit);
+</script>
 
 </body>
 
