@@ -107,7 +107,14 @@
       .section-box { background-attachment: scroll; min-height: 80vh; }
       .contact-card { padding: 25px; }
     }
-  </style>
+  
+.social-section{padding:80px 20px;background:linear-gradient(135deg,#1a4d2e,#244d7a)}
+.glass-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1000px;margin:auto}
+.social-card{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:25px;text-align:center;color:#fff;text-decoration:none;transition:.35s}
+.social-card:hover{transform:translateY(-8px) scale(1.03);background:rgba(255,255,255,.22)}
+.social-icon{font-size:42px;margin-bottom:10px}.social-title{font-weight:800;font-size:1.2rem}
+
+</style>
 </head>
 <body>
 
@@ -246,7 +253,17 @@
     </div>
   </section>
 
-  <footer>
+  
+<section class="social-section">
+<h2 style="text-align:center;color:#fff;margin-bottom:35px">ما را در شبکه‌های اجتماعی دنبال کنید</h2>
+<div class="glass-grid">
+<a class="social-card" href="https://instagram.com/Tebsuzani_hakim" target="_blank"><div class="social-icon">📷</div><div class="social-title">اینستاگرام</div><div>@Tebsuzani_hakim</div></a>
+<a class="social-card" href="https://eitaa.com/tebsuzani" target="_blank"><div class="social-icon">📢</div><div class="social-title">کانال اطلاع‌رسانی ایتا</div></a>
+<a class="social-card" href="https://eitaa.com/eduteb" target="_blank"><div class="social-icon">🎓</div><div class="social-title">آموزش طب سوزنی (ایتا)</div></a>
+<a class="social-card" href="https://ble.ir/tebsuzanii" target="_blank"><div class="social-icon">🎓</div><div class="social-title">آموزش طب سوزنی (بله)</div></a>
+</div></section>
+
+<footer>
     <p>© ۱۴۰۵ - تمامی حقوق برای کلینیک تخصصی طب سنتی-سوزنی حکیم محفوظ است.</p>
   </footer>
 
